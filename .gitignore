@@ -5,6 +5,11 @@
 !jobs
 !jobs/*
 !jobs/*/
+!jobs/*/*
+!jobs/*/*/
+!jobs/*/*/*
+!jobs/*/*/*/
 !users
 !users/*
 !users/*/
+.DS_Store
