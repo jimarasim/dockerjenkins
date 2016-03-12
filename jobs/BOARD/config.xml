@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<maven2-moduleset plugin="maven-plugin@2.7.1">
+  <actions/>
+  <description>-DcontactButtonXpath=&quot;//section[contains(@class,&apos;ReplyBar&apos;)]//button&quot; -DcontactInfoAnchorXpaths=&quot;//div[contains(@class,&apos;reply_options&apos;)]/ul/li/a&quot; -DcontactInfoLiXpaths=&quot;//div[contains(@class,&apos;reply_options&apos;)]/ul/li&quot; -DnumResultsRESTParm=&quot;0&quot; -DstartRESTParm=&quot;start&quot; -DnoScroll -Dreport=&quot;craigslist&quot; -Dinput=&quot;http://seattle.craigslist.org/search/sss?query=$GENERALSEARCH&quot; -DbodyTextXpath=&quot;//section[@id=&apos;postingbody&apos;]&quot; -DnextLinkXpath=&quot;//a[@title=&apos;next page&apos;]&quot; -DlinksLoadedIndicatorXpath=&quot;//input[@id=&apos;query&apos;]&quot; -DlinkXpath=&quot;//span[@class=&apos;pl&apos;]/a&quot; -DimageXpath=&quot;//div[contains(@class,&apos;slide first&apos;)]/img&quot; -DtitleTextXpath=&quot;//h2[@class=&apos;postingtitle&apos;]&quot; -DstartRESTParm=&quot;page&quot; -DaString=&quot;//p&quot; -Dbrowser=&quot;$BROWSER&quot; -DaHubPort=&quot;$HUBPORT&quot; -DaHubServer=&quot;192.168.99.100&quot; -DaNumber=&quot;$MAXHITS&quot; -DwaitAfterPageLoadMilliSeconds=&quot;0&quot; -Dtest=&quot;BoardScrub#BuildPageOfFoundLinks&quot; test</description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <hudson.model.ParametersDefinitionProperty>
+      <parameterDefinitions>
+        <hudson.model.StringParameterDefinition>
+          <name>BRANCH</name>
+          <description></description>
+          <defaultValue>develop</defaultValue>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>MAXHITS</name>
+          <description></description>
+          <defaultValue>15</defaultValue>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>GENERALSEARCH</name>
+          <description></description>
+          <defaultValue>records</defaultValue>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.ChoiceParameterDefinition>
+          <name>HUBPORT</name>
+          <description></description>
+          <choices class="java.util.Arrays$ArrayList">
+            <a class="string-array">
+              <string>4444</string>
+              <string>4723</string>
+            </a>
+          </choices>
+        </hudson.model.ChoiceParameterDefinition>
+        <hudson.model.ChoiceParameterDefinition>
+          <name>BROWSER</name>
+          <description></description>
+          <choices class="java.util.Arrays$ArrayList">
+            <a class="string-array">
+              <string>CHROMEMAC</string>
+            </a>
+          </choices>
+        </hudson.model.ChoiceParameterDefinition>
+        <hudson.model.ChoiceParameterDefinition>
+          <name>GOAL</name>
+          <description></description>
+          <choices class="java.util.Arrays$ArrayList">
+            <a class="string-array">
+              <string>-DcontactButtonXpath=&quot;//section[contains(@class,&apos;ReplyBar&apos;)]//button&quot; -DcontactInfoAnchorXpaths=&quot;//div[contains(@class,&apos;reply_options&apos;)]/ul/li/a&quot; -DcontactInfoLiXpaths=&quot;//div[contains(@class,&apos;reply_options&apos;)]/ul/li&quot; -DnumResultsRESTParm=&quot;0&quot; -DstartRESTParm=&quot;start&quot; -DnoScroll -Dreport=&quot;craigslist&quot; -Dinput=&quot;http://seattle.craigslist.org/search/sss?query=$GENERALSEARCH&quot; -DbodyTextXpath=&quot;//section[@id=&apos;postingbody&apos;]&quot; -DnextLinkXpath=&quot;//a[@title=&apos;next page&apos;]&quot; -DlinksLoadedIndicatorXpath=&quot;//input[@id=&apos;query&apos;]&quot; -DlinkXpath=&quot;//span[@class=&apos;pl&apos;]/a&quot; -DimageXpath=&quot;//div[contains(@class,&apos;slide first&apos;)]/img&quot; -DtitleTextXpath=&quot;//h2[@class=&apos;postingtitle&apos;]&quot; -DstartRESTParm=&quot;page&quot; -DaString=&quot;//p&quot; -Dbrowser=&quot;$BROWSER&quot; -DaHubPort=&quot;$HUBPORT&quot; -DaHubServer=&quot;192.168.99.100&quot; -DaNumber=&quot;$MAXHITS&quot; -DwaitAfterPageLoadMilliSeconds=&quot;0&quot; -Dtest=&quot;BoardScrub#BuildPageOfFoundLinks&quot; test</string>
+            </a>
+          </choices>
+        </hudson.model.ChoiceParameterDefinition>
+      </parameterDefinitions>
+    </hudson.model.ParametersDefinitionProperty>
+  </properties>
+  <scm class="hudson.plugins.git.GitSCM" plugin="git@2.4.2">
+    <configVersion>2</configVersion>
+    <userRemoteConfigs>
+      <hudson.plugins.git.UserRemoteConfig>
+        <url>https://github.com/jimarasim/Board</url>
+        <credentialsId>c42efbc1-3dc9-4f43-a483-9ec78eba111f</credentialsId>
+      </hudson.plugins.git.UserRemoteConfig>
+    </userRemoteConfigs>
+    <branches>
+      <hudson.plugins.git.BranchSpec>
+        <name>*/$BRANCH</name>
+      </hudson.plugins.git.BranchSpec>
+    </branches>
+    <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+    <submoduleCfg class="list"/>
+    <extensions/>
+  </scm>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <rootModule>
+    <groupId>com.jaemzware</groupId>
+    <artifactId>AppTest</artifactId>
+  </rootModule>
+  <goals>$GOAL</goals>
+  <aggregatorStyleBuild>true</aggregatorStyleBuild>
+  <incrementalBuild>false</incrementalBuild>
+  <ignoreUpstremChanges>false</ignoreUpstremChanges>
+  <archivingDisabled>false</archivingDisabled>
+  <siteArchivingDisabled>false</siteArchivingDisabled>
+  <fingerprintingDisabled>false</fingerprintingDisabled>
+  <resolveDependencies>false</resolveDependencies>
+  <processPlugins>false</processPlugins>
+  <mavenValidationLevel>-1</mavenValidationLevel>
+  <runHeadless>false</runHeadless>
+  <disableTriggerDownstreamProjects>false</disableTriggerDownstreamProjects>
+  <blockTriggerWhenBuilding>true</blockTriggerWhenBuilding>
+  <settings class="jenkins.mvn.DefaultSettingsProvider"/>
+  <globalSettings class="jenkins.mvn.DefaultGlobalSettingsProvider"/>
+  <reporters/>
+  <publishers/>
+  <buildWrappers/>
+  <prebuilders/>
+  <postbuilders/>
+  <runPostStepsIfResult>
+    <name>FAILURE</name>
+    <ordinal>2</ordinal>
+    <color>RED</color>
+    <completeBuild>true</completeBuild>
+  </runPostStepsIfResult>
+</maven2-moduleset>
