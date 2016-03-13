@@ -33,7 +33,7 @@
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
         <url>https://github.com/jimarasim/SeleniumCodeBase.git</url>
-        <credentialsId>c42efbc1-3dc9-4f43-a483-9ec78eba111f</credentialsId>
+        <credentialsId>f5c2e5a8-64dc-4e1a-96fb-2915f4a99e93</credentialsId>
       </hudson.plugins.git.UserRemoteConfig>
     </userRemoteConfigs>
     <branches>

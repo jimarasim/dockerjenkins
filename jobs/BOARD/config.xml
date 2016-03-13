@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<maven2-moduleset plugin="maven-plugin@2.7.1">
+<maven2-moduleset plugin="maven-plugin@2.12.1">
   <actions/>
-  <description>-Dinput=&quot;http://seattle.craigslist.org/search/sss?query=$GENERALSEARCH&quot; -DcontactButtonXpath=&quot;//section[contains(@class,&apos;ReplyBar&apos;)]//button&quot; -DcontactInfoAnchorXpaths=&quot;//div[contains(@class,&apos;reply_options&apos;)]/ul/li/a&quot; -DcontactInfoLiXpaths=&quot;//div[contains(@class,&apos;reply_options&apos;)]/ul/li&quot; -DnumResultsRESTParm=&quot;0&quot; -DstartRESTParm=&quot;start&quot; -DnoScroll -Dreport=&quot;craigslist&quot; -DbodyTextXpath=&quot;//section[@id=&apos;postingbody&apos;]&quot; -DnextLinkXpath=&quot;//a[@title=&apos;next page&apos;]&quot; -DlinksLoadedIndicatorXpath=&quot;//input[@id=&apos;query&apos;]&quot; -DlinkXpath=&quot;//span[@class=&apos;pl&apos;]/a&quot; -DimageXpath=&quot;//div[contains(@class,&apos;slide first&apos;)]/img&quot; -DtitleTextXpath=&quot;//h2[@class=&apos;postingtitle&apos;]&quot; -DstartRESTParm=&quot;page&quot; -DaString=&quot;//p&quot; -Dbrowser=&quot;$BROWSER&quot; -DaHubPort=&quot;$HUBPORT&quot; -DaHubServer=&quot;192.168.99.100&quot; -DaNumber=&quot;$MAXHITS&quot; -DwaitAfterPageLoadMilliSeconds=&quot;0&quot; -Dtest=&quot;BoardScrub#BuildPageOfFoundLinks&quot; test&#xd;
--Dinput=&quot;http://www.ebay.com/sch/i.html?_from=R40&amp;_sacat=0&amp;_nkw=$GENERALSEARCH&quot; -DnumResultsRESTParm=&quot;num&quot; -DstartRESTParm=&quot;start&quot; -DnoScroll -Dreport=&quot;ebay&quot; -DbodyTextXpath=&quot;//td&quot; -DnextLinkXpath=&quot;//a[contains(@class,&apos;next&apos;])&quot; -DlinksLoadedIndicatorXpath=&quot;//a[contains(@class,&apos;curr&apos;)]&quot; -DlinkXpath=&quot;//a[contains(@href,&apos;ebay.com/itm&apos;)]&quot; -DimageXpath=&quot;//img[contains(@class,&apos;img&apos;)]&quot; -DtitleTextXpath=&quot;//h1[@class=&apos;it-ttl&apos;]&quot; -DnumResultsRESTParm=&quot;num&quot; -DstartRESTParm=&quot;page&quot; -DaString=&quot;//p&quot; -Dbrowser=&quot;$BROWSER&quot; -DaNumber=&quot;$MAXHITS&quot; -DwaitAfterPageLoadMilliSeconds=&quot;0&quot; -Dtest=&quot;BoardScrub#BuildPageOfFoundLinks&quot; -DdefaultImplicitWaitSeconds=&quot;10&quot; -DaHubPort=&quot;$HUBPORT&quot; -DaHubServer=&quot;192.168.99.100&quot; test</description>
+  <description>-Dinput=&quot;http://seattle.craigslist.org/search/sss?query=$GENERALSEARCH&quot; -DcontactButtonXpath=&quot;//section[contains(@class,&apos;ReplyBar&apos;)]//button&quot; -DcontactInfoAnchorXpaths=&quot;//div[contains(@class,&apos;reply_options&apos;)]/ul/li/a&quot; -DcontactInfoLiXpaths=&quot;//div[contains(@class,&apos;reply_options&apos;)]/ul/li&quot; -DnumResultsRESTParm=&quot;num&quot; -DstartRESTParm=&quot;start&quot; -DnoScroll -Dreport=&quot;craigslist&quot; -DbodyTextXpath=&quot;//section[@id=&apos;postingbody&apos;]&quot; -DnextLinkXpath=&quot;//a[@title=&apos;next page&apos;]&quot; -DlinksLoadedIndicatorXpath=&quot;//input[@id=&apos;query&apos;]&quot; -DlinkXpath=&quot;//span[@class=&apos;pl&apos;]/a&quot; -DimageXpath=&quot;//div[contains(@class,&apos;slide first&apos;)]/img&quot; -DtitleTextXpath=&quot;//h2[@class=&apos;postingtitle&apos;]&quot; -DstartRESTParm=&quot;page&quot; -DaString=&quot;//p&quot; -Dbrowser=&quot;$BROWSER&quot; -DaHubPort=&quot;$HUBPORT&quot; -DaHubServer=&quot;$HUBSERVER&quot; -DaNumber=&quot;$MAXHITS&quot; -DwaitAfterPageLoadMilliSeconds=&quot;0&quot; -Dtest=&quot;BoardScrub#BuildPageOfFoundLinks&quot; test&#xd;
+-Dinput=&quot;http://www.ebay.com/sch/i.html?_from=R40&amp;_sacat=0&amp;_nkw=$GENERALSEARCH&quot; -DnumResultsRESTParm=&quot;num&quot; -DstartRESTParm=&quot;start&quot; -DnoScroll -Dreport=&quot;$ebay&quot; -DbodyTextXpath=&quot;//td&quot; -DnextLinkXpath=&quot;//a[contains(@class,&apos;next&apos;])&quot; -DlinksLoadedIndicatorXpath=&quot;//a[contains(@class,&apos;curr&apos;)]&quot; -DlinkXpath=&quot;//a[contains(@href,&apos;ebay.com/itm&apos;)]&quot; -DimageXpath=&quot;//img[contains(@class,&apos;img&apos;)]&quot; -DtitleTextXpath=&quot;//h1[@class=&apos;it-ttl&apos;]&quot; -DnumResultsRESTParm=&quot;num&quot; -DstartRESTParm=&quot;page&quot; -DaString=&quot;//p&quot; -Dbrowser=&quot;$BROWSER&quot; -DaNumber=&quot;$MAXHITS&quot; -DwaitAfterPageLoadMilliSeconds=&quot;0&quot; -Dtest=&quot;BoardScrub#BuildPageOfFoundLinks&quot; -DdefaultImplicitWaitSeconds=&quot;10&quot; -DaHubPort=&quot;$HUBPORT&quot; -DaHubServer=&quot;$HUBSERVER&quot; test</description>
   <keepDependencies>false</keepDependencies>
   <properties>
     <hudson.model.ParametersDefinitionProperty>
@@ -46,11 +46,16 @@
           <description></description>
           <choices class="java.util.Arrays$ArrayList">
             <a class="string-array">
-              <string>-Dinput=&quot;http://seattle.craigslist.org/search/sss?query=$GENERALSEARCH&quot; -DcontactButtonXpath=&quot;//section[contains(@class,&apos;ReplyBar&apos;)]//button&quot; -DcontactInfoAnchorXpaths=&quot;//div[contains(@class,&apos;reply_options&apos;)]/ul/li/a&quot; -DcontactInfoLiXpaths=&quot;//div[contains(@class,&apos;reply_options&apos;)]/ul/li&quot; -DnumResultsRESTParm=&quot;0&quot; -DstartRESTParm=&quot;start&quot; -DnoScroll -Dreport=&quot;craigslist&quot; -DbodyTextXpath=&quot;//section[@id=&apos;postingbody&apos;]&quot; -DnextLinkXpath=&quot;//a[@title=&apos;next page&apos;]&quot; -DlinksLoadedIndicatorXpath=&quot;//input[@id=&apos;query&apos;]&quot; -DlinkXpath=&quot;//span[@class=&apos;pl&apos;]/a&quot; -DimageXpath=&quot;//div[contains(@class,&apos;slide first&apos;)]/img&quot; -DtitleTextXpath=&quot;//h2[@class=&apos;postingtitle&apos;]&quot; -DstartRESTParm=&quot;page&quot; -DaString=&quot;//p&quot; -Dbrowser=&quot;$BROWSER&quot; -DaHubPort=&quot;$HUBPORT&quot; -DaHubServer=&quot;192.168.99.100&quot; -DaNumber=&quot;$MAXHITS&quot; -DwaitAfterPageLoadMilliSeconds=&quot;0&quot; -Dtest=&quot;BoardScrub#BuildPageOfFoundLinks&quot; test</string>
+              <string>-Dinput=&quot;http://seattle.craigslist.org/search/sss?query=$GENERALSEARCH&quot; -DcontactButtonXpath=&quot;//section[contains(@class,&apos;ReplyBar&apos;)]//button&quot; -DcontactInfoAnchorXpaths=&quot;//div[contains(@class,&apos;reply_options&apos;)]/ul/li/a&quot; -DcontactInfoLiXpaths=&quot;//div[contains(@class,&apos;reply_options&apos;)]/ul/li&quot; -DnumResultsRESTParm=&quot;num&quot; -DstartRESTParm=&quot;start&quot; -DnoScroll -Dreport=&quot;craigslist&quot; -DbodyTextXpath=&quot;//section[@id=&apos;postingbody&apos;]&quot; -DnextLinkXpath=&quot;//a[@title=&apos;next page&apos;]&quot; -DlinksLoadedIndicatorXpath=&quot;//input[@id=&apos;query&apos;]&quot; -DlinkXpath=&quot;//span[@class=&apos;pl&apos;]/a&quot; -DimageXpath=&quot;//div[contains(@class,&apos;slide first&apos;)]/img&quot; -DtitleTextXpath=&quot;//h2[@class=&apos;postingtitle&apos;]&quot; -DstartRESTParm=&quot;page&quot; -DaString=&quot;//p&quot; -Dbrowser=&quot;$BROWSER&quot; -DaHubPort=&quot;$HUBPORT&quot; -DaHubServer=&quot;192.168.99.100&quot; -DaNumber=&quot;$MAXHITS&quot; -DwaitAfterPageLoadMilliSeconds=&quot;0&quot; -Dtest=&quot;BoardScrub#BuildPageOfFoundLinks&quot; test</string>
               <string>-Dinput=&quot;http://www.ebay.com/sch/i.html?_from=R40&amp;_sacat=0&amp;_nkw=$GENERALSEARCH&quot; -DnumResultsRESTParm=&quot;num&quot; -DstartRESTParm=&quot;start&quot; -DnoScroll -Dreport=&quot;$ebay&quot; -DbodyTextXpath=&quot;//td&quot; -DnextLinkXpath=&quot;//a[contains(@class,&apos;next&apos;])&quot; -DlinksLoadedIndicatorXpath=&quot;//a[contains(@class,&apos;curr&apos;)]&quot; -DlinkXpath=&quot;//a[contains(@href,&apos;ebay.com/itm&apos;)]&quot; -DimageXpath=&quot;//img[contains(@class,&apos;img&apos;)]&quot; -DtitleTextXpath=&quot;//h1[@class=&apos;it-ttl&apos;]&quot; -DnumResultsRESTParm=&quot;num&quot; -DstartRESTParm=&quot;page&quot; -DaString=&quot;//p&quot; -Dbrowser=&quot;$BROWSER&quot; -DaNumber=&quot;$MAXHITS&quot; -DwaitAfterPageLoadMilliSeconds=&quot;0&quot; -Dtest=&quot;BoardScrub#BuildPageOfFoundLinks&quot; -DdefaultImplicitWaitSeconds=&quot;10&quot; -DaHubPort=&quot;$HUBPORT&quot; -DaHubServer=&quot;192.168.99.100&quot; test</string>
             </a>
           </choices>
         </hudson.model.ChoiceParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>HUBSERVER</name>
+          <description></description>
+          <defaultValue>192.168.99.100</defaultValue>
+        </hudson.model.StringParameterDefinition>
       </parameterDefinitions>
     </hudson.model.ParametersDefinitionProperty>
   </properties>
@@ -59,7 +64,7 @@
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
         <url>https://github.com/jimarasim/Board</url>
-        <credentialsId>c42efbc1-3dc9-4f43-a483-9ec78eba111f</credentialsId>
+        <credentialsId>f5c2e5a8-64dc-4e1a-96fb-2915f4a99e93</credentialsId>
       </hudson.plugins.git.UserRemoteConfig>
     </userRemoteConfigs>
     <branches>
@@ -97,38 +102,7 @@
   <settings class="jenkins.mvn.DefaultSettingsProvider"/>
   <globalSettings class="jenkins.mvn.DefaultGlobalSettingsProvider"/>
   <reporters/>
-  <publishers>
-    <hudson.plugins.emailext.ExtendedEmailPublisher plugin="email-ext@2.41.3">
-      <recipientList>$DEFAULT_RECIPIENTS</recipientList>
-      <configuredTriggers>
-        <hudson.plugins.emailext.plugins.trigger.FailureTrigger>
-          <email>
-            <recipientList>jaemzware@hotmail.com</recipientList>
-            <subject>$PROJECT_DEFAULT_SUBJECT</subject>
-            <body>$PROJECT_DEFAULT_CONTENT</body>
-            <recipientProviders>
-              <hudson.plugins.emailext.plugins.recipients.ListRecipientProvider/>
-            </recipientProviders>
-            <attachmentsPattern>*.jpg *.htm</attachmentsPattern>
-            <attachBuildLog>false</attachBuildLog>
-            <compressBuildLog>false</compressBuildLog>
-            <replyTo>$PROJECT_DEFAULT_REPLYTO</replyTo>
-            <contentType>text/html</contentType>
-          </email>
-        </hudson.plugins.emailext.plugins.trigger.FailureTrigger>
-      </configuredTriggers>
-      <contentType>default</contentType>
-      <defaultSubject>$DEFAULT_SUBJECT</defaultSubject>
-      <defaultContent>$DEFAULT_CONTENT</defaultContent>
-      <attachmentsPattern>*.htm, *.jpg</attachmentsPattern>
-      <presendScript>$DEFAULT_PRESEND_SCRIPT</presendScript>
-      <attachBuildLog>false</attachBuildLog>
-      <compressBuildLog>false</compressBuildLog>
-      <replyTo>$DEFAULT_REPLYTO</replyTo>
-      <saveOutput>false</saveOutput>
-      <disabled>false</disabled>
-    </hudson.plugins.emailext.ExtendedEmailPublisher>
-  </publishers>
+  <publishers/>
   <buildWrappers/>
   <prebuilders/>
   <postbuilders/>

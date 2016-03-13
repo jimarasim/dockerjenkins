@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<maven2-moduleset plugin="maven-plugin@2.7.1">
+<maven2-moduleset plugin="maven-plugin@2.12.1">
   <actions/>
-  <description>clean install test -Dtest=Scratch#VerifyLogos -DaHubServer=192.168.99.100 -DaHubPort=4444 -Dbrowser=CHROMEMAC -Dinput=$STARTURL -DaNumber=0 -Dreport=$REPORTNAME -Duserid=$LINKFILTER -DaString=&quot;$LOGOXPATH&quot; -DwaitAfterPageLoadMilliSeconds=0 -Dlogging</description>
+  <description>clean install test -Dtest=Scratch#VerifyLogos -DaHubServer=$HUBSERVER -DaHubPort=$HUBPORT -Dbrowser=CHROMEMAC -Dinput=$STARTURL -DaNumber=0 -Dreport=$REPORTNAME -Duserid=$LINKFILTER -DaString=&quot;$LOGOXPATH&quot; -DwaitAfterPageLoadMilliSeconds=0 -Dlogging</description>
   <keepDependencies>false</keepDependencies>
   <properties>
     <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.17.1">
@@ -35,6 +35,21 @@
           <description></description>
           <defaultValue>blackmarketskates$BUILD_ID-$BUILD_NUMBER</defaultValue>
         </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>HUBSERVER</name>
+          <description></description>
+          <defaultValue>192.168.99.100</defaultValue>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.ChoiceParameterDefinition>
+          <name>HUBPORT</name>
+          <description></description>
+          <choices class="java.util.Arrays$ArrayList">
+            <a class="string-array">
+              <string>4444</string>
+              <string>4723</string>
+            </a>
+          </choices>
+        </hudson.model.ChoiceParameterDefinition>
       </parameterDefinitions>
     </hudson.model.ParametersDefinitionProperty>
   </properties>
@@ -43,7 +58,7 @@
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
         <url>https://github.com/jimarasim/SeleniumCodeBase.git</url>
-        <credentialsId>c42efbc1-3dc9-4f43-a483-9ec78eba111f</credentialsId>
+        <credentialsId>f5c2e5a8-64dc-4e1a-96fb-2915f4a99e93</credentialsId>
       </hudson.plugins.git.UserRemoteConfig>
     </userRemoteConfigs>
     <branches>
@@ -65,7 +80,7 @@
     <groupId>com.jaemzware</groupId>
     <artifactId>SeleniumCodeBase</artifactId>
   </rootModule>
-  <goals>clean install test -Dtest=Scratch#VerifyLogos -DaHubServer=192.168.99.100 -DaHubPort=4444 -Dbrowser=CHROMEMAC -Dinput=$STARTURL -DaNumber=0 -Dreport=$REPORTNAME -Duserid=$LINKFILTER -DaString=&quot;$LOGOXPATH&quot; -DwaitAfterPageLoadMilliSeconds=0 -Dlogging</goals>
+  <goals>clean install test -Dtest=Scratch#VerifyLogos -DaHubServer=$HUBSERVER -DaHubPort=$HUBPORT -Dbrowser=CHROMEMAC -Dinput=$STARTURL -DaNumber=0 -Dreport=$REPORTNAME -Duserid=$LINKFILTER -DaString=&quot;$LOGOXPATH&quot; -DwaitAfterPageLoadMilliSeconds=0 -Dlogging</goals>
   <aggregatorStyleBuild>true</aggregatorStyleBuild>
   <incrementalBuild>false</incrementalBuild>
   <ignoreUpstremChanges>false</ignoreUpstremChanges>
@@ -81,38 +96,7 @@
   <settings class="jenkins.mvn.DefaultSettingsProvider"/>
   <globalSettings class="jenkins.mvn.DefaultGlobalSettingsProvider"/>
   <reporters/>
-  <publishers>
-    <hudson.plugins.emailext.ExtendedEmailPublisher plugin="email-ext@2.41.3">
-      <recipientList>$DEFAULT_RECIPIENTS</recipientList>
-      <configuredTriggers>
-        <hudson.plugins.emailext.plugins.trigger.FailureTrigger>
-          <email>
-            <recipientList>jaemzware@hotmail.com</recipientList>
-            <subject>$PROJECT_DEFAULT_SUBJECT</subject>
-            <body>$PROJECT_DEFAULT_CONTENT</body>
-            <recipientProviders>
-              <hudson.plugins.emailext.plugins.recipients.DevelopersRecipientProvider/>
-            </recipientProviders>
-            <attachmentsPattern></attachmentsPattern>
-            <attachBuildLog>true</attachBuildLog>
-            <compressBuildLog>false</compressBuildLog>
-            <replyTo>$PROJECT_DEFAULT_REPLYTO</replyTo>
-            <contentType>text/html</contentType>
-          </email>
-        </hudson.plugins.emailext.plugins.trigger.FailureTrigger>
-      </configuredTriggers>
-      <contentType>text/html</contentType>
-      <defaultSubject>$DEFAULT_SUBJECT</defaultSubject>
-      <defaultContent>$DEFAULT_CONTENT</defaultContent>
-      <attachmentsPattern>*.htm, *.jpg</attachmentsPattern>
-      <presendScript>$DEFAULT_PRESEND_SCRIPT</presendScript>
-      <attachBuildLog>false</attachBuildLog>
-      <compressBuildLog>false</compressBuildLog>
-      <replyTo>$DEFAULT_REPLYTO</replyTo>
-      <saveOutput>false</saveOutput>
-      <disabled>false</disabled>
-    </hudson.plugins.emailext.ExtendedEmailPublisher>
-  </publishers>
+  <publishers/>
   <buildWrappers/>
   <prebuilders/>
   <postbuilders/>
