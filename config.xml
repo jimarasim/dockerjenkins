@@ -2,54 +2,62 @@
 <hudson>
   <disabledAdministrativeMonitors/>
   <version>1.642.2</version>
-  <numExecutors>2</numExecutors>
+  <numExecutors>5</numExecutors>
   <mode>NORMAL</mode>
   <useSecurity>true</useSecurity>
   <authorizationStrategy class="hudson.security.GlobalMatrixAuthorizationStrategy">
-    <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Create:sk8creteordie</permission>
-    <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Delete:sk8creteordie</permission>
-    <permission>com.cloudbees.plugins.credentials.CredentialsProvider.ManageDomains:sk8creteordie</permission>
-    <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Update:sk8creteordie</permission>
-    <permission>com.cloudbees.plugins.credentials.CredentialsProvider.View:sk8creteordie</permission>
-    <permission>com.sonyericsson.jenkins.plugins.bfa.PluginImpl.RemoveCause:anonymous</permission>
-    <permission>com.sonyericsson.jenkins.plugins.bfa.PluginImpl.RemoveCause:sk8creteordie</permission>
-    <permission>com.sonyericsson.jenkins.plugins.bfa.PluginImpl.UpdateCauses:anonymous</permission>
-    <permission>com.sonyericsson.jenkins.plugins.bfa.PluginImpl.UpdateCauses:sk8creteordie</permission>
-    <permission>com.sonyericsson.jenkins.plugins.bfa.PluginImpl.ViewCauses:anonymous</permission>
-    <permission>com.sonyericsson.jenkins.plugins.bfa.PluginImpl.ViewCauses:sk8creteordie</permission>
+    <permission>hudson.model.Computer.Build:anonymous</permission>
     <permission>hudson.model.Computer.Build:sk8creteordie</permission>
+    <permission>hudson.model.Computer.Configure:anonymous</permission>
     <permission>hudson.model.Computer.Configure:sk8creteordie</permission>
+    <permission>hudson.model.Computer.Connect:anonymous</permission>
     <permission>hudson.model.Computer.Connect:sk8creteordie</permission>
+    <permission>hudson.model.Computer.Create:anonymous</permission>
     <permission>hudson.model.Computer.Create:sk8creteordie</permission>
+    <permission>hudson.model.Computer.Delete:anonymous</permission>
     <permission>hudson.model.Computer.Delete:sk8creteordie</permission>
+    <permission>hudson.model.Computer.Disconnect:anonymous</permission>
     <permission>hudson.model.Computer.Disconnect:sk8creteordie</permission>
+    <permission>hudson.model.Hudson.Administer:anonymous</permission>
     <permission>hudson.model.Hudson.Administer:sk8creteordie</permission>
+    <permission>hudson.model.Hudson.ConfigureUpdateCenter:anonymous</permission>
     <permission>hudson.model.Hudson.ConfigureUpdateCenter:sk8creteordie</permission>
+    <permission>hudson.model.Hudson.Read:anonymous</permission>
     <permission>hudson.model.Hudson.Read:sk8creteordie</permission>
+    <permission>hudson.model.Hudson.RunScripts:anonymous</permission>
     <permission>hudson.model.Hudson.RunScripts:sk8creteordie</permission>
+    <permission>hudson.model.Hudson.UploadPlugins:anonymous</permission>
     <permission>hudson.model.Hudson.UploadPlugins:sk8creteordie</permission>
+    <permission>hudson.model.Item.Build:anonymous</permission>
     <permission>hudson.model.Item.Build:sk8creteordie</permission>
+    <permission>hudson.model.Item.Cancel:anonymous</permission>
     <permission>hudson.model.Item.Cancel:sk8creteordie</permission>
+    <permission>hudson.model.Item.Configure:anonymous</permission>
     <permission>hudson.model.Item.Configure:sk8creteordie</permission>
+    <permission>hudson.model.Item.Create:anonymous</permission>
     <permission>hudson.model.Item.Create:sk8creteordie</permission>
+    <permission>hudson.model.Item.Delete:anonymous</permission>
     <permission>hudson.model.Item.Delete:sk8creteordie</permission>
+    <permission>hudson.model.Item.Discover:anonymous</permission>
     <permission>hudson.model.Item.Discover:sk8creteordie</permission>
+    <permission>hudson.model.Item.Read:anonymous</permission>
     <permission>hudson.model.Item.Read:sk8creteordie</permission>
+    <permission>hudson.model.Item.Workspace:anonymous</permission>
     <permission>hudson.model.Item.Workspace:sk8creteordie</permission>
+    <permission>hudson.model.Run.Delete:anonymous</permission>
     <permission>hudson.model.Run.Delete:sk8creteordie</permission>
+    <permission>hudson.model.Run.Update:anonymous</permission>
     <permission>hudson.model.Run.Update:sk8creteordie</permission>
+    <permission>hudson.model.View.Configure:anonymous</permission>
     <permission>hudson.model.View.Configure:sk8creteordie</permission>
+    <permission>hudson.model.View.Create:anonymous</permission>
     <permission>hudson.model.View.Create:sk8creteordie</permission>
+    <permission>hudson.model.View.Delete:anonymous</permission>
     <permission>hudson.model.View.Delete:sk8creteordie</permission>
+    <permission>hudson.model.View.Read:anonymous</permission>
     <permission>hudson.model.View.Read:sk8creteordie</permission>
-    <permission>hudson.scm.SCM.Tag:sk8creteordie</permission>
-    <permission>org.jenkinsci.plugins.ios.connector.iOSDeviceList.Deploy:sk8creteordie</permission>
-    <permission>org.jenkinsci.plugins.ios.connector.iOSDeviceList.Read:sk8creteordie</permission>
   </authorizationStrategy>
-  <securityRealm class="hudson.security.HudsonPrivateSecurityRealm">
-    <disableSignup>false</disableSignup>
-    <enableCaptcha>false</enableCaptcha>
-  </securityRealm>
+  <securityRealm class="hudson.security.SecurityRealm$None"/>
   <disableRememberMe>false</disableRememberMe>
   <projectNamingStrategy class="jenkins.model.ProjectNamingStrategy$DefaultProjectNamingStrategy"/>
   <workspaceDir>${JENKINS_HOME}/workspace/${ITEM_FULLNAME}</workspaceDir>
@@ -67,7 +75,6 @@
     <hudson.model.AllView>
       <owner class="hudson" reference="../../.."/>
       <name>All</name>
-      <description>Plugins Added: Github</description>
       <filterExecutors>false</filterExecutors>
       <filterQueue>false</filterQueue>
       <properties class="hudson.model.View$PropertyList"/>
@@ -76,9 +83,6 @@
   <primaryView>All</primaryView>
   <slaveAgentPort>50000</slaveAgentPort>
   <label></label>
-  <crumbIssuer class="hudson.security.csrf.DefaultCrumbIssuer">
-    <excludeClientIPFromCrumb>true</excludeClientIPFromCrumb>
-  </crumbIssuer>
   <nodeProperties/>
   <globalNodeProperties/>
 </hudson>

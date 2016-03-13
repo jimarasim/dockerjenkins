@@ -19,9 +19,24 @@
     <hudson.model.ParametersDefinitionProperty>
       <parameterDefinitions>
         <hudson.model.StringParameterDefinition>
-          <name>BRANCH</name>
+          <name>GENERALSEARCH</name>
           <description></description>
-          <defaultValue>develop</defaultValue>
+          <defaultValue>skateboard</defaultValue>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.ChoiceParameterDefinition>
+          <name>STARTURL</name>
+          <description></description>
+          <choices class="java.util.Arrays$ArrayList">
+            <a class="string-array">
+              <string>http://seattle.craigslist.org/search/sss?query=$GENERALSEARCH</string>
+              <string>http://seattle.craigslist.org/search/sya?query=$GENERALSEARCH</string>
+            </a>
+          </choices>
+        </hudson.model.ChoiceParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>TARGETURL</name>
+          <description></description>
+          <defaultValue>craigslist.org</defaultValue>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
           <name>MAXHITS</name>
@@ -29,9 +44,14 @@
           <defaultValue>15</defaultValue>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
-          <name>GENERALSEARCH</name>
+          <name>REPORT</name>
           <description></description>
-          <defaultValue>records</defaultValue>
+          <defaultValue>craigslist-$BUILD_ID</defaultValue>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>BRANCH</name>
+          <description></description>
+          <defaultValue>develop</defaultValue>
         </hudson.model.StringParameterDefinition>
         <hudson.model.ChoiceParameterDefinition>
           <name>HUBPORT</name>
@@ -52,20 +72,80 @@
             </a>
           </choices>
         </hudson.model.ChoiceParameterDefinition>
-        <hudson.model.ChoiceParameterDefinition>
-          <name>GOAL</name>
-          <description></description>
-          <choices class="java.util.Arrays$ArrayList">
-            <a class="string-array">
-              <string>-Dinput=&quot;http://seattle.craigslist.org/search/sss?query=$GENERALSEARCH&quot; -DcontactButtonXpath=&quot;//section[contains(@class,&apos;ReplyBar&apos;)]//button&quot; -DcontactInfoAnchorXpaths=&quot;//div[contains(@class,&apos;reply_options&apos;)]/ul/li/a&quot; -DcontactInfoLiXpaths=&quot;//div[contains(@class,&apos;reply_options&apos;)]/ul/li&quot; -DnumResultsRESTParm=&quot;num&quot; -DstartRESTParm=&quot;start&quot; -DnoScroll -Dreport=&quot;craigslist&quot; -DbodyTextXpath=&quot;//section[@id=&apos;postingbody&apos;]&quot; -DnextLinkXpath=&quot;//a[@title=&apos;next page&apos;]&quot; -DlinksLoadedIndicatorXpath=&quot;//input[@id=&apos;query&apos;]&quot; -DlinkXpath=&quot;//span[@class=&apos;pl&apos;]/a&quot; -DimageXpath=&quot;//div[contains(@class,&apos;slide first&apos;)]/img&quot; -DtitleTextXpath=&quot;//h2[@class=&apos;postingtitle&apos;]&quot; -DstartRESTParm=&quot;page&quot; -DaString=&quot;//p&quot; -Dbrowser=&quot;$BROWSER&quot; -DaHubPort=&quot;$HUBPORT&quot; -DaHubServer=&quot;192.168.99.100&quot; -DaNumber=&quot;$MAXHITS&quot; -DwaitAfterPageLoadMilliSeconds=&quot;0&quot; -Dtest=&quot;BoardScrub#BuildPageOfFoundLinks&quot; test</string>
-              <string>-Dinput=&quot;http://www.ebay.com/sch/i.html?_from=R40&amp;_sacat=0&amp;_nkw=$GENERALSEARCH&quot; -DnumResultsRESTParm=&quot;num&quot; -DstartRESTParm=&quot;start&quot; -DnoScroll -Dreport=&quot;$ebay&quot; -DbodyTextXpath=&quot;//td&quot; -DnextLinkXpath=&quot;//a[contains(@class,&apos;next&apos;])&quot; -DlinksLoadedIndicatorXpath=&quot;//a[contains(@class,&apos;curr&apos;)]&quot; -DlinkXpath=&quot;//a[contains(@href,&apos;ebay.com/itm&apos;)]&quot; -DimageXpath=&quot;//img[contains(@class,&apos;img&apos;)]&quot; -DtitleTextXpath=&quot;//h1[@class=&apos;it-ttl&apos;]&quot; -DnumResultsRESTParm=&quot;num&quot; -DstartRESTParm=&quot;page&quot; -DaString=&quot;//p&quot; -Dbrowser=&quot;$BROWSER&quot; -DaNumber=&quot;$MAXHITS&quot; -DwaitAfterPageLoadMilliSeconds=&quot;0&quot; -Dtest=&quot;BoardScrub#BuildPageOfFoundLinks&quot; -DdefaultImplicitWaitSeconds=&quot;10&quot; -DaHubPort=&quot;$HUBPORT&quot; -DaHubServer=&quot;192.168.99.100&quot; test</string>
-            </a>
-          </choices>
-        </hudson.model.ChoiceParameterDefinition>
         <hudson.model.StringParameterDefinition>
           <name>HUBSERVER</name>
           <description></description>
           <defaultValue>192.168.99.100</defaultValue>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>CONTACTBUTTONXPATH</name>
+          <description></description>
+          <defaultValue>//section[contains(@class,&apos;ReplyBar&apos;)]//button</defaultValue>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>CONTACTINFOANCHORXPATHS</name>
+          <description></description>
+          <defaultValue>//div[contains(@class,&apos;reply_options&apos;)]/ul/li/a</defaultValue>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>CONTACTINFOLIXPATHS</name>
+          <description></description>
+          <defaultValue>//div[contains(@class,&apos;reply_options&apos;)]/ul/li</defaultValue>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>BODYTEXTXPATH</name>
+          <description></description>
+          <defaultValue>//section[@id=&apos;postingbody&apos;]</defaultValue>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>NEXTLINKXPATH</name>
+          <description></description>
+          <defaultValue>//a[@title=&apos;next page&apos;]</defaultValue>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>LINKSLOADEDINDICATORXPATH</name>
+          <description></description>
+          <defaultValue>//input[@id=&apos;query&apos;]</defaultValue>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>LINKXPATH</name>
+          <description></description>
+          <defaultValue>//span[@class=&apos;pl&apos;]/a</defaultValue>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>IMAGEXPATH</name>
+          <description></description>
+          <defaultValue>//div[contains(@class,&apos;slide first&apos;)]/img</defaultValue>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>TITLETEXTXPATH</name>
+          <description></description>
+          <defaultValue>//h2[@class=&apos;postingtitle&apos;]</defaultValue>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>HUBSERVER</name>
+          <description></description>
+          <defaultValue>192.168.99.100</defaultValue>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>WAITAFTERPAGELOADMILLISECONDS</name>
+          <description></description>
+          <defaultValue>0</defaultValue>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>DEFAULTIMPLICITWAITSECONDS</name>
+          <description></description>
+          <defaultValue>7</defaultValue>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>NUMRESULTSRESTPARM</name>
+          <description></description>
+          <defaultValue>num</defaultValue>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>STARTRESTPARM</name>
+          <description></description>
+          <defaultValue>start</defaultValue>
         </hudson.model.StringParameterDefinition>
       </parameterDefinitions>
     </hudson.model.ParametersDefinitionProperty>
@@ -85,7 +165,9 @@
     </branches>
     <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
     <submoduleCfg class="list"/>
-    <extensions/>
+    <extensions>
+      <hudson.plugins.git.extensions.impl.CleanBeforeCheckout/>
+    </extensions>
   </scm>
   <canRoam>true</canRoam>
   <disabled>false</disabled>
@@ -97,7 +179,7 @@
     <groupId>com.jaemzware</groupId>
     <artifactId>AppTest</artifactId>
   </rootModule>
-  <goals>$GOAL</goals>
+  <goals>-Dinput=&quot;$STARTURL&quot; -DnumResultsRESTParm=&quot;$NUMRESULTSRESTPARM&quot; -DstartRESTParm=&quot;$STARTRESTPARM&quot; -DcontactButtonXpath=&quot;$CONTACTBUTTONXPATH&quot; -DcontactInfoAnchorXpaths=&quot;$CONTACTINFOANCHORXPATHS&quot; -DcontactInfoLiXpaths=&quot;$CONTACTINFOLIXPATHS&quot; -DnoScroll -Dreport=&quot;$REPORT&quot; -DbodyTextXpath=&quot;$BODYTEXTXPATH&quot; -DnextLinkXpath=&quot;$NEXTLINKXPATH&quot; -DlinksLoadedIndicatorXpath=&quot;$LINKSLOADEDINDICATORXPATH&quot; -DlinkXpath=&quot;$LINKXPATH&quot; -DimageXpath=&quot;$IMAGEXPATH&quot; -DtitleTextXpath=&quot;$TITLETEXTXPATH&quot; -DaString=&quot;$TARGETURL&quot; -Dbrowser=&quot;$BROWSER&quot; -DaHubPort=&quot;$HUBPORT&quot; -DaHubServer=&quot;$HUBSERVER&quot; -DaNumber=&quot;$MAXHITS&quot; -DwaitAfterPageLoadMilliSeconds=&quot;$WAITAFTERPAGELOADMILLISECONDS&quot; -Dtest=&quot;BoardScrub#BuildPageOfFoundLinks&quot; test</goals>
   <aggregatorStyleBuild>true</aggregatorStyleBuild>
   <incrementalBuild>false</incrementalBuild>
   <ignoreUpstremChanges>false</ignoreUpstremChanges>
@@ -127,7 +209,7 @@
             <attachBuildLog>false</attachBuildLog>
             <compressBuildLog>false</compressBuildLog>
             <replyTo>$PROJECT_DEFAULT_REPLYTO</replyTo>
-            <contentType>project</contentType>
+            <contentType>both</contentType>
           </email>
         </hudson.plugins.emailext.plugins.trigger.SuccessTrigger>
       </configuredTriggers>
@@ -136,7 +218,7 @@
       <defaultContent>$DEFAULT_CONTENT</defaultContent>
       <attachmentsPattern></attachmentsPattern>
       <presendScript>$DEFAULT_PRESEND_SCRIPT</presendScript>
-      <attachBuildLog>false</attachBuildLog>
+      <attachBuildLog>true</attachBuildLog>
       <compressBuildLog>false</compressBuildLog>
       <replyTo>$DEFAULT_REPLYTO</replyTo>
       <saveOutput>false</saveOutput>

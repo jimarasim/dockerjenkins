@@ -11,19 +11,11 @@
   <triggers/>
   <concurrentBuild>false</concurrentBuild>
   <reporters/>
-  <displayName>SeleniumCodeBase</displayName>
+  <displayName>Board</displayName>
   <version>1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
   <relativePath></relativePath>
   <dependencies>
-    <dependency>
-      <groupId>commons-io</groupId>
-      <artifactId>commons-io</artifactId>
-      <version>2.4</version>
-      <plugin>false</plugin>
-      <scope>compile</scope>
-      <type>jar</type>
-    </dependency>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
@@ -33,19 +25,11 @@
       <type>jar</type>
     </dependency>
     <dependency>
-      <groupId>io.appium</groupId>
-      <artifactId>java-client</artifactId>
-      <version>3.3.0</version>
+      <groupId>com.jaemzware</groupId>
+      <artifactId>SeleniumCodeBase</artifactId>
+      <version>1.0-SNAPSHOT</version>
       <plugin>false</plugin>
-      <scope>compile</scope>
-      <type>jar</type>
-    </dependency>
-    <dependency>
-      <groupId>com.github.psorobka</groupId>
-      <artifactId>appium-maven-plugin</artifactId>
-      <version>1.1.0</version>
-      <plugin>false</plugin>
-      <scope>compile</scope>
+      <scope>test</scope>
       <type>jar</type>
     </dependency>
     <dependency>
@@ -64,30 +48,6 @@
       <groupId>org.seleniumhq.selenium</groupId>
       <artifactId>selenium-java</artifactId>
       <version>2.52.0</version>
-      <plugin>false</plugin>
-      <scope>compile</scope>
-      <type>jar</type>
-    </dependency>
-    <dependency>
-      <groupId>commons-lang</groupId>
-      <artifactId>commons-lang</artifactId>
-      <version>2.6</version>
-      <plugin>false</plugin>
-      <scope>compile</scope>
-      <type>jar</type>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.httpcomponents</groupId>
-      <artifactId>httpclient</artifactId>
-      <version>4.5.2</version>
-      <plugin>false</plugin>
-      <scope>compile</scope>
-      <type>jar</type>
-    </dependency>
-    <dependency>
-      <groupId>javax.mail</groupId>
-      <artifactId>mail</artifactId>
-      <version>1.4.7</version>
       <plugin>false</plugin>
       <scope>compile</scope>
       <type>jar</type>
