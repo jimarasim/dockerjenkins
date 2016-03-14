@@ -155,7 +155,7 @@
   <goals>-Dinput=&quot;$STARTURL&quot; -DnumResultsRESTParm=&quot;$NUMRESULTSRESTPARM&quot; -DstartRESTParm=&quot;$STARTRESTPARM&quot; -DcontactButtonXpath=&quot;$CONTACTBUTTONXPATH&quot; -DcontactInfoAnchorXpaths=&quot;$CONTACTINFOANCHORXPATHS&quot; -DcontactInfoLiXpaths=&quot;$CONTACTINFOLIXPATHS&quot; -DnoScroll -Dreport=&quot;$REPORT&quot; -DbodyTextXpath=&quot;$BODYTEXTXPATH&quot; -DnextLinkXpath=&quot;$NEXTLINKXPATH&quot; -DlinksLoadedIndicatorXpath=&quot;$LINKSLOADEDINDICATORXPATH&quot; -DlinkXpath=&quot;$LINKXPATH&quot; -DimageXpath=&quot;$IMAGEXPATH&quot; -DtitleTextXpath=&quot;$TITLETEXTXPATH&quot; -DaString=&quot;$TARGETURL&quot; -Dbrowser=&quot;$BROWSER&quot; -DaHubPort=&quot;$HUBPORT&quot; -DaHubServer=&quot;$HUBSERVER&quot; -DaNumber=&quot;$MAXHITS&quot; -DwaitAfterPageLoadMilliSeconds=&quot;$WAITAFTERPAGELOADMILLISECONDS&quot; -Dtest=&quot;BoardScrub#BuildPageOfFoundLinks&quot; test</goals>
   <aggregatorStyleBuild>true</aggregatorStyleBuild>
   <incrementalBuild>false</incrementalBuild>
-  <ignoreUpstremChanges>false</ignoreUpstremChanges>
+  <ignoreUpstremChanges>true</ignoreUpstremChanges>
   <archivingDisabled>false</archivingDisabled>
   <siteArchivingDisabled>false</siteArchivingDisabled>
   <fingerprintingDisabled>false</fingerprintingDisabled>
