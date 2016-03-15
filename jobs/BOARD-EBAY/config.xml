@@ -36,7 +36,7 @@
         <hudson.model.StringParameterDefinition>
           <name>REPORT</name>
           <description></description>
-          <defaultValue>ebay+$BUILD_ID</defaultValue>
+          <defaultValue>ebay-$GENERALSEARCH</defaultValue>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
           <name>BRANCH</name>
@@ -122,6 +122,11 @@
           <description></description>
           <defaultValue>page</defaultValue>
         </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>EMAILTO</name>
+          <description></description>
+          <defaultValue>jaemzware@hotmail.com</defaultValue>
+        </hudson.model.StringParameterDefinition>
       </parameterDefinitions>
     </hudson.model.ParametersDefinitionProperty>
   </properties>
@@ -140,7 +145,9 @@
     </branches>
     <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
     <submoduleCfg class="list"/>
-    <extensions/>
+    <extensions>
+      <hudson.plugins.git.extensions.impl.CleanBeforeCheckout/>
+    </extensions>
   </scm>
   <canRoam>true</canRoam>
   <disabled>false</disabled>
@@ -152,7 +159,7 @@
     <groupId>com.jaemzware</groupId>
     <artifactId>AppTest</artifactId>
   </rootModule>
-  <goals>-Dinput=&quot;$STARTURL&quot; -DnumResultsRESTParm=&quot;$NUMRESULTSRESTPARM&quot; -DstartRESTParm=&quot;$STARTRESTPARM&quot; -DcontactButtonXpath=&quot;$CONTACTBUTTONXPATH&quot; -DcontactInfoAnchorXpaths=&quot;$CONTACTINFOANCHORXPATHS&quot; -DcontactInfoLiXpaths=&quot;$CONTACTINFOLIXPATHS&quot; -DnoScroll -Dreport=&quot;$REPORT&quot; -DbodyTextXpath=&quot;$BODYTEXTXPATH&quot; -DnextLinkXpath=&quot;$NEXTLINKXPATH&quot; -DlinksLoadedIndicatorXpath=&quot;$LINKSLOADEDINDICATORXPATH&quot; -DlinkXpath=&quot;$LINKXPATH&quot; -DimageXpath=&quot;$IMAGEXPATH&quot; -DtitleTextXpath=&quot;$TITLETEXTXPATH&quot; -DaString=&quot;$TARGETURL&quot; -Dbrowser=&quot;$BROWSER&quot; -DaHubPort=&quot;$HUBPORT&quot; -DaHubServer=&quot;$HUBSERVER&quot; -DaNumber=&quot;$MAXHITS&quot; -DwaitAfterPageLoadMilliSeconds=&quot;$WAITAFTERPAGELOADMILLISECONDS&quot; -Dtest=&quot;BoardScrub#BuildPageOfFoundLinks&quot; test</goals>
+  <goals>-DnoScreenShots -Dinput=&quot;$STARTURL&quot; -DnumResultsRESTParm=&quot;$NUMRESULTSRESTPARM&quot; -DstartRESTParm=&quot;$STARTRESTPARM&quot; -DcontactButtonXpath=&quot;$CONTACTBUTTONXPATH&quot; -DcontactInfoAnchorXpaths=&quot;$CONTACTINFOANCHORXPATHS&quot; -DcontactInfoLiXpaths=&quot;$CONTACTINFOLIXPATHS&quot; -DnoScroll -Dreport=&quot;$REPORT&quot; -DbodyTextXpath=&quot;$BODYTEXTXPATH&quot; -DnextLinkXpath=&quot;$NEXTLINKXPATH&quot; -DlinksLoadedIndicatorXpath=&quot;$LINKSLOADEDINDICATORXPATH&quot; -DlinkXpath=&quot;$LINKXPATH&quot; -DimageXpath=&quot;$IMAGEXPATH&quot; -DtitleTextXpath=&quot;$TITLETEXTXPATH&quot; -DaString=&quot;$TARGETURL&quot; -Dbrowser=&quot;$BROWSER&quot; -DaHubPort=&quot;$HUBPORT&quot; -DaHubServer=&quot;$HUBSERVER&quot; -DaNumber=&quot;$MAXHITS&quot; -DwaitAfterPageLoadMilliSeconds=&quot;$WAITAFTERPAGELOADMILLISECONDS&quot; -Dtest=&quot;BoardScrub#BuildPageOfFoundLinks&quot; test</goals>
   <aggregatorStyleBuild>true</aggregatorStyleBuild>
   <incrementalBuild>false</incrementalBuild>
   <ignoreUpstremChanges>true</ignoreUpstremChanges>
@@ -170,15 +177,17 @@
   <reporters/>
   <publishers>
     <hudson.plugins.emailext.ExtendedEmailPublisher plugin="email-ext@2.41.3">
-      <recipientList>$DEFAULT_RECIPIENTS</recipientList>
+      <recipientList>$EMAILTO</recipientList>
       <configuredTriggers>
         <hudson.plugins.emailext.plugins.trigger.SuccessTrigger>
           <email>
-            <recipientList>jaemzware@hotmail.com</recipientList>
+            <recipientList></recipientList>
             <subject>$PROJECT_DEFAULT_SUBJECT</subject>
             <body>$PROJECT_DEFAULT_CONTENT</body>
-            <recipientProviders/>
-            <attachmentsPattern>*.htm, *.jpg, *.png, *.gif, *.jpeg, *.JPEG, *.JPG</attachmentsPattern>
+            <recipientProviders>
+              <hudson.plugins.emailext.plugins.recipients.ListRecipientProvider/>
+            </recipientProviders>
+            <attachmentsPattern></attachmentsPattern>
             <attachBuildLog>false</attachBuildLog>
             <compressBuildLog>false</compressBuildLog>
             <replyTo>$PROJECT_DEFAULT_REPLYTO</replyTo>
@@ -186,9 +195,9 @@
           </email>
         </hudson.plugins.emailext.plugins.trigger.SuccessTrigger>
       </configuredTriggers>
-      <contentType>default</contentType>
-      <defaultSubject>$DEFAULT_SUBJECT</defaultSubject>
-      <defaultContent>$DEFAULT_CONTENT</defaultContent>
+      <contentType>text/html</contentType>
+      <defaultSubject>$REPORT</defaultSubject>
+      <defaultContent>${FILE,path=&quot;index$REPORT.htm&quot;}</defaultContent>
       <attachmentsPattern></attachmentsPattern>
       <presendScript>$DEFAULT_PRESEND_SCRIPT</presendScript>
       <attachBuildLog>false</attachBuildLog>

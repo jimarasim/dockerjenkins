@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <maven2-moduleset plugin="maven-plugin@2.12.1">
   <actions/>
-  <description>clean install test -Dtest=Scratch#VerifyLogos -DaHubServer=$HUBSERVER -DaHubPort=$HUBPORT -Dbrowser=CHROMEMAC -Dinput=$STARTURL -DaNumber=0 -Dreport=$REPORTNAME -Duserid=$LINKFILTER -DaString=&quot;$LOGOXPATH&quot; -DwaitAfterPageLoadMilliSeconds=0 -Dlogging</description>
+  <description></description>
   <keepDependencies>false</keepDependencies>
   <properties>
     <jenkins.model.BuildDiscarderProperty>
@@ -45,7 +45,7 @@
         <hudson.model.StringParameterDefinition>
           <name>REPORTNAME</name>
           <description></description>
-          <defaultValue>blackmarketskates$BUILD_ID-$BUILD_NUMBER</defaultValue>
+          <defaultValue>blackmarketskates-$BUILD_NUMBER</defaultValue>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
           <name>HUBSERVER</name>
@@ -76,6 +76,11 @@
           <name>WAITAFTERPAGELOADMILLISECONDS</name>
           <description></description>
           <defaultValue>0</defaultValue>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>EMAILTO</name>
+          <description></description>
+          <defaultValue>jaemzware@hotmail.com</defaultValue>
         </hudson.model.StringParameterDefinition>
       </parameterDefinitions>
     </hudson.model.ParametersDefinitionProperty>
@@ -125,15 +130,17 @@
   <reporters/>
   <publishers>
     <hudson.plugins.emailext.ExtendedEmailPublisher plugin="email-ext@2.41.3">
-      <recipientList>$DEFAULT_RECIPIENTS</recipientList>
+      <recipientList>$EMAILTO</recipientList>
       <configuredTriggers>
         <hudson.plugins.emailext.plugins.trigger.SuccessTrigger>
           <email>
-            <recipientList>jaemzware@hotmail.com</recipientList>
+            <recipientList></recipientList>
             <subject>$PROJECT_DEFAULT_SUBJECT</subject>
             <body>$PROJECT_DEFAULT_CONTENT</body>
-            <recipientProviders/>
-            <attachmentsPattern>*.htm, *.jpg, *.png, *.gif, *.jpeg, *.JPEG, *.JPG</attachmentsPattern>
+            <recipientProviders>
+              <hudson.plugins.emailext.plugins.recipients.ListRecipientProvider/>
+            </recipientProviders>
+            <attachmentsPattern></attachmentsPattern>
             <attachBuildLog>false</attachBuildLog>
             <compressBuildLog>false</compressBuildLog>
             <replyTo>$PROJECT_DEFAULT_REPLYTO</replyTo>
@@ -141,9 +148,9 @@
           </email>
         </hudson.plugins.emailext.plugins.trigger.SuccessTrigger>
       </configuredTriggers>
-      <contentType>default</contentType>
-      <defaultSubject>$DEFAULT_SUBJECT</defaultSubject>
-      <defaultContent>$DEFAULT_CONTENT</defaultContent>
+      <contentType>text/html</contentType>
+      <defaultSubject>$REPORTNAME</defaultSubject>
+      <defaultContent>${FILE,path=&quot;index.htm&quot;}</defaultContent>
       <attachmentsPattern></attachmentsPattern>
       <presendScript>$DEFAULT_PRESEND_SCRIPT</presendScript>
       <attachBuildLog>false</attachBuildLog>
