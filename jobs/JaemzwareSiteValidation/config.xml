@@ -12,7 +12,7 @@
         <artifactNumToKeep>-1</artifactNumToKeep>
       </strategy>
     </jenkins.model.BuildDiscarderProperty>
-    <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.17.1">
+    <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.18.1">
       <projectUrl>https://github.com/jimarasim/SeleniumCodeBase/</projectUrl>
       <displayName></displayName>
     </com.coravy.hudson.plugins.github.GithubProjectProperty>
@@ -87,7 +87,7 @@
     <groupId>com.jaemzware</groupId>
     <artifactId>SeleniumCodeBase</artifactId>
   </rootModule>
-  <goals>clean install test -Dtest=JaemzwareSiteValidation -Dbrowser=CHROME -DnoScreenShots -DaHubServer=$HUBSERVER -DaHubPort=$HUBPORT -Dbrowser=$BROWSER</goals>
+  <goals>test -Dtest=JaemzwareSiteValidation -Dbrowser=CHROME -DnoScreenShots -DaHubServer=$HUBSERVER -DaHubPort=$HUBPORT -Dbrowser=$BROWSER</goals>
   <aggregatorStyleBuild>true</aggregatorStyleBuild>
   <incrementalBuild>false</incrementalBuild>
   <ignoreUpstremChanges>true</ignoreUpstremChanges>
