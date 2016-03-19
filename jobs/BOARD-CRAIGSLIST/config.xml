@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <maven2-moduleset plugin="maven-plugin@2.12.1">
   <actions/>
-  <description></description>
+  <description>-DnoScreenShots -Dinput=&quot;$STARTURL&quot; -DnumResultsRESTParm=&quot;$NUMRESULTSRESTPARM&quot; -DstartRESTParm=&quot;$STARTRESTPARM&quot; -DcontactButtonXpath=&quot;$CONTACTBUTTONXPATH&quot; -DcontactInfoAnchorXpaths=&quot;$CONTACTINFOANCHORXPATHS&quot; -DcontactInfoLiXpaths=&quot;$CONTACTINFOLIXPATHS&quot; -DnoScroll -Dreport=&quot;$REPORT&quot; -DbodyTextXpath=&quot;$BODYTEXTXPATH&quot; -DnextLinkXpath=&quot;$NEXTLINKXPATH&quot; -DlinksLoadedIndicatorXpath=&quot;$LINKSLOADEDINDICATORXPATH&quot; -DlinkXpath=&quot;$LINKXPATH&quot; -DimageXpath=&quot;$IMAGEXPATH&quot; -DtitleTextXpath=&quot;$TITLETEXTXPATH&quot; -DaString=&quot;$TARGETURL&quot; -Dbrowser=&quot;$BROWSER&quot; -DaHubPort=&quot;$HUBPORT&quot; -DaHubServer=&quot;$HUBSERVER&quot; -DaNumber=&quot;$MAXHITS&quot; -DwaitAfterPageLoadMilliSeconds=&quot;$WAITAFTERPAGELOADMILLISECONDS&quot; -Dtest=&quot;BoardScrub#BuildPageOfFoundLinks&quot; test</description>
   <keepDependencies>false</keepDependencies>
   <properties>
     <jenkins.model.BuildDiscarderProperty>
@@ -215,7 +215,7 @@ homes with pets&lt;br /&gt;</description>
             <recipientProviders>
               <hudson.plugins.emailext.plugins.recipients.ListRecipientProvider/>
             </recipientProviders>
-            <attachmentsPattern></attachmentsPattern>
+            <attachmentsPattern>jquery-1.12.2.min</attachmentsPattern>
             <attachBuildLog>false</attachBuildLog>
             <compressBuildLog>false</compressBuildLog>
             <replyTo>$PROJECT_DEFAULT_REPLYTO</replyTo>
