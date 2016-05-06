@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <maven2-moduleset plugin="maven-plugin@2.12.1">
   <actions/>
-  <description>-DnoScreenShots -Dinput=&quot;$STARTURL&quot; -DdefaultImplicitWaitSeconds=$DEFAULTIMPLICITWAITSECONDS -DnumResultsRESTParm=&quot;$NUMRESULTSRESTPARM&quot; -DstartRESTParm=&quot;$STARTRESTPARM&quot; -DnoScroll -Dreport=&quot;$REPORT&quot; -DbodyTextXpath=&quot;$BODYTEXTXPATH&quot; -DnextLinkXpath=&quot;$NEXTLINKXPATH&quot; -DlinksLoadedIndicatorXpath=&quot;$LINKSLOADEDINDICATORXPATH&quot; -DlinkXpath=&quot;$LINKXPATH&quot; -DimageXpath=&quot;$IMAGEXPATH&quot; -DtitleTextXpath=&quot;$TITLETEXTXPATH&quot; -DaString=&quot;$TARGETURL&quot; -Dbrowser=&quot;$BROWSER&quot; -DaHubPort=&quot;$HUBPORT&quot; -DaHubServer=&quot;$HUBSERVER&quot; -DaNumber=&quot;$MAXHITS&quot; -DwaitAfterPageLoadMilliSeconds=&quot;$WAITAFTERPAGELOADMILLISECONDS&quot; -Dtest=&quot;BoardScrubREST#BuildPageOfFoundLinksViaRest&quot; test</description>
+  <description>-Dinput=&quot;$STARTURL&quot; -DdefaultImplicitWaitSeconds=$DEFAULTIMPLICITWAITSECONDS -Dreport=&quot;$REPORT&quot; -DlinksLoadedIndicatorXpath=&quot;$LINKSLOADEDINDICATORXPATH&quot; -DlinkXpath=&quot;$LINKXPATH&quot; -DaString=&quot;$TARGETURL&quot; -Dbrowser=&quot;$BROWSER&quot; -DaHubPort=&quot;$HUBPORT&quot; -DaHubServer=&quot;$HUBSERVER&quot; -DaNumber=&quot;$MAXHITS&quot; -DwaitAfterPageLoadMilliSeconds=&quot;$WAITAFTERPAGELOADMILLISECONDS&quot; -Dtest=&quot;BoardScrubREST#BuildPageOfFoundLinksViaRest&quot; test</description>
   <keepDependencies>false</keepDependencies>
   <properties>
     <jenkins.model.BuildDiscarderProperty>
@@ -18,37 +18,15 @@
     </com.sonyericsson.rebuild.RebuildSettings>
     <hudson.model.ParametersDefinitionProperty>
       <parameterDefinitions>
-        <hudson.model.ChoiceParameterDefinition>
-          <name>CITY</name>
-          <description></description>
-          <choices class="java.util.Arrays$ArrayList">
-            <a class="string-array">
-              <string>seattle</string>
-              <string>boise</string>
-            </a>
-          </choices>
-        </hudson.model.ChoiceParameterDefinition>
-        <hudson.model.ChoiceParameterDefinition>
-          <name>STARTURL</name>
-          <description>general&lt;br /&gt;
-computers&lt;br /&gt;
-homes with pets&lt;br /&gt;
-web jobs&lt;br /&gt;
-apartments max 700&lt;br /&gt;</description>
-          <choices class="java.util.Arrays$ArrayList">
-            <a class="string-array">
-              <string>http://$CITY.craigslist.org/search/sss?query=$GENERALSEARCH</string>
-              <string>http://$CITY.craigslist.org/search/sya?query=$GENERALSEARCH</string>
-              <string>http://$CITY.craigslist.org/search/apa?hasPic=1&amp;pets_cat=1&amp;pets_dog=1&amp;housing_type=6&amp;query=$GENERALSEARCH</string>
-              <string>https://$CITY.craigslist.org/search/web?employment_type=1&amp;employment_type=2&amp;employment_type=3</string>
-              <string>https://seattle.craigslist.org/search/apa?hasPic=1&amp;searchNearby=2&amp;nearbyArea=461&amp;max_price=700&amp;bedrooms=1&amp;bathrooms=1</string>
-            </a>
-          </choices>
-        </hudson.model.ChoiceParameterDefinition>
         <hudson.model.StringParameterDefinition>
-          <name>GENERALSEARCH</name>
-          <description></description>
-          <defaultValue>skateboard</defaultValue>
+          <name>STARTURL</name>
+          <description>first page to hit</description>
+          <defaultValue>http://jaemzware.com</defaultValue>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>TARGETURL</name>
+          <description>links to follow from starturl; results to collect data from</description>
+          <defaultValue>jaemzware.com</defaultValue>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
           <name>MAXHITS</name>
@@ -63,12 +41,7 @@ apartments max 700&lt;br /&gt;</description>
         <hudson.model.StringParameterDefinition>
           <name>REPORT</name>
           <description></description>
-          <defaultValue>craigslistREST-$GENERALSEARCH</defaultValue>
-        </hudson.model.StringParameterDefinition>
-        <hudson.model.StringParameterDefinition>
-          <name>TARGETURL</name>
-          <description>links to follow from starturl; results to collect data from</description>
-          <defaultValue>craigslist.org</defaultValue>
+          <defaultValue>boardrest</defaultValue>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
           <name>DEFAULTIMPLICITWAITSECONDS</name>
@@ -105,34 +78,14 @@ apartments max 700&lt;br /&gt;</description>
           <defaultValue>192.168.99.100</defaultValue>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
-          <name>BODYTEXTXPATH</name>
-          <description></description>
-          <defaultValue>//section[@id=&apos;postingbody&apos;]</defaultValue>
-        </hudson.model.StringParameterDefinition>
-        <hudson.model.StringParameterDefinition>
-          <name>NEXTLINKXPATH</name>
-          <description></description>
-          <defaultValue>//a[@title=&apos;next page&apos;]</defaultValue>
-        </hudson.model.StringParameterDefinition>
-        <hudson.model.StringParameterDefinition>
           <name>LINKSLOADEDINDICATORXPATH</name>
           <description></description>
-          <defaultValue>//input[@id=&apos;query&apos;]</defaultValue>
+          <defaultValue>//body</defaultValue>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
           <name>LINKXPATH</name>
           <description></description>
-          <defaultValue>//span[@class=&apos;pl&apos;]/a</defaultValue>
-        </hudson.model.StringParameterDefinition>
-        <hudson.model.StringParameterDefinition>
-          <name>IMAGEXPATH</name>
-          <description></description>
-          <defaultValue>//div[contains(@class,&apos;slide first&apos;)]/img</defaultValue>
-        </hudson.model.StringParameterDefinition>
-        <hudson.model.StringParameterDefinition>
-          <name>TITLETEXTXPATH</name>
-          <description></description>
-          <defaultValue>//h2[@class=&apos;postingtitle&apos;]</defaultValue>
+          <defaultValue>//a</defaultValue>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
           <name>HUBSERVER</name>
@@ -143,16 +96,6 @@ apartments max 700&lt;br /&gt;</description>
           <name>WAITAFTERPAGELOADMILLISECONDS</name>
           <description></description>
           <defaultValue>0</defaultValue>
-        </hudson.model.StringParameterDefinition>
-        <hudson.model.StringParameterDefinition>
-          <name>NUMRESULTSRESTPARM</name>
-          <description></description>
-          <defaultValue>num</defaultValue>
-        </hudson.model.StringParameterDefinition>
-        <hudson.model.StringParameterDefinition>
-          <name>STARTRESTPARM</name>
-          <description></description>
-          <defaultValue>start</defaultValue>
         </hudson.model.StringParameterDefinition>
       </parameterDefinitions>
     </hudson.model.ParametersDefinitionProperty>
@@ -183,7 +126,7 @@ apartments max 700&lt;br /&gt;</description>
     <groupId>com.jaemzware</groupId>
     <artifactId>AppTest</artifactId>
   </rootModule>
-  <goals>-DnoScreenShots -Dinput=&quot;$STARTURL&quot; -DdefaultImplicitWaitSeconds=$DEFAULTIMPLICITWAITSECONDS -DnumResultsRESTParm=&quot;$NUMRESULTSRESTPARM&quot; -DstartRESTParm=&quot;$STARTRESTPARM&quot; -DnoScroll -Dreport=&quot;$REPORT&quot; -DbodyTextXpath=&quot;$BODYTEXTXPATH&quot; -DnextLinkXpath=&quot;$NEXTLINKXPATH&quot; -DlinksLoadedIndicatorXpath=&quot;$LINKSLOADEDINDICATORXPATH&quot; -DlinkXpath=&quot;$LINKXPATH&quot; -DimageXpath=&quot;$IMAGEXPATH&quot; -DtitleTextXpath=&quot;$TITLETEXTXPATH&quot; -DaString=&quot;$TARGETURL&quot; -Dbrowser=&quot;$BROWSER&quot; -DaHubPort=&quot;$HUBPORT&quot; -DaHubServer=&quot;$HUBSERVER&quot; -DaNumber=&quot;$MAXHITS&quot; -DwaitAfterPageLoadMilliSeconds=&quot;$WAITAFTERPAGELOADMILLISECONDS&quot; -Dtest=&quot;BoardScrubREST#BuildPageOfFoundLinksViaRest&quot; test</goals>
+  <goals>-Dinput=&quot;$STARTURL&quot; -DdefaultImplicitWaitSeconds=$DEFAULTIMPLICITWAITSECONDS -Dreport=&quot;$REPORT&quot; -DlinksLoadedIndicatorXpath=&quot;$LINKSLOADEDINDICATORXPATH&quot; -DlinkXpath=&quot;$LINKXPATH&quot; -DaString=&quot;$TARGETURL&quot; -Dbrowser=&quot;$BROWSER&quot; -DaHubPort=&quot;$HUBPORT&quot; -DaHubServer=&quot;$HUBSERVER&quot; -DaNumber=&quot;$MAXHITS&quot; -DwaitAfterPageLoadMilliSeconds=&quot;$WAITAFTERPAGELOADMILLISECONDS&quot; -Dtest=&quot;BoardScrubREST#BuildPageOfFoundLinksViaRest&quot; test</goals>
   <aggregatorStyleBuild>true</aggregatorStyleBuild>
   <incrementalBuild>false</incrementalBuild>
   <ignoreUpstremChanges>true</ignoreUpstremChanges>
