@@ -10,13 +10,6 @@
 !jobs/*/*/
 !jobs/*/*/*
 !jobs/*/*/*/
-!plugins
-!plugins/*
-!plugins/*/
-!plugins/*/*
-!plugins/*/*/
-!plugins/*/*/*
-!plugins/*/*/*/
 !users
 !users/*
 !users/*/
