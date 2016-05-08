@@ -7,7 +7,7 @@
     <jenkins.model.BuildDiscarderProperty>
       <strategy class="hudson.tasks.LogRotator">
         <daysToKeep>-1</daysToKeep>
-        <numToKeep>1</numToKeep>
+        <numToKeep>10</numToKeep>
         <artifactDaysToKeep>-1</artifactDaysToKeep>
         <artifactNumToKeep>-1</artifactNumToKeep>
       </strategy>
@@ -30,25 +30,28 @@
         </hudson.model.ChoiceParameterDefinition>
         <hudson.model.ChoiceParameterDefinition>
           <name>STARTURL</name>
-          <description>general&lt;br /&gt;
+          <description>car 100-500 fair+&lt;br /&gt;
+general&lt;br /&gt;
 computers&lt;br /&gt;
 homes with pets&lt;br /&gt;
 web jobs&lt;br /&gt;
-apartments max 700&lt;br /&gt;</description>
+apartments&lt;br /&gt;
+</description>
           <choices class="java.util.Arrays$ArrayList">
             <a class="string-array">
+              <string>https://$CITY.craigslist.org/search/cta?query=$GENERALSEARCH&amp;sort=pricedsc&amp;hasPic=1&amp;searchNearby=2&amp;nearbyArea=217&amp;nearbyArea=471&amp;nearbyArea=466&amp;nearbyArea=461&amp;nearbyArea=177&amp;nearbyArea=325&amp;min_price=100&amp;max_price=500&amp;condition=10&amp;condition=20&amp;condition=30&amp;condition=40&amp;condition=50</string>
               <string>http://$CITY.craigslist.org/search/sss?query=$GENERALSEARCH</string>
               <string>http://$CITY.craigslist.org/search/sya?query=$GENERALSEARCH</string>
               <string>http://$CITY.craigslist.org/search/apa?hasPic=1&amp;pets_cat=1&amp;pets_dog=1&amp;housing_type=6&amp;query=$GENERALSEARCH</string>
-              <string>https://$CITY.craigslist.org/search/web?employment_type=1&amp;employment_type=2&amp;employment_type=3</string>
-              <string>https://seattle.craigslist.org/search/apa?hasPic=1&amp;searchNearby=2&amp;nearbyArea=461&amp;max_price=700&amp;bedrooms=1&amp;bathrooms=1</string>
+              <string>https://$CITY.craigslist.org/search/web?employment_type=1&amp;employment_type=2&amp;employment_type=3&amp;query=$GENERALSEARCH</string>
+              <string>https://$CITY.craigslist.org/search/apa?hasPic=1&amp;searchNearby=2&amp;nearbyArea=461&amp;max_price=1200&amp;bedrooms=3&amp;bathrooms=1&amp;query=$GENERALSEARCH</string>
             </a>
           </choices>
         </hudson.model.ChoiceParameterDefinition>
         <hudson.model.StringParameterDefinition>
           <name>GENERALSEARCH</name>
-          <description></description>
-          <defaultValue>skateboard</defaultValue>
+          <description>search term for the query, in any category of STARTURL</description>
+          <defaultValue></defaultValue>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
           <name>MAXHITS</name>
@@ -172,7 +175,7 @@ apartments max 700&lt;br /&gt;</description>
       </parameterDefinitions>
     </hudson.model.ParametersDefinitionProperty>
   </properties>
-  <scm class="hudson.plugins.git.GitSCM" plugin="git@2.4.3">
+  <scm class="hudson.plugins.git.GitSCM" plugin="git@2.4.4">
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
@@ -186,7 +189,11 @@ apartments max 700&lt;br /&gt;</description>
       </hudson.plugins.git.BranchSpec>
     </branches>
     <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+    <browser class="hudson.plugins.git.browser.AssemblaWeb">
+      <url></url>
+    </browser>
     <submoduleCfg class="list"/>
+    <extensions/>
   </scm>
   <canRoam>true</canRoam>
   <disabled>false</disabled>
@@ -215,7 +222,7 @@ apartments max 700&lt;br /&gt;</description>
   <globalSettings class="jenkins.mvn.DefaultGlobalSettingsProvider"/>
   <reporters/>
   <publishers>
-    <hudson.plugins.emailext.ExtendedEmailPublisher plugin="email-ext@2.41.3">
+    <hudson.plugins.emailext.ExtendedEmailPublisher plugin="email-ext@2.42">
       <recipientList>$EMAILTO</recipientList>
       <configuredTriggers>
         <hudson.plugins.emailext.plugins.trigger.SuccessTrigger>
@@ -254,6 +261,7 @@ apartments max 700&lt;br /&gt;</description>
       <defaultContent>${FILE,path=&quot;index$REPORT.htm&quot;}</defaultContent>
       <attachmentsPattern></attachmentsPattern>
       <presendScript>$DEFAULT_PRESEND_SCRIPT</presendScript>
+      <postsendScript></postsendScript>
       <attachBuildLog>false</attachBuildLog>
       <compressBuildLog>false</compressBuildLog>
       <replyTo>$DEFAULT_REPLYTO</replyTo>
