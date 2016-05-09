@@ -13,4 +13,5 @@
 !users
 !users/*
 !users/*/
+!sshdeployconfigsample
 .DS_Store
