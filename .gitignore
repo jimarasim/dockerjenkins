@@ -13,5 +13,5 @@
 !users
 !users/*
 !users/*/
-!sshdeployconfigsample
+!sshdeployconfigsample.pdf
 .DS_Store
