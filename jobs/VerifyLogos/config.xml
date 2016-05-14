@@ -7,12 +7,12 @@
     <jenkins.model.BuildDiscarderProperty>
       <strategy class="hudson.tasks.LogRotator">
         <daysToKeep>-1</daysToKeep>
-        <numToKeep>1</numToKeep>
+        <numToKeep>10</numToKeep>
         <artifactDaysToKeep>-1</artifactDaysToKeep>
         <artifactNumToKeep>-1</artifactNumToKeep>
       </strategy>
     </jenkins.model.BuildDiscarderProperty>
-    <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.17.1">
+    <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.19.0">
       <projectUrl>https://github.com/jimarasim/SeleniumCodeBase/</projectUrl>
       <displayName></displayName>
     </com.coravy.hudson.plugins.github.GithubProjectProperty>
@@ -43,9 +43,9 @@
           <defaultValue>//*[@id=&apos;masthead&apos;]/div/a[3]/img</defaultValue>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
-          <name>REPORTNAME</name>
+          <name>REPORT</name>
           <description></description>
-          <defaultValue>blackmarketskates-$BUILD_NUMBER</defaultValue>
+          <defaultValue>$JOB_NAME$BUILD_NUMBER</defaultValue>
         </hudson.model.StringParameterDefinition>
         <hudson.model.StringParameterDefinition>
           <name>HUBSERVER</name>
@@ -85,7 +85,7 @@
       </parameterDefinitions>
     </hudson.model.ParametersDefinitionProperty>
   </properties>
-  <scm class="hudson.plugins.git.GitSCM" plugin="git@2.4.2">
+  <scm class="hudson.plugins.git.GitSCM" plugin="git@2.4.4">
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
@@ -112,7 +112,7 @@
     <groupId>com.jaemzware</groupId>
     <artifactId>SeleniumCodeBase</artifactId>
   </rootModule>
-  <goals>clean install test -Dtest=Scratch#VerifyLogos -DaHubServer=$HUBSERVER -DaHubPort=$HUBPORT -Dbrowser=$BROWSER -Dinput=$STARTURL -DaNumber=$MAXHITS -Dreport=$REPORTNAME -Duserid=$LINKFILTER -DaString=&quot;$LOGOXPATH&quot; -DwaitAfterPageLoadMilliSeconds=$WAITAFTERPAGELOADMILLISECONDS -Dlogging</goals>
+  <goals>clean install test -Dtest=Scratch#VerifyLogos -DaHubServer=$HUBSERVER -DaHubPort=$HUBPORT -Dbrowser=$BROWSER -Dinput=$STARTURL -DaNumber=$MAXHITS -Dreport=$REPORT -Duserid=$LINKFILTER -DaString=&quot;$LOGOXPATH&quot; -DwaitAfterPageLoadMilliSeconds=$WAITAFTERPAGELOADMILLISECONDS -Dlogging</goals>
   <aggregatorStyleBuild>true</aggregatorStyleBuild>
   <incrementalBuild>false</incrementalBuild>
   <ignoreUpstremChanges>true</ignoreUpstremChanges>
@@ -129,7 +129,7 @@
   <globalSettings class="jenkins.mvn.DefaultGlobalSettingsProvider"/>
   <reporters/>
   <publishers>
-    <hudson.plugins.emailext.ExtendedEmailPublisher plugin="email-ext@2.41.3">
+    <hudson.plugins.emailext.ExtendedEmailPublisher plugin="email-ext@2.42">
       <recipientList>$EMAILTO</recipientList>
       <configuredTriggers>
         <hudson.plugins.emailext.plugins.trigger.SuccessTrigger>
@@ -149,16 +149,51 @@
         </hudson.plugins.emailext.plugins.trigger.SuccessTrigger>
       </configuredTriggers>
       <contentType>text/html</contentType>
-      <defaultSubject>$REPORTNAME</defaultSubject>
-      <defaultContent>${FILE,path=&quot;index.htm&quot;}</defaultContent>
+      <defaultSubject>$REPORT</defaultSubject>
+      <defaultContent>${FILE,path=&quot;index$REPORT.htm&quot;}</defaultContent>
       <attachmentsPattern></attachmentsPattern>
       <presendScript>$DEFAULT_PRESEND_SCRIPT</presendScript>
+      <postsendScript></postsendScript>
       <attachBuildLog>false</attachBuildLog>
       <compressBuildLog>false</compressBuildLog>
       <replyTo>$DEFAULT_REPLYTO</replyTo>
       <saveOutput>false</saveOutput>
       <disabled>false</disabled>
     </hudson.plugins.emailext.ExtendedEmailPublisher>
+    <jenkins.plugins.publish__over__ssh.BapSshPublisherPlugin plugin="publish-over-ssh@1.14">
+      <consolePrefix>SSH: </consolePrefix>
+      <delegate>
+        <publishers>
+          <jenkins.plugins.publish__over__ssh.BapSshPublisher>
+            <configName>seattlerules</configName>
+            <verbose>false</verbose>
+            <transfers>
+              <jenkins.plugins.publish__over__ssh.BapSshTransfer>
+                <remoteDirectory></remoteDirectory>
+                <sourceFiles>*.htm, *.png</sourceFiles>
+                <excludes></excludes>
+                <removePrefix></removePrefix>
+                <remoteDirectorySDF>false</remoteDirectorySDF>
+                <flatten>false</flatten>
+                <cleanRemote>false</cleanRemote>
+                <noDefaultExcludes>false</noDefaultExcludes>
+                <makeEmptyDirs>false</makeEmptyDirs>
+                <patternSeparator>[, ]+</patternSeparator>
+                <execCommand></execCommand>
+                <execTimeout>120000</execTimeout>
+                <usePty>false</usePty>
+              </jenkins.plugins.publish__over__ssh.BapSshTransfer>
+            </transfers>
+            <useWorkspaceInPromotion>false</useWorkspaceInPromotion>
+            <usePromotionTimestamp>false</usePromotionTimestamp>
+          </jenkins.plugins.publish__over__ssh.BapSshPublisher>
+        </publishers>
+        <continueOnError>false</continueOnError>
+        <failOnError>false</failOnError>
+        <alwaysPublishFromMaster>false</alwaysPublishFromMaster>
+        <hostConfigurationAccess class="jenkins.plugins.publish_over_ssh.BapSshPublisherPlugin" reference="../.."/>
+      </delegate>
+    </jenkins.plugins.publish__over__ssh.BapSshPublisherPlugin>
   </publishers>
   <buildWrappers/>
   <prebuilders/>
