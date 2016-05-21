@@ -1,4 +1,12 @@
+USER
+sk8creteordie
+Sk8Omlb
+
+jim
+jim
+
+PLUGINS REQUIRED
 Email Ext
 github
-node.js
+nodejs
 publish over ssh
