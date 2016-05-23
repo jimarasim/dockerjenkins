@@ -15,3 +15,8 @@
 !users/*/
 !sshdeployconfigsample.pdf
 .DS_Store
+!FULLBACKUP
+!FULLBACKUP/*
+!FULLBACKUP/*/*
+!FULLBACKUP/*/*/*
+!FULLBACKUP/*/*/*
