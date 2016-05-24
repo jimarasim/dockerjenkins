@@ -87,7 +87,7 @@
     <groupId>com.jaemzware</groupId>
     <artifactId>SeleniumCodeBase</artifactId>
   </rootModule>
-  <goals>test -Dtest=JaemzwareSiteValidation -Dbrowser=CHROME -DaHubServer=$HUBSERVER -DaHubPort=$HUBPORT -Dbrowser=$BROWSER</goals>
+  <goals>test -Dtest=JaemzwareSiteValidation -DaHubServer=$HUBSERVER -DaHubPort=$HUBPORT -Dbrowser=$BROWSER</goals>
   <aggregatorStyleBuild>true</aggregatorStyleBuild>
   <incrementalBuild>false</incrementalBuild>
   <ignoreUpstremChanges>true</ignoreUpstremChanges>
