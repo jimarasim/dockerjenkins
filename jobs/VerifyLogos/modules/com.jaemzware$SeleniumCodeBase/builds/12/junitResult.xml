@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<result plugin="junit@1.13">
+  <suites>
+    <suite>
+      <file>/var/jenkins_home/workspace/VerifyLogos/target/surefire-reports/TEST-com.jaemzware.seleniumcodebase.Scratch.xml</file>
+      <name>com.jaemzware.seleniumcodebase.Scratch</name>
+      <duration>84.767</duration>
+      <time>84.767</time>
+      <cases>
+        <case>
+          <duration>84.414</duration>
+          <className>com.jaemzware.seleniumcodebase.Scratch</className>
+          <testName>VerifyLogos</testName>
+          <skipped>false</skipped>
+          <failedSince>0</failedSince>
+        </case>
+      </cases>
+    </suite>
+  </suites>
+  <duration>84.767</duration>
+  <keepLongStdio>false</keepLongStdio>
+</result>

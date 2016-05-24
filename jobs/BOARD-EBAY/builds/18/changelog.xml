@@ -1,0 +1,11 @@
+commit 1000e345001978175ce9a699274975c0391b17be
+tree 172e617c68f16cff90981ce8e2a185c561d2e82a
+parent b3714de1300f805f496c001747b5e0634ff97cc6
+author JAMES ARASIM <jaemzware@hotmail.com> 2016-04-15 13:09:12 -0700
+committer JAMES ARASIM <jaemzware@hotmail.com> 2016-04-15 13:09:12 -0700
+
+    took out random wait
+
+
+
+:100644 100644 ec75344e446424c2ca71be76b6f6c8b35234a22e 6affceff9176e570e53f44293ba935279a053752 M	src/test/java/com/jaemzware/board/BoardScrub.java

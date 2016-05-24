@@ -1,0 +1,79 @@
+commit 0391cf8ff1e1504b84b64cc0a10eab1990d54370
+tree fa24187899adf760884713e64bda21b05176d63e
+parent e2f634f56e201e49d8a628bb6366f5b6a94c3c81
+author JAMES ARASIM <jaemzware@hotmail.com> 2016-05-06 10:13:17 -0700
+committer JAMES ARASIM <jaemzware@hotmail.com> 2016-05-06 10:13:17 -0700
+
+    make report more defined
+
+
+
+:100644 100644 1758ce7c3a787cfdd24ceb72f01db38f35e52f72 36957f2e1762f5be292c7b56a969576a9b2dfefd M	src/test/java/com/jaemzware/board/BoardScrubREST.java
+commit e2f634f56e201e49d8a628bb6366f5b6a94c3c81
+tree 87c43f29979dffc909848c3ad9a887e2ad2153bb
+parent e032f36c7f2bf7bc171bf823dc4441e7a669c5d9
+author JAMES ARASIM <jaemzware@hotmail.com> 2016-05-06 10:06:31 -0700
+committer JAMES ARASIM <jaemzware@hotmail.com> 2016-05-06 10:06:31 -0700
+
+    added some console output
+
+
+
+:100644 100644 ab975335a0ea5ff0cf58abae8b57f6ee2070d086 1758ce7c3a787cfdd24ceb72f01db38f35e52f72 M	src/test/java/com/jaemzware/board/BoardScrubREST.java
+commit e032f36c7f2bf7bc171bf823dc4441e7a669c5d9
+tree 0205a2591925c2195d9212f5d84031870829afdb
+parent 1000e345001978175ce9a699274975c0391b17be
+author JAMES ARASIM <jaemzware@hotmail.com> 2016-05-06 10:02:59 -0700
+committer JAMES ARASIM <jaemzware@hotmail.com> 2016-05-06 10:02:59 -0700
+
+    omit mailto links and javascript links
+
+
+
+:100644 100644 80815e4fac788855191ad3ac171f14c0a89b45b7 ab975335a0ea5ff0cf58abae8b57f6ee2070d086 M	src/test/java/com/jaemzware/board/BoardScrubREST.java
+commit 1000e345001978175ce9a699274975c0391b17be
+tree 172e617c68f16cff90981ce8e2a185c561d2e82a
+parent b3714de1300f805f496c001747b5e0634ff97cc6
+author JAMES ARASIM <jaemzware@hotmail.com> 2016-04-15 13:09:12 -0700
+committer JAMES ARASIM <jaemzware@hotmail.com> 2016-04-15 13:09:12 -0700
+
+    took out random wait
+
+
+
+:100644 100644 ec75344e446424c2ca71be76b6f6c8b35234a22e 6affceff9176e570e53f44293ba935279a053752 M	src/test/java/com/jaemzware/board/BoardScrub.java
+commit b3714de1300f805f496c001747b5e0634ff97cc6
+tree 43bfb2107b214eb2bca0a3b7acb4165123ea2e21
+parent 600a5ad1985990d3442b9bfcfe2b44b58988a2c0
+author JAMES ARASIM <jaemzware@hotmail.com> 2016-04-11 10:13:12 -0700
+committer JAMES ARASIM <jaemzware@hotmail.com> 2016-04-11 10:13:12 -0700
+
+    added href to rest report
+
+
+
+:100755 100755 38b96f923d5a0dbc5bd24ca3ac3bfd5eae9a3aa6 d1ffe4f71e12b6846f20c054f84320d2c82a26cb M	RESTcraigslist.sh
+:100644 100644 b2ef165cc7030f8a6d280ae9ae172c8aed321c48 80815e4fac788855191ad3ac171f14c0a89b45b7 M	src/test/java/com/jaemzware/board/BoardScrubREST.java
+commit 600a5ad1985990d3442b9bfcfe2b44b58988a2c0
+tree 949b5f0ce3f6a27a84b28ca906c52d3af3b934e4
+parent bfb53e6c64e9e4daf877a6d5f1eb7522202a5e80
+author JAMES ARASIM <jaemzware@hotmail.com> 2016-04-11 01:42:33 -0700
+committer JAMES ARASIM <jaemzware@hotmail.com> 2016-04-11 01:42:33 -0700
+
+    updated name of report
+
+
+
+:100644 100644 a2db6a47f02f14893df056202b35f7ac897dbc28 b2ef165cc7030f8a6d280ae9ae172c8aed321c48 M	src/test/java/com/jaemzware/board/BoardScrubREST.java
+commit 104fd09a169ed5da5987b2a0fb5f29091b4dc094
+tree 44643212f203f38aa8ad2305aca9d1cc6a79f53d
+parent 3946f7d6afb97b15874b2b29111895b12c6c7a86
+author jimarasim <jaemzware@hotmail.com> 2016-04-08 10:57:48 -0700
+committer jimarasim <jaemzware@hotmail.com> 2016-04-08 10:57:48 -0700
+
+    some board update
+
+
+
+:100755 100755 df4ded11897a272db44e54dbcc86b58e73c8ddbd 3d81b5032621349f46ef21981e9ecbb414c2bd70 M	tnaboard.sh
+:000000 100755 0000000000000000000000000000000000000000 d9259d0adb064313a0cdba644de2b33ff957e250 A	tnaboardbellevue.sh

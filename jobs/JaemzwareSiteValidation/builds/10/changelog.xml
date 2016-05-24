@@ -1,0 +1,17 @@
+commit c2efd09011dcaaa7ed30d4f8f2bc9556ba563a10
+tree 0bb8855476e66c95c99fed856f22afa6c5db949e
+parent ae91d10c58dad92f5f5110650a838b55fd6489a6
+author JAMES ARASIM <jaemzware@hotmail.com> 2016-05-23 10:44:21 -0600
+committer JAMES ARASIM <jaemzware@hotmail.com> 2016-05-23 10:44:21 -0600
+
+    added skatecreteordie page object
+
+
+
+:100644 100644 ee35aec0590019a3f2a2dff0a3854efcf5e9e3f2 5e45f88f0c531d0efef1fa0d5dccd534cf503db9 M	.idea/workspace.xml
+:000000 100755 0000000000000000000000000000000000000000 df8ef51618a2e754a81059d68e88510eefa831bd A	SeleniumGrid/FIREFOXMAC_192.168.99.100.sh
+:100755 100755 d94f32a702c94530eed499fde8c7b1cbddb5ecb1 93aa9a350347c5e6e52130e10ed876e0e22487b8 M	nogridjaemzware.sh
+:000000 100755 0000000000000000000000000000000000000000 d94f32a702c94530eed499fde8c7b1cbddb5ecb1 A	nogridskatecreteordiechat.sh
+:100644 100644 4b432dff9db02b6d7c5f1eff77fe58e1924cd27d fb1052fa608b2eaa8221d4565e19233e3db9534e M	src/main/java/com/jaemzware/seleniumcodebase/CodeBase.java
+:100644 100644 4eaa9df244d5b2cfb6434738a4aebf487cbaa28a e270c65a2456f2eacd3e72828658ff8b8c62bcf2 M	src/test/java/com/jaemzware/seleniumcodebase/JaemzwareSiteValidation.java
+:000000 100644 0000000000000000000000000000000000000000 12b31baf20bc101970cb430f3844cea873a7dd41 A	src/test/java/com/jaemzware/seleniumcodebase/SkateCreteOrDiePage.java

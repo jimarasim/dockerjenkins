@@ -1,0 +1,117 @@
+Started by user [8mha:AAAAnx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyeEgZh/dLi1CL94myL5KLUktT8opTMVABHz0+NyAAAAA==[0mJAMES ARASIM
+Building in workspace /var/jenkins_home/jobs/SeleniumGrid/workspace
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/jimarasim/SeleniumCodeBase.git # timeout=10
+Fetching upstream changes from https://github.com/jimarasim/SeleniumCodeBase.git
+ > git --version # timeout=10
+using .gitcredentials to set credentials
+ > git config --local credential.username jimarasim # timeout=10
+ > git config --local credential.helper store --file=/tmp/git5083172493449044912.credentials # timeout=10
+ > git -c core.askpass=true fetch --tags --progress https://github.com/jimarasim/SeleniumCodeBase.git +refs/heads/*:refs/remotes/origin/*
+ > git config --local --remove-section credential # timeout=10
+ > git rev-parse refs/remotes/origin/develop^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/develop^{commit} # timeout=10
+Checking out Revision ae91d10c58dad92f5f5110650a838b55fd6489a6 (refs/remotes/origin/develop)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f ae91d10c58dad92f5f5110650a838b55fd6489a6
+ > git rev-list 42b6a06253950b843ba7a00de8cf859517a0f6cc # timeout=10
+[workspace] $ /bin/sh -xe /tmp/hudson1539103314134969245.sh
++ cd SeleniumGrid
++ java -jar selenium-server-standalone-2.52.0.jar -role hub -port 4444
+17:28:20.579 INFO - Launching Selenium Grid hub
+2016-05-21 17:28:22.940:INFO::main: Logging initialized @3455ms
+17:28:23.002 INFO - Will listen on 4444
+17:28:23.160 INFO - Will listen on 4444
+2016-05-21 17:28:23.168:INFO:osjs.Server:main: jetty-9.2.z-SNAPSHOT
+2016-05-21 17:28:23.256:INFO:osjsh.ContextHandler:main: Started o.s.j.s.ServletContextHandler@74a10858{/,null,AVAILABLE}
+2016-05-21 17:28:23.415:INFO:osjs.ServerConnector:main: Started ServerConnector@30d0cf44{HTTP/1.1}{0.0.0.0:4444}
+2016-05-21 17:28:23.416:INFO:osjs.Server:main: Started @3931ms
+17:28:23.419 INFO - Nodes should register to http://172.17.0.2:4444/grid/register/
+17:28:23.419 INFO - Selenium Grid hub is up and running
+17:29:21.963 INFO - Registered a node http://192.168.99.1:5561
+17:33:48.102 INFO - Got a request to create a new session: Capabilities [{acceptSslCerts=true, browserName=chrome, version=, platform=MAC}]
+17:33:48.103 INFO - Available nodes: [http://192.168.99.1:5561]
+17:33:48.103 INFO - Trying to create a new session on node http://192.168.99.1:5561
+17:33:48.104 INFO - Trying to create a new session on test slot {seleniumProtocol=WebDriver, acceptSslCerts=true, browserName=chrome, maxInstances=5, platform=MAC}
+17:33:55.301 INFO - Got a request to create a new session: Capabilities [{acceptSslCerts=true, browserName=chrome, version=, platform=MAC}]
+17:33:55.303 INFO - Available nodes: [http://192.168.99.1:5561]
+17:33:55.304 INFO - Trying to create a new session on node http://192.168.99.1:5561
+17:33:55.306 INFO - Trying to create a new session on test slot {seleniumProtocol=WebDriver, acceptSslCerts=true, browserName=chrome, maxInstances=5, platform=MAC}
+17:34:09.200 INFO - Got a request to create a new session: Capabilities [{acceptSslCerts=true, browserName=chrome, version=, platform=MAC}]
+17:34:09.202 INFO - Available nodes: [http://192.168.99.1:5561]
+17:34:09.202 INFO - Trying to create a new session on node http://192.168.99.1:5561
+17:34:09.203 INFO - Trying to create a new session on test slot {seleniumProtocol=WebDriver, acceptSslCerts=true, browserName=chrome, maxInstances=5, platform=MAC}
+17:34:15.265 INFO - Got a request to create a new session: Capabilities [{acceptSslCerts=true, browserName=chrome, version=, platform=MAC}]
+17:34:15.266 INFO - Available nodes: [http://192.168.99.1:5561]
+17:34:15.266 INFO - Trying to create a new session on node http://192.168.99.1:5561
+17:34:15.266 INFO - Trying to create a new session on test slot {seleniumProtocol=WebDriver, acceptSslCerts=true, browserName=chrome, maxInstances=5, platform=MAC}
+17:34:21.431 INFO - Got a request to create a new session: Capabilities [{acceptSslCerts=true, browserName=chrome, version=, platform=MAC}]
+17:34:21.434 INFO - Available nodes: [http://192.168.99.1:5561]
+17:34:21.434 INFO - Trying to create a new session on node http://192.168.99.1:5561
+17:34:21.436 INFO - Trying to create a new session on test slot {seleniumProtocol=WebDriver, acceptSslCerts=true, browserName=chrome, maxInstances=5, platform=MAC}
+17:34:24.523 INFO - Got a request to create a new session: Capabilities [{acceptSslCerts=true, browserName=chrome, version=, platform=MAC}]
+17:34:24.523 INFO - Available nodes: [http://192.168.99.1:5561]
+17:34:24.523 INFO - Trying to create a new session on node http://192.168.99.1:5561
+17:34:24.523 INFO - Trying to create a new session on test slot {seleniumProtocol=WebDriver, acceptSslCerts=true, browserName=chrome, maxInstances=5, platform=MAC}
+17:34:29.062 INFO - Got a request to create a new session: Capabilities [{acceptSslCerts=true, browserName=chrome, version=, platform=MAC}]
+17:34:29.063 INFO - Available nodes: [http://192.168.99.1:5561]
+17:34:29.064 INFO - Trying to create a new session on node http://192.168.99.1:5561
+17:34:29.066 INFO - Trying to create a new session on test slot {seleniumProtocol=WebDriver, acceptSslCerts=true, browserName=chrome, maxInstances=5, platform=MAC}
+17:34:33.017 INFO - Got a request to create a new session: Capabilities [{acceptSslCerts=true, browserName=chrome, version=, platform=MAC}]
+17:34:33.019 INFO - Available nodes: [http://192.168.99.1:5561]
+17:34:33.019 INFO - Trying to create a new session on node http://192.168.99.1:5561
+17:34:33.019 INFO - Trying to create a new session on test slot {seleniumProtocol=WebDriver, acceptSslCerts=true, browserName=chrome, maxInstances=5, platform=MAC}
+17:34:39.190 INFO - Got a request to create a new session: Capabilities [{acceptSslCerts=true, browserName=chrome, version=, platform=MAC}]
+17:34:39.191 INFO - Available nodes: [http://192.168.99.1:5561]
+17:34:39.191 INFO - Trying to create a new session on node http://192.168.99.1:5561
+17:34:39.191 INFO - Trying to create a new session on test slot {seleniumProtocol=WebDriver, acceptSslCerts=true, browserName=chrome, maxInstances=5, platform=MAC}
+17:34:45.177 INFO - Got a request to create a new session: Capabilities [{acceptSslCerts=true, browserName=chrome, version=, platform=MAC}]
+17:34:45.179 INFO - Available nodes: [http://192.168.99.1:5561]
+17:34:45.179 INFO - Trying to create a new session on node http://192.168.99.1:5561
+17:34:45.179 INFO - Trying to create a new session on test slot {seleniumProtocol=WebDriver, acceptSslCerts=true, browserName=chrome, maxInstances=5, platform=MAC}
+17:35:19.967 INFO - Registered a node http://192.168.99.1:5561
+17:35:19.968 WARN - Cleaning up stale test sessions on the unregistered node http://192.168.99.1:5561
+17:35:58.180 INFO - Got a request to create a new session: Capabilities [{acceptSslCerts=true, browserName=chrome, version=, platform=MAC}]
+17:35:58.181 INFO - Available nodes: [http://192.168.99.1:5561]
+17:35:58.181 INFO - Trying to create a new session on node http://192.168.99.1:5561
+17:35:58.181 INFO - Trying to create a new session on test slot {seleniumProtocol=WebDriver, acceptSslCerts=true, browserName=chrome, maxInstances=5, platform=MAC}
+17:36:03.097 INFO - Got a request to create a new session: Capabilities [{acceptSslCerts=true, browserName=chrome, version=, platform=MAC}]
+17:36:03.099 INFO - Available nodes: [http://192.168.99.1:5561]
+17:36:03.099 INFO - Trying to create a new session on node http://192.168.99.1:5561
+17:36:03.099 INFO - Trying to create a new session on test slot {seleniumProtocol=WebDriver, acceptSslCerts=true, browserName=chrome, maxInstances=5, platform=MAC}
+17:36:17.538 INFO - Got a request to create a new session: Capabilities [{acceptSslCerts=true, browserName=chrome, version=, platform=MAC}]
+17:36:17.539 INFO - Available nodes: [http://192.168.99.1:5561]
+17:36:17.539 INFO - Trying to create a new session on node http://192.168.99.1:5561
+17:36:17.540 INFO - Trying to create a new session on test slot {seleniumProtocol=WebDriver, acceptSslCerts=true, browserName=chrome, maxInstances=5, platform=MAC}
+17:36:23.592 INFO - Got a request to create a new session: Capabilities [{acceptSslCerts=true, browserName=chrome, version=, platform=MAC}]
+17:36:23.592 INFO - Available nodes: [http://192.168.99.1:5561]
+17:36:23.592 INFO - Trying to create a new session on node http://192.168.99.1:5561
+17:36:23.592 INFO - Trying to create a new session on test slot {seleniumProtocol=WebDriver, acceptSslCerts=true, browserName=chrome, maxInstances=5, platform=MAC}
+17:36:28.975 INFO - Got a request to create a new session: Capabilities [{acceptSslCerts=true, browserName=chrome, version=, platform=MAC}]
+17:36:28.975 INFO - Available nodes: [http://192.168.99.1:5561]
+17:36:28.975 INFO - Trying to create a new session on node http://192.168.99.1:5561
+17:36:28.976 INFO - Trying to create a new session on test slot {seleniumProtocol=WebDriver, acceptSslCerts=true, browserName=chrome, maxInstances=5, platform=MAC}
+17:36:32.090 INFO - Got a request to create a new session: Capabilities [{acceptSslCerts=true, browserName=chrome, version=, platform=MAC}]
+17:36:32.091 INFO - Available nodes: [http://192.168.99.1:5561]
+17:36:32.091 INFO - Trying to create a new session on node http://192.168.99.1:5561
+17:36:32.091 INFO - Trying to create a new session on test slot {seleniumProtocol=WebDriver, acceptSslCerts=true, browserName=chrome, maxInstances=5, platform=MAC}
+17:36:36.491 INFO - Got a request to create a new session: Capabilities [{acceptSslCerts=true, browserName=chrome, version=, platform=MAC}]
+17:36:36.491 INFO - Available nodes: [http://192.168.99.1:5561]
+17:36:36.491 INFO - Trying to create a new session on node http://192.168.99.1:5561
+17:36:36.491 INFO - Trying to create a new session on test slot {seleniumProtocol=WebDriver, acceptSslCerts=true, browserName=chrome, maxInstances=5, platform=MAC}
+17:36:40.451 INFO - Got a request to create a new session: Capabilities [{acceptSslCerts=true, browserName=chrome, version=, platform=MAC}]
+17:36:40.452 INFO - Available nodes: [http://192.168.99.1:5561]
+17:36:40.452 INFO - Trying to create a new session on node http://192.168.99.1:5561
+17:36:40.452 INFO - Trying to create a new session on test slot {seleniumProtocol=WebDriver, acceptSslCerts=true, browserName=chrome, maxInstances=5, platform=MAC}
+17:36:45.949 INFO - Got a request to create a new session: Capabilities [{acceptSslCerts=true, browserName=chrome, version=, platform=MAC}]
+17:36:45.949 INFO - Available nodes: [http://192.168.99.1:5561]
+17:36:45.949 INFO - Trying to create a new session on node http://192.168.99.1:5561
+17:36:45.950 INFO - Trying to create a new session on test slot {seleniumProtocol=WebDriver, acceptSslCerts=true, browserName=chrome, maxInstances=5, platform=MAC}
+17:36:50.580 INFO - Got a request to create a new session: Capabilities [{acceptSslCerts=true, browserName=chrome, version=, platform=MAC}]
+17:36:50.582 INFO - Available nodes: [http://192.168.99.1:5561]
+17:36:50.582 INFO - Trying to create a new session on node http://192.168.99.1:5561
+17:36:50.582 INFO - Trying to create a new session on test slot {seleniumProtocol=WebDriver, acceptSslCerts=true, browserName=chrome, maxInstances=5, platform=MAC}
+Build was aborted
+Aborted by [8mha:AAAAnx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyeEgZh/dLi1CL94myL5KLUktT8opTMVABHz0+NyAAAAA==[0mJAMES ARASIM
+Finished: ABORTED

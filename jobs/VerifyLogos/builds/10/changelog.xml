@@ -1,0 +1,11 @@
+commit 42b6a06253950b843ba7a00de8cf859517a0f6cc
+tree f8ef567f4e2904426a5383a6c50f5eecce34b0a4
+parent a1ebc6abb98d3ad742e455086744b84ef08b3074
+author JAMES ARASIM <jaemzware@hotmail.com> 2016-05-09 17:39:31 -0700
+committer JAMES ARASIM <jaemzware@hotmail.com> 2016-05-09 17:39:31 -0700
+
+    added report parameter to report name
+
+
+
+:100644 100644 939055c248b4ce0feaaa866eb64745ca01c25396 108cf19efe779621ba61c6affc493612cb8536e1 M	src/test/java/com/jaemzware/seleniumcodebase/Scratch.java

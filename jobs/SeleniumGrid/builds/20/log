@@ -1,0 +1,37 @@
+Started by user [8mha:AAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzOEgYu/dLi1CL9vNKcHACFIKlWvwAAAA==[0manonymous
+Building on master in workspace /var/jenkins_home/workspace/SeleniumGrid
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/jimarasim/SeleniumCodeBase.git # timeout=10
+Fetching upstream changes from https://github.com/jimarasim/SeleniumCodeBase.git
+ > git --version # timeout=10
+using .gitcredentials to set credentials
+ > git config --local credential.username jimarasim # timeout=10
+ > git config --local credential.helper store --file=/tmp/git2820747653472039798.credentials # timeout=10
+ > git -c core.askpass=true fetch --tags --progress https://github.com/jimarasim/SeleniumCodeBase.git +refs/heads/*:refs/remotes/origin/*
+ > git config --local --remove-section credential # timeout=10
+ > git rev-parse refs/remotes/origin/develop^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/develop^{commit} # timeout=10
+Checking out Revision fab1184a2f1283993b4279be3e0dfbb09fc0f024 (refs/remotes/origin/develop)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f fab1184a2f1283993b4279be3e0dfbb09fc0f024
+ > git rev-list fdf31b868287082cbc2695a69ab1abbd352b8aa3 # timeout=10
+[SeleniumGrid] $ /bin/sh -xe /tmp/hudson5527763569913172349.sh
++ cd SeleniumGrid
++ java -jar selenium-server-standalone-2.52.0.jar -role hub -port 4444
+07:03:23.788 INFO - Launching Selenium Grid hub
+2016-03-15 07:03:24.917:INFO::main: Logging initialized @1357ms
+07:03:24.964 INFO - Will listen on 4444
+07:03:25.074 INFO - Will listen on 4444
+2016-03-15 07:03:25.078:INFO:osjs.Server:main: jetty-9.2.z-SNAPSHOT
+2016-03-15 07:03:25.136:INFO:osjsh.ContextHandler:main: Started o.s.j.s.ServletContextHandler@401e7803{/,null,AVAILABLE}
+2016-03-15 07:03:25.160:INFO:osjs.ServerConnector:main: Started ServerConnector@40cfb449{HTTP/1.1}{0.0.0.0:4444}
+2016-03-15 07:03:25.160:INFO:osjs.Server:main: Started @1601ms
+07:03:25.161 INFO - Nodes should register to http://172.17.0.2:4444/grid/register/
+07:03:25.161 INFO - Selenium Grid hub is up and running
+07:03:42.466 INFO - Registered a node http://192.168.99.1:5561
+07:05:02.585 INFO - Got a request to create a new session: Capabilities [{acceptSslCerts=true, browserName=chrome, version=, platform=MAC}]
+07:05:02.586 INFO - Available nodes: [http://192.168.99.1:5561]
+07:05:02.586 INFO - Trying to create a new session on node http://192.168.99.1:5561
+07:05:02.587 INFO - Trying to create a new session on test slot {seleniumProtocol=WebDriver, acceptSslCerts=true, browserName=chrome, maxInstances=5, platform=MAC}
+Build was aborted

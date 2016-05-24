@@ -1,0 +1,174 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<hudson.maven.MavenModuleSetBuild plugin="maven-plugin@2.12.1">
+  <actions>
+    <hudson.model.ParametersAction>
+      <parameters>
+        <hudson.model.StringParameterValue>
+          <name>STARTURL</name>
+          <description>USA PARKS</description>
+          <value>http://concretedisciples.com/skatepark-directory/search-results?order=alpha&amp;limit=50&amp;cat=58&amp;query=all</value>
+        </hudson.model.StringParameterValue>
+        <hudson.model.StringParameterValue>
+          <name>MAXHITS</name>
+          <description></description>
+          <value>0</value>
+        </hudson.model.StringParameterValue>
+        <hudson.model.StringParameterValue>
+          <name>EMAILTO</name>
+          <description></description>
+          <value>jaemzware@hotmail.com</value>
+        </hudson.model.StringParameterValue>
+        <hudson.model.StringParameterValue>
+          <name>REPORT</name>
+          <description></description>
+          <value>concretedisciples</value>
+        </hudson.model.StringParameterValue>
+        <hudson.model.StringParameterValue>
+          <name>TARGETURL</name>
+          <description>links to follow from starturl; results to collect data from</description>
+          <value>/skatepark/usa/</value>
+        </hudson.model.StringParameterValue>
+        <hudson.model.StringParameterValue>
+          <name>DEFAULTIMPLICITWAITSECONDS</name>
+          <description></description>
+          <value>50</value>
+        </hudson.model.StringParameterValue>
+        <hudson.model.StringParameterValue>
+          <name>BRANCH</name>
+          <description></description>
+          <value>develop</value>
+        </hudson.model.StringParameterValue>
+        <hudson.model.StringParameterValue>
+          <name>HUBPORT</name>
+          <description></description>
+          <value>4444</value>
+        </hudson.model.StringParameterValue>
+        <hudson.model.StringParameterValue>
+          <name>BROWSER</name>
+          <description></description>
+          <value>CHROMEMAC</value>
+        </hudson.model.StringParameterValue>
+        <hudson.model.StringParameterValue>
+          <name>HUBSERVER</name>
+          <description></description>
+          <value>192.168.99.100</value>
+        </hudson.model.StringParameterValue>
+        <hudson.model.StringParameterValue>
+          <name>BODYTEXTXPATH</name>
+          <description></description>
+          <value>//div[@class=&apos;jrFieldGroup Location&apos;]</value>
+        </hudson.model.StringParameterValue>
+        <hudson.model.StringParameterValue>
+          <name>NEXTLINKXPATH</name>
+          <description></description>
+          <value>//a[@class=&apos;jr-pagenav-next jrButton jrSmall&apos;]</value>
+        </hudson.model.StringParameterValue>
+        <hudson.model.StringParameterValue>
+          <name>LINKSLOADEDINDICATORXPATH</name>
+          <description></description>
+          <value>//span[@class=&apos;jrPagenavResultsText&apos;]</value>
+        </hudson.model.StringParameterValue>
+        <hudson.model.StringParameterValue>
+          <name>LINKXPATH</name>
+          <description>xpath of links to follow</description>
+          <value>//a[contains(@id,&apos;jr-listing-title&apos;)]</value>
+        </hudson.model.StringParameterValue>
+        <hudson.model.StringParameterValue>
+          <name>IMAGEXPATH</name>
+          <description></description>
+          <value>//div[@class=&apos;jrListingMainImage&apos;]/a/img</value>
+        </hudson.model.StringParameterValue>
+        <hudson.model.StringParameterValue>
+          <name>TITLETEXTXPATH</name>
+          <description></description>
+          <value>//h1[@class=&apos;contentheading&apos;]/span</value>
+        </hudson.model.StringParameterValue>
+        <hudson.model.StringParameterValue>
+          <name>HUBSERVER</name>
+          <description></description>
+          <value>192.168.99.100</value>
+        </hudson.model.StringParameterValue>
+        <hudson.model.StringParameterValue>
+          <name>WAITAFTERPAGELOADMILLISECONDS</name>
+          <description></description>
+          <value>0</value>
+        </hudson.model.StringParameterValue>
+        <hudson.model.StringParameterValue>
+          <name>NUMRESULTSRESTPARM</name>
+          <description></description>
+          <value>num</value>
+        </hudson.model.StringParameterValue>
+        <hudson.model.StringParameterValue>
+          <name>STARTRESTPARM</name>
+          <description></description>
+          <value>start</value>
+        </hudson.model.StringParameterValue>
+      </parameters>
+    </hudson.model.ParametersAction>
+    <hudson.model.CauseAction>
+      <causes>
+        <hudson.model.Cause_-UserIdCause>
+          <userId>sk8creteordie</userId>
+        </hudson.model.Cause_-UserIdCause>
+      </causes>
+    </hudson.model.CauseAction>
+    <hudson.plugins.git.util.BuildData plugin="git@2.4.3">
+      <buildsByBranchName>
+        <entry>
+          <string>refs/remotes/origin/develop</string>
+          <hudson.plugins.git.util.Build>
+            <marked plugin="git-client@1.19.6">
+              <sha1>677c08028842168705aef56ab818ccbf27d090c2</sha1>
+              <branches class="list">
+                <hudson.plugins.git.Branch>
+                  <sha1 reference="../../../sha1"/>
+                  <name>refs/remotes/origin/develop</name>
+                </hudson.plugins.git.Branch>
+              </branches>
+            </marked>
+            <revision reference="../marked"/>
+            <hudsonBuildNumber>3</hudsonBuildNumber>
+          </hudson.plugins.git.util.Build>
+        </entry>
+      </buildsByBranchName>
+      <lastBuild reference="../buildsByBranchName/entry/hudson.plugins.git.util.Build"/>
+      <scmName></scmName>
+      <remoteUrls>
+        <string>https://github.com/jimarasim/Board</string>
+      </remoteUrls>
+    </hudson.plugins.git.util.BuildData>
+    <hudson.plugins.git.GitTagAction plugin="git@2.4.3">
+      <tags class="hudson.util.CopyOnWriteMap$Tree">
+        <entry>
+          <string>refs/remotes/origin/develop</string>
+          <list/>
+        </entry>
+      </tags>
+      <ws>/var/jenkins_home/workspace/BOARD-CONCRETEDISCIPLES</ws>
+    </hudson.plugins.git.GitTagAction>
+    <hudson.scm.SCMRevisionState_-None/>
+    <jenkins.model.InterruptedBuildAction>
+      <causes class="com.google.common.collect.ImmutableList">
+        <jenkins.model.CauseOfInterruption_-UserInterruption>
+          <user>sk8creteordie</user>
+        </jenkins.model.CauseOfInterruption_-UserInterruption>
+      </causes>
+    </jenkins.model.InterruptedBuildAction>
+    <com.sonyericsson.rebuild.RebuildAction plugin="rebuild@1.25"/>
+  </actions>
+  <queueId>137</queueId>
+  <timestamp>1458962694476</timestamp>
+  <startTime>1458962694692</startTime>
+  <result>ABORTED</result>
+  <duration>1806964</duration>
+  <charset>UTF-8</charset>
+  <keepLog>false</keepLog>
+  <builtOn></builtOn>
+  <workspace>/var/jenkins_home/workspace/BOARD-CONCRETEDISCIPLES</workspace>
+  <hudsonVersion>1.642.2</hudsonVersion>
+  <scm class="hudson.plugins.git.GitChangeLogParser" plugin="git@2.4.3">
+    <authorOrCommitter>false</authorOrCommitter>
+  </scm>
+  <culprits class="com.google.common.collect.EmptyImmutableSortedSet"/>
+  <mavenVersionUsed>3.3.9</mavenVersionUsed>
+</hudson.maven.MavenModuleSetBuild>

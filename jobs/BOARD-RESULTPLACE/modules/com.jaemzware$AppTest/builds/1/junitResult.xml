@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<result plugin="junit@1.13">
+  <suites>
+    <suite>
+      <file>/var/jenkins_home/jobs/BOARD-RESULTPLACE/workspace/target/surefire-reports/TEST-com.jaemzware.board.ResultPlace.xml</file>
+      <name>com.jaemzware.board.ResultPlace</name>
+      <duration>10.277</duration>
+      <time>10.277</time>
+      <cases>
+        <case>
+          <duration>9.548</duration>
+          <className>com.jaemzware.board.ResultPlace</className>
+          <testName>ResultPlace</testName>
+          <skipped>false</skipped>
+          <errorStackTrace>java.lang.AssertionError: 
+DRIVER.GET FAILED. TRY SPECIFYING A LONGER -DdefaultImplicitWaitSeconds, WHICH IS SET TO 20 SECONDS FOR THIS RUN. EXCEPTION:unknown error: unhandled inspector error: {&quot;code&quot;:-32603,&quot;message&quot;:&quot;Cannot navigate to invalid URL&quot;}
+  (Session info: chrome=50.0.2661.102)
+  (Driver info: chromedriver=2.21.371459 (36d3d07f660ff2bc1bf28a75d1cdabed0983e7c4),platform=Mac OS X 10.11.5 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 23 milliseconds
+Build info: version: &apos;2.52.0&apos;, revision: &apos;4c2593c&apos;, time: &apos;2016-02-11 19:06:42&apos;
+System info: host: &apos;computer.local&apos;, ip: &apos;192.168.0.11&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.11.5&apos;, java.version: &apos;1.8.0_45&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, chrome={chromedriverVersion=2.21.371459 (36d3d07f660ff2bc1bf28a75d1cdabed0983e7c4), userDataDir=/var/folders/2v/_37nrjt5655fc4zbvn61yqkc0000gn/T/.org.chromium.Chromium.zJlQne}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=50.0.2661.102, platform=MAC, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 573da1994500e7fab5afd2b95b623b2c
+Command duration or timeout: 1.17 seconds
+Build info: version: &apos;2.52.0&apos;, revision: &apos;4c2593cfc3689a7fcd7be52549167e5ccc93ad28&apos;, time: &apos;2016-02-11 11:22:43&apos;
+System info: host: &apos;6fb31ddac028&apos;, ip: &apos;172.17.0.2&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;4.4.8-boot2docker&apos;, java.version: &apos;1.8.0_92&apos;
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, chrome={chromedriverVersion=2.21.371459 (36d3d07f660ff2bc1bf28a75d1cdabed0983e7c4), userDataDir=/var/folders/2v/_37nrjt5655fc4zbvn61yqkc0000gn/T/.org.chromium.Chromium.zJlQne}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=50.0.2661.102, platform=MAC, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, webdriver.remote.sessionid=2eaae5a8-a67f-4379-a6ae-a8fc13ac570a, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 2eaae5a8-a67f-4379-a6ae-a8fc13ac570a
+	at com.jaemzware.board.ResultPlace.ResultPlace(ResultPlace.java:74)
+</errorStackTrace>
+          <errorDetails>DRIVER.GET FAILED. TRY SPECIFYING A LONGER -DdefaultImplicitWaitSeconds, WHICH IS SET TO 20 SECONDS FOR THIS RUN. EXCEPTION:unknown error: unhandled inspector error: {&quot;code&quot;:-32603,&quot;message&quot;:&quot;Cannot navigate to invalid URL&quot;}
+  (Session info: chrome=50.0.2661.102)
+  (Driver info: chromedriver=2.21.371459 (36d3d07f660ff2bc1bf28a75d1cdabed0983e7c4),platform=Mac OS X 10.11.5 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 23 milliseconds
+Build info: version: &apos;2.52.0&apos;, revision: &apos;4c2593c&apos;, time: &apos;2016-02-11 19:06:42&apos;
+System info: host: &apos;computer.local&apos;, ip: &apos;192.168.0.11&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.11.5&apos;, java.version: &apos;1.8.0_45&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, chrome={chromedriverVersion=2.21.371459 (36d3d07f660ff2bc1bf28a75d1cdabed0983e7c4), userDataDir=/var/folders/2v/_37nrjt5655fc4zbvn61yqkc0000gn/T/.org.chromium.Chromium.zJlQne}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=50.0.2661.102, platform=MAC, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 573da1994500e7fab5afd2b95b623b2c
+Command duration or timeout: 1.17 seconds
+Build info: version: &apos;2.52.0&apos;, revision: &apos;4c2593cfc3689a7fcd7be52549167e5ccc93ad28&apos;, time: &apos;2016-02-11 11:22:43&apos;
+System info: host: &apos;6fb31ddac028&apos;, ip: &apos;172.17.0.2&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;4.4.8-boot2docker&apos;, java.version: &apos;1.8.0_92&apos;
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, chrome={chromedriverVersion=2.21.371459 (36d3d07f660ff2bc1bf28a75d1cdabed0983e7c4), userDataDir=/var/folders/2v/_37nrjt5655fc4zbvn61yqkc0000gn/T/.org.chromium.Chromium.zJlQne}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=50.0.2661.102, platform=MAC, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, webdriver.remote.sessionid=2eaae5a8-a67f-4379-a6ae-a8fc13ac570a, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 2eaae5a8-a67f-4379-a6ae-a8fc13ac570a</errorDetails>
+          <stdout>-Dbrowser=CHROMEMAC
+-DaHubPort=4444
+-DaHubServer=192.168.99.100
+-DaNumber=15
+-DaString=craigslist.org
+-DdefaultImplicitWaitSeconds=20
+-Dinput=$STARTURL
+-DnoScreenShots=true
+-DnoScroll=true
+-Dreport=craigslistREST-$GENERALSEARCH
+-DwaitAfterPageLoadMilliSeconds=0
+-DlinkXpath=//span[@class=&apos;pl&apos;]/a
+-DnextLinkXpath=//a[@title=&apos;next page&apos;]
+-DnumResultsRESTParm=num
+-DstartRESTParm=start
+-Dlogging NOT SPECIFIED
+FINDING SELENIUM GRID NODE:chrome VERSION: PLATFORM:MAC
+CONTACTING SELENIUM GRID [USE -Dnogrid TO SKIP AND LAUNCH NATIVE (NON-GRID)] 
+AUGMENT THE DRIVER FOR SCREENSHOTS
+SUCCESSFULLY GRID NODE FOR:chrome VERSION: PLATFORM:MAC
+aNumber:15 linkXpath://span[@class=&apos;pl&apos;]/a numResultsRESTParm:num startRESTParm:start aString:craigslist.org input:$STARTURLnextLinkXpath://a[@title=&apos;next page&apos;]
+GETRESULTPLACESOFTARGET
+RANDOM PAUSE:0
+SCREENSHOT:/var/jenkins_home/jobs/BOARD-RESULTPLACE/workspace/screenshot20160523042359170.png
+EXCEPTION MESSAGE:DRIVER.GET FAILED. TRY SPECIFYING A LONGER -DdefaultImplicitWaitSeconds, WHICH IS SET TO 20 SECONDS FOR THIS RUN. EXCEPTION:unknown error: unhandled inspector error: {&quot;code&quot;:-32603,&quot;message&quot;:&quot;Cannot navigate to invalid URL&quot;}
+  (Session info: chrome=50.0.2661.102)
+  (Driver info: chromedriver=2.21.371459 (36d3d07f660ff2bc1bf28a75d1cdabed0983e7c4),platform=Mac OS X 10.11.5 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 23 milliseconds
+Build info: version: &apos;2.52.0&apos;, revision: &apos;4c2593c&apos;, time: &apos;2016-02-11 19:06:42&apos;
+System info: host: &apos;computer.local&apos;, ip: &apos;192.168.0.11&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.11.5&apos;, java.version: &apos;1.8.0_45&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, chrome={chromedriverVersion=2.21.371459 (36d3d07f660ff2bc1bf28a75d1cdabed0983e7c4), userDataDir=/var/folders/2v/_37nrjt5655fc4zbvn61yqkc0000gn/T/.org.chromium.Chromium.zJlQne}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=50.0.2661.102, platform=MAC, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 573da1994500e7fab5afd2b95b623b2c
+Command duration or timeout: 1.17 seconds
+Build info: version: &apos;2.52.0&apos;, revision: &apos;4c2593cfc3689a7fcd7be52549167e5ccc93ad28&apos;, time: &apos;2016-02-11 11:22:43&apos;
+System info: host: &apos;6fb31ddac028&apos;, ip: &apos;172.17.0.2&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;4.4.8-boot2docker&apos;, java.version: &apos;1.8.0_92&apos;
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, chrome={chromedriverVersion=2.21.371459 (36d3d07f660ff2bc1bf28a75d1cdabed0983e7c4), userDataDir=/var/folders/2v/_37nrjt5655fc4zbvn61yqkc0000gn/T/.org.chromium.Chromium.zJlQne}, takesHeapSnapshot=true, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=50.0.2661.102, platform=MAC, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, webdriver.remote.sessionid=2eaae5a8-a67f-4379-a6ae-a8fc13ac570a, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 2eaae5a8-a67f-4379-a6ae-a8fc13ac570a
+MESSAGE:EXCEPTION TRACE STACK TRACE:
+FILE:CodeBase.java METHOD:driverGetWithTime LINE:970
+FILE:ResultPlace.java METHOD:GetResultPlacesOfTarget LINE:136
+FILE:ResultPlace.java METHOD:ResultPlace LINE:64
+FILE:NativeMethodAccessorImpl.java METHOD:invoke0 LINE:-2
+FILE:NativeMethodAccessorImpl.java METHOD:invoke LINE:62
+FILE:DelegatingMethodAccessorImpl.java METHOD:invoke LINE:43
+FILE:Method.java METHOD:invoke LINE:498
+FILE:FrameworkMethod.java METHOD:runReflectiveCall LINE:50
+FILE:ReflectiveCallable.java METHOD:run LINE:12
+FILE:FrameworkMethod.java METHOD:invokeExplosively LINE:47
+FILE:InvokeMethod.java METHOD:evaluate LINE:17
+FILE:RunBefores.java METHOD:evaluate LINE:26
+FILE:RunAfters.java METHOD:evaluate LINE:27
+FILE:ParentRunner.java METHOD:runLeaf LINE:325
+FILE:BlockJUnit4ClassRunner.java METHOD:runChild LINE:78
+FILE:BlockJUnit4ClassRunner.java METHOD:runChild LINE:57
+FILE:ParentRunner.java METHOD:run LINE:290
+FILE:ParentRunner.java METHOD:schedule LINE:71
+FILE:ParentRunner.java METHOD:runChildren LINE:288
+FILE:ParentRunner.java METHOD:access$000 LINE:58
+FILE:ParentRunner.java METHOD:evaluate LINE:268
+FILE:ParentRunner.java METHOD:run LINE:363
+FILE:JUnit4Provider.java METHOD:execute LINE:367
+FILE:JUnit4Provider.java METHOD:executeWithRerun LINE:274
+FILE:JUnit4Provider.java METHOD:executeTestSet LINE:238
+FILE:JUnit4Provider.java METHOD:invoke LINE:161
+FILE:ForkedBooter.java METHOD:invokeProviderInSameClassLoader LINE:290
+FILE:ForkedBooter.java METHOD:runSuitesInProcess LINE:242
+FILE:ForkedBooter.java METHOD:main LINE:121
+</stdout>
+          <failedSince>1</failedSince>
+        </case>
+      </cases>
+    </suite>
+  </suites>
+  <duration>10.277</duration>
+  <keepLongStdio>false</keepLongStdio>
+</result>

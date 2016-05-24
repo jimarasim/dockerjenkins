@@ -1,0 +1,36 @@
+Started by user [8mha:AAAAnx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyeEgZh/dLi1CL94myL5KLUktT8opTMVABHz0+NyAAAAA==[0mJAMES ARASIM
+Building in workspace /var/jenkins_home/jobs/BOARD-BACKPAGE/workspace
+Cloning the remote Git repository
+Cloning repository https://github.com/jimarasim/Board
+ > git init /var/jenkins_home/jobs/BOARD-BACKPAGE/workspace # timeout=10
+Fetching upstream changes from https://github.com/jimarasim/Board
+ > git --version # timeout=10
+ > git -c core.askpass=true fetch --tags --progress https://github.com/jimarasim/Board +refs/heads/*:refs/remotes/origin/*
+ERROR: Error cloning remote repo 'origin'
+[8mha:AAAAWB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P08vOT+vOD8nVc8DzHWtSE4tKMnMz/PLL0ldFVf2c+b/lb5MDAwVRQxSaBqcITRIIQMEMIIUFgAAckCEiWAAAAA=[0mhudson.plugins.git.GitException: Command "git -c core.askpass=true fetch --tags --progress https://github.com/jimarasim/Board +refs/heads/*:refs/remotes/origin/*" returned status code 128:
+stdout: 
+stderr: remote: Invalid username or password.
+fatal: Authentication failed for 'https://github.com/jimarasim/Board/'
+
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.launchCommandIn(CliGitAPIImpl.java:1719)
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.launchCommandWithCredentials(CliGitAPIImpl.java:1463)
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.access$300(CliGitAPIImpl.java:63)
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl$1.execute(CliGitAPIImpl.java:314)
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl$2.execute(CliGitAPIImpl.java:506)
+	at hudson.plugins.git.GitSCM.retrieveChanges(GitSCM.java:1057)
+	at hudson.plugins.git.GitSCM.checkout(GitSCM.java:1097)
+	at hudson.scm.SCM.checkout(SCM.java:485)
+	at hudson.model.AbstractProject.checkout(AbstractProject.java:1269)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.defaultCheckout(AbstractBuild.java:607)
+	at jenkins.scm.SCMCheckoutStrategy.checkout(SCMCheckoutStrategy.java:86)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.run(AbstractBuild.java:529)
+	at hudson.model.Run.execute(Run.java:1738)
+	at hudson.maven.MavenModuleSetBuild.run(MavenModuleSetBuild.java:531)
+	at hudson.model.ResourceController.execute(ResourceController.java:98)
+	at hudson.model.Executor.run(Executor.java:410)
+ERROR: null
+[8mha:AAAAWB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P08vOT+vOD8nVc8DzHWtSE4tKMnMz/PLL0ldFVf2c+b/lb5MDAwVRQxSaBqcITRIIQMEMIIUFgAAckCEiWAAAAA=[0mEmail was triggered for: Failure - Any
+Sending email for trigger: Failure - Any
+Sending email to: jaemzware@hotmail.com
+Error sending to the following INVALID addresses: jaemzware@hotmail.com
+Finished: FAILURE

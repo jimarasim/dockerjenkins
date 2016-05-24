@@ -1,0 +1,1575 @@
+Started by user [8mha:AAAAnx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzeEgZh/dLi1CL94myL5KLUktT8opTMVACTJTwWyAAAAA==[0mjames arasim 
+Building remotely on [8mha:AAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAwOoBn6yfm5BaUlqUVwBgAX+IaIxwAAAA==[0mcomputer (osx) in workspace /Users/jameskarasim/Downloads/installed/dockerjenkins_slave/workspace/SeleniumChromeNode
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/jimarasim/SeleniumCodeBase.git # timeout=10
+Fetching upstream changes from https://github.com/jimarasim/SeleniumCodeBase.git
+ > git --version # timeout=10
+using .gitcredentials to set credentials
+ > git config --local credential.username jimarasim # timeout=10
+ > git config --local credential.helper store --file=/var/folders/2v/_37nrjt5655fc4zbvn61yqkc0000gn/T/git4852129589668778041.credentials # timeout=10
+ > git -c core.askpass=true fetch --tags --progress https://github.com/jimarasim/SeleniumCodeBase.git +refs/heads/*:refs/remotes/origin/*
+ > git config --local --remove-section credential # timeout=10
+ > git rev-parse refs/remotes/origin/develop^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/develop^{commit} # timeout=10
+Checking out Revision 42b6a06253950b843ba7a00de8cf859517a0f6cc (refs/remotes/origin/develop)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 42b6a06253950b843ba7a00de8cf859517a0f6cc
+ > git rev-list a1ebc6abb98d3ad742e455086744b84ef08b3074 # timeout=10
+[SeleniumChromeNode] $ /bin/sh -xe /var/folders/2v/_37nrjt5655fc4zbvn61yqkc0000gn/T/hudson1114883134712759766.sh
++ cd SeleniumGrid
++ java -Dwebdriver.chrome.driver=chromedrivermac -jar selenium-server-standalone-2.52.0.jar -role node -browser platform=MAC,browserName=chrome,maxInstances=5,seleniumProtocol=WebDriver,acceptSslCerts=true -hub http://192.168.99.100:4444/grid/register -port 5561
+15:25:09.488 INFO - Launching a Selenium Grid node
+15:25:09.578 INFO - Adding platform=MAC,browserName=chrome,maxInstances=5,seleniumProtocol=WebDriver,acceptSslCerts=true
+15:25:10.336 INFO - Java: Oracle Corporation 25.45-b02
+15:25:10.336 INFO - OS: Mac OS X 10.11.5 x86_64
+15:25:10.348 INFO - v2.52.0, with Core v2.52.0. Built from revision 4c2593c
+15:25:10.451 INFO - Driver provider org.openqa.selenium.ie.InternetExplorerDriver registration is skipped:
+registration capabilities Capabilities [{ensureCleanSession=true, browserName=internet explorer, version=, platform=WINDOWS}] does not match the current platform MAC
+15:25:10.451 INFO - Driver provider org.openqa.selenium.edge.EdgeDriver registration is skipped:
+registration capabilities Capabilities [{browserName=MicrosoftEdge, version=, platform=WINDOWS}] does not match the current platform MAC
+15:25:10.451 INFO - Driver class not found: com.opera.core.systems.OperaDriver
+15:25:10.452 INFO - Driver provider com.opera.core.systems.OperaDriver is not registered
+15:25:10.580 INFO - Selenium Grid node is up and ready to register to the hub
+15:25:10.624 INFO - Starting auto registration thread. Will try to register every 5000 ms.
+15:25:10.624 INFO - Registering the node to the hub: http://192.168.99.100:4444/grid/register
+15:25:10.672 INFO - The node is registered to the hub and ready to use
+15:25:38.609 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, browserName=chrome, version=, platform=MAC}]])
+15:25:38.621 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, browserName=chrome, version=, platform=MAC}]
+Starting ChromeDriver 2.21.371459 (36d3d07f660ff2bc1bf28a75d1cdabed0983e7c4) on port 10090
+Only local connections are allowed.
+15:25:39.649 INFO - Done: [new session: Capabilities [{acceptSslCerts=true, browserName=chrome, version=, platform=MAC}]]
+15:25:40.080 INFO - Executing: [delete all cookies])
+15:25:40.093 INFO - Done: [delete all cookies]
+15:25:40.120 INFO - Executing: [maximise window])
+15:25:40.392 INFO - Done: [maximise window]
+15:25:40.411 INFO - Executing: [get current window handle])
+15:25:40.415 INFO - Done: [get current window handle]
+15:25:40.434 INFO - Executing: [implicit wait: 15000])
+15:25:40.439 INFO - Done: [implicit wait: 15000]
+15:25:40.455 INFO - Executing: [get current url])
+15:25:40.462 INFO - Done: [get current url]
+15:25:40.479 INFO - Executing: [page load wait: 15000])
+15:25:40.482 INFO - Done: [page load wait: 15000]
+15:25:40.503 INFO - Executing: [get: https://www.tnaboard.com/forumdisplay.php?98-WA-Provider-Ads&s=&pp=30&prefixid=wa_statewide&field_dvb_service_type=Escort])
+15:25:44.112 INFO - Done: [get: https://www.tnaboard.com/forumdisplay.php?98-WA-Provider-Ads&s=&pp=30&prefixid=wa_statewide&field_dvb_service_type=Escort]
+15:25:44.141 INFO - Executing: [get current url])
+15:25:44.148 INFO - Done: [get current url]
+15:25:44.172 INFO - Executing: [switch to window: CDwindow-68C2596F-3198-4C01-95BA-04CAA3C9FE70])
+15:25:44.178 INFO - Done: [switch to window: CDwindow-68C2596F-3198-4C01-95BA-04CAA3C9FE70]
+15:25:44.206 INFO - Executing: [implicit wait: 10000])
+15:25:44.210 INFO - Done: [implicit wait: 10000]
+15:25:44.224 INFO - Executing: [find elements: By.xpath: //span[@class='forumtitle']])
+15:25:44.259 INFO - Done: [find elements: By.xpath: //span[@class='forumtitle']]
+15:25:44.294 INFO - Executing: [implicit wait: 15000])
+15:25:44.297 INFO - Done: [implicit wait: 15000]
+15:25:44.312 INFO - Executing: [implicit wait: 10000])
+15:25:44.315 INFO - Done: [implicit wait: 10000]
+15:25:44.333 INFO - Executing: [find elements: By.xpath: //a[@class='title']])
+15:25:44.361 INFO - Done: [find elements: By.xpath: //a[@class='title']]
+15:25:44.381 INFO - Executing: [implicit wait: 15000])
+15:25:44.385 INFO - Done: [implicit wait: 15000]
+15:25:44.401 INFO - Executing: [find elements: By.xpath: //a[@class='title']])
+15:25:44.425 INFO - Done: [find elements: By.xpath: //a[@class='title']]
+15:25:44.448 INFO - Executing: [get element attribute: 1 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //a[@class='title']], href])
+15:25:44.461 INFO - Done: [get element attribute: 1 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //a[@class='title']], href]
+15:25:44.475 INFO - Executing: [get element attribute: 2 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //a[@class='title']], href])
+15:25:44.487 INFO - Done: [get element attribute: 2 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //a[@class='title']], href]
+15:25:44.505 INFO - Executing: [get element attribute: 3 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //a[@class='title']], href])
+15:25:44.515 INFO - Done: [get element attribute: 3 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //a[@class='title']], href]
+15:25:44.527 INFO - Executing: [get element attribute: 4 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //a[@class='title']], href])
+15:25:44.540 INFO - Done: [get element attribute: 4 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //a[@class='title']], href]
+15:25:44.555 INFO - Executing: [get element attribute: 5 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //a[@class='title']], href])
+15:25:44.567 INFO - Done: [get element attribute: 5 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //a[@class='title']], href]
+15:25:44.578 INFO - Executing: [get element attribute: 6 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //a[@class='title']], href])
+15:25:44.591 INFO - Done: [get element attribute: 6 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //a[@class='title']], href]
+15:25:44.601 INFO - Executing: [get element attribute: 7 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //a[@class='title']], href])
+15:25:44.612 INFO - Done: [get element attribute: 7 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //a[@class='title']], href]
+15:25:44.623 INFO - Executing: [get element attribute: 8 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //a[@class='title']], href])
+15:25:44.635 INFO - Done: [get element attribute: 8 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //a[@class='title']], href]
+15:25:44.661 INFO - Executing: [get element attribute: 9 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //a[@class='title']], href])
+15:25:44.674 INFO - Done: [get element attribute: 9 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //a[@class='title']], href]
+15:25:44.683 INFO - Executing: [get element attribute: 10 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //a[@class='title']], href])
+15:25:44.697 INFO - Done: [get element attribute: 10 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //a[@class='title']], href]
+15:25:44.708 INFO - Executing: [get element attribute: 11 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //a[@class='title']], href])
+15:25:44.719 INFO - Done: [get element attribute: 11 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //a[@class='title']], href]
+15:25:44.732 INFO - Executing: [get element attribute: 12 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //a[@class='title']], href])
+15:25:44.744 INFO - Done: [get element attribute: 12 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //a[@class='title']], href]
+15:25:44.756 INFO - Executing: [get element attribute: 13 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //a[@class='title']], href])
+15:25:44.766 INFO - Done: [get element attribute: 13 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //a[@class='title']], href]
+15:25:44.777 INFO - Executing: [get element attribute: 14 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //a[@class='title']], href])
+15:25:44.788 INFO - Done: [get element attribute: 14 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //a[@class='title']], href]
+15:25:44.808 INFO - Executing: [get element attribute: 15 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //a[@class='title']], href])
+15:25:44.818 INFO - Done: [get element attribute: 15 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //a[@class='title']], href]
+15:25:44.834 INFO - Executing: [get element attribute: 16 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //a[@class='title']], href])
+15:25:44.849 INFO - Done: [get element attribute: 16 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //a[@class='title']], href]
+15:25:44.860 INFO - Executing: [get element attribute: 17 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //a[@class='title']], href])
+15:25:44.871 INFO - Done: [get element attribute: 17 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //a[@class='title']], href]
+15:25:44.883 INFO - Executing: [get element attribute: 18 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //a[@class='title']], href])
+15:25:44.895 INFO - Done: [get element attribute: 18 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //a[@class='title']], href]
+15:25:44.907 INFO - Executing: [get element attribute: 19 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //a[@class='title']], href])
+15:25:44.917 INFO - Done: [get element attribute: 19 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //a[@class='title']], href]
+15:25:44.930 INFO - Executing: [get element attribute: 20 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //a[@class='title']], href])
+15:25:44.945 INFO - Done: [get element attribute: 20 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //a[@class='title']], href]
+15:25:44.960 INFO - Executing: [get element attribute: 21 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //a[@class='title']], href])
+15:25:44.970 INFO - Done: [get element attribute: 21 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //a[@class='title']], href]
+15:25:44.982 INFO - Executing: [get element attribute: 22 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //a[@class='title']], href])
+15:25:44.993 INFO - Done: [get element attribute: 22 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //a[@class='title']], href]
+15:25:45.003 INFO - Executing: [get element attribute: 23 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //a[@class='title']], href])
+15:25:45.013 INFO - Done: [get element attribute: 23 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //a[@class='title']], href]
+15:25:45.024 INFO - Executing: [get element attribute: 24 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //a[@class='title']], href])
+15:25:45.036 INFO - Done: [get element attribute: 24 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //a[@class='title']], href]
+15:25:45.048 INFO - Executing: [get element attribute: 25 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //a[@class='title']], href])
+15:25:45.059 INFO - Done: [get element attribute: 25 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //a[@class='title']], href]
+15:25:45.070 INFO - Executing: [get element attribute: 26 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //a[@class='title']], href])
+15:25:45.081 INFO - Done: [get element attribute: 26 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //a[@class='title']], href]
+15:25:45.096 INFO - Executing: [get element attribute: 27 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //a[@class='title']], href])
+15:25:45.107 INFO - Done: [get element attribute: 27 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //a[@class='title']], href]
+15:25:45.117 INFO - Executing: [get element attribute: 28 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //a[@class='title']], href])
+15:25:45.131 INFO - Done: [get element attribute: 28 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //a[@class='title']], href]
+15:25:45.144 INFO - Executing: [get element attribute: 29 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //a[@class='title']], href])
+15:25:45.155 INFO - Done: [get element attribute: 29 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //a[@class='title']], href]
+15:25:45.166 INFO - Executing: [get element attribute: 30 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //a[@class='title']], href])
+15:25:45.177 INFO - Done: [get element attribute: 30 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //a[@class='title']], href]
+15:25:45.187 INFO - Executing: [get current url])
+15:25:45.193 INFO - Done: [get current url]
+15:25:45.207 INFO - Executing: [page load wait: 15000])
+15:25:45.213 INFO - Done: [page load wait: 15000]
+15:25:45.225 INFO - Executing: [get: https://www.tnaboard.com/showthread.php?1055731-Private-Bothell-Location%95%B0%26%239642%3BNaughty-and-Nice-Brunette%95%B0%95Amazing-Reviews%95%B0%95&s=8951601ef02366b5cdbfd3d6083db32b])
+15:25:46.923 INFO - Done: [get: https://www.tnaboard.com/showthread.php?1055731-Private-Bothell-Location%95%B0%26%239642%3BNaughty-and-Nice-Brunette%95%B0%95Amazing-Reviews%95%B0%95&s=8951601ef02366b5cdbfd3d6083db32b]
+15:25:46.934 INFO - Executing: [get current url])
+15:25:46.940 INFO - Done: [get current url]
+15:25:46.957 INFO - Executing: [switch to window: CDwindow-68C2596F-3198-4C01-95BA-04CAA3C9FE70])
+15:25:46.964 INFO - Done: [switch to window: CDwindow-68C2596F-3198-4C01-95BA-04CAA3C9FE70]
+15:25:46.978 INFO - Executing: [implicit wait: 5000])
+15:25:46.981 INFO - Done: [implicit wait: 5000]
+15:25:46.990 INFO - Executing: [implicit wait: 5000])
+15:25:46.994 INFO - Done: [implicit wait: 5000]
+15:25:47.009 INFO - Executing: [find elements: By.xpath: //span[@class='threadtitle']/a])
+15:25:47.029 INFO - Done: [find elements: By.xpath: //span[@class='threadtitle']/a]
+15:25:47.038 INFO - Executing: [implicit wait: 15000])
+15:25:47.041 INFO - Done: [implicit wait: 15000]
+15:25:47.057 INFO - Executing: [find element: By.xpath: //span[@class='threadtitle']/a])
+15:25:47.076 INFO - Done: [find element: By.xpath: //span[@class='threadtitle']/a]
+15:25:47.091 INFO - Executing: [get text: 31 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //span[@class='threadtitle']/a]])
+15:25:47.113 INFO - Done: [get text: 31 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //span[@class='threadtitle']/a]]
+15:25:47.123 INFO - Executing: [implicit wait: 15000])
+15:25:47.126 INFO - Done: [implicit wait: 15000]
+15:25:47.150 INFO - Executing: [implicit wait: 5000])
+15:25:47.153 INFO - Done: [implicit wait: 5000]
+15:25:47.174 INFO - Executing: [find elements: By.xpath: //div[@class='postrow']])
+15:25:47.192 INFO - Done: [find elements: By.xpath: //div[@class='postrow']]
+15:25:47.205 INFO - Executing: [implicit wait: 15000])
+15:25:47.210 INFO - Done: [implicit wait: 15000]
+15:25:47.221 INFO - Executing: [find elements: By.xpath: //div[@class='postrow']])
+15:25:47.245 INFO - Done: [find elements: By.xpath: //div[@class='postrow']]
+15:25:47.263 INFO - Executing: [get text: 32 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //div[@class='postrow']]])
+15:25:47.303 INFO - Done: [get text: 32 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //div[@class='postrow']]]
+15:25:47.322 INFO - Executing: [implicit wait: 5000])
+15:25:47.324 INFO - Done: [implicit wait: 5000]
+15:25:47.338 INFO - Executing: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img])
+15:25:47.354 INFO - Done: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img]
+15:25:47.366 INFO - Executing: [implicit wait: 15000])
+15:25:47.369 INFO - Done: [implicit wait: 15000]
+15:25:47.376 INFO - Executing: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img])
+15:25:47.393 INFO - Done: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img]
+15:25:47.408 INFO - Executing: [get element attribute: 33 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:25:47.418 INFO - Done: [get element attribute: 33 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:25:47.434 INFO - Executing: [get element attribute: 34 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:25:47.444 INFO - Done: [get element attribute: 34 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:25:47.455 INFO - Executing: [get element attribute: 35 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:25:47.465 INFO - Done: [get element attribute: 35 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:25:47.474 INFO - Executing: [get element attribute: 36 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:25:47.484 INFO - Done: [get element attribute: 36 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:25:47.497 INFO - Executing: [get element attribute: 37 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:25:47.508 INFO - Done: [get element attribute: 37 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:25:47.517 INFO - Executing: [get current url])
+15:25:47.522 INFO - Done: [get current url]
+15:25:47.534 INFO - Executing: [page load wait: 15000])
+15:25:47.536 INFO - Done: [page load wait: 15000]
+15:25:47.548 INFO - Executing: [get: https://www.tnaboard.com/showthread.php?1055709-%26%23128139%3B-Allow-me-to-take-you-on-your-INTIMATE-journey-HIGHLY-REVIEWED-amp-providing-QUALITY-discreet-companionship-fit-for-a-king%26%23128081%3B-By-Appointment-Only-%26%2310084%3B-This&s=8951601ef02366b5cdbfd3d6083db32b])
+15:25:49.162 INFO - Done: [get: https://www.tnaboard.com/showthread.php?1055709-%26%23128139%3B-Allow-me-to-take-you-on-your-INTIMATE-journey-HIGHLY-REVIEWED-amp-providing-QUALITY-discreet-companionship-fit-for-a-king%26%23128081%3B-By-Appointment-Only-%26%2310084%3B-This&s=8951601ef02366b5cdbfd3d6083db32b]
+15:25:49.173 INFO - Executing: [get current url])
+15:25:49.178 INFO - Done: [get current url]
+15:25:49.189 INFO - Executing: [switch to window: CDwindow-68C2596F-3198-4C01-95BA-04CAA3C9FE70])
+15:25:49.193 INFO - Done: [switch to window: CDwindow-68C2596F-3198-4C01-95BA-04CAA3C9FE70]
+15:25:49.205 INFO - Executing: [implicit wait: 5000])
+15:25:49.207 INFO - Done: [implicit wait: 5000]
+15:25:49.220 INFO - Executing: [implicit wait: 5000])
+15:25:49.223 INFO - Done: [implicit wait: 5000]
+15:25:49.234 INFO - Executing: [find elements: By.xpath: //span[@class='threadtitle']/a])
+15:25:49.252 INFO - Done: [find elements: By.xpath: //span[@class='threadtitle']/a]
+15:25:49.261 INFO - Executing: [implicit wait: 15000])
+15:25:49.264 INFO - Done: [implicit wait: 15000]
+15:25:49.275 INFO - Executing: [find element: By.xpath: //span[@class='threadtitle']/a])
+15:25:49.291 INFO - Done: [find element: By.xpath: //span[@class='threadtitle']/a]
+15:25:49.318 INFO - Executing: [get text: 38 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //span[@class='threadtitle']/a]])
+15:25:49.336 INFO - Done: [get text: 38 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //span[@class='threadtitle']/a]]
+15:25:49.349 INFO - Executing: [implicit wait: 15000])
+15:25:49.352 INFO - Done: [implicit wait: 15000]
+15:25:49.365 INFO - Executing: [implicit wait: 5000])
+15:25:49.368 INFO - Done: [implicit wait: 5000]
+15:25:49.380 INFO - Executing: [find elements: By.xpath: //div[@class='postrow']])
+15:25:49.390 INFO - Done: [find elements: By.xpath: //div[@class='postrow']]
+15:25:49.399 INFO - Executing: [implicit wait: 15000])
+15:25:49.402 INFO - Done: [implicit wait: 15000]
+15:25:49.413 INFO - Executing: [find elements: By.xpath: //div[@class='postrow']])
+15:25:49.421 INFO - Done: [find elements: By.xpath: //div[@class='postrow']]
+15:25:49.431 INFO - Executing: [get text: 39 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //div[@class='postrow']]])
+15:25:49.464 INFO - Done: [get text: 39 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //div[@class='postrow']]]
+15:25:49.477 INFO - Executing: [implicit wait: 5000])
+15:25:49.480 INFO - Done: [implicit wait: 5000]
+15:25:49.496 INFO - Executing: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img])
+15:25:49.510 INFO - Done: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img]
+15:25:49.523 INFO - Executing: [implicit wait: 15000])
+15:25:49.525 INFO - Done: [implicit wait: 15000]
+15:25:49.540 INFO - Executing: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img])
+15:25:49.550 INFO - Done: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img]
+15:25:49.568 INFO - Executing: [get element attribute: 40 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:25:49.581 INFO - Done: [get element attribute: 40 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:25:49.595 INFO - Executing: [get element attribute: 41 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:25:49.605 INFO - Done: [get element attribute: 41 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:25:49.618 INFO - Executing: [get element attribute: 42 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:25:49.628 INFO - Done: [get element attribute: 42 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:25:49.638 INFO - Executing: [get element attribute: 43 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:25:49.647 INFO - Done: [get element attribute: 43 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:25:49.656 INFO - Executing: [get element attribute: 44 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:25:49.665 INFO - Done: [get element attribute: 44 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:25:49.673 INFO - Executing: [get current url])
+15:25:49.678 INFO - Done: [get current url]
+15:25:49.688 INFO - Executing: [page load wait: 15000])
+15:25:49.691 INFO - Done: [page load wait: 15000]
+15:25:49.703 INFO - Executing: [get: https://www.tnaboard.com/showthread.php?1055572-Filthy!-Dirty!-Nasty-shit!!&s=8951601ef02366b5cdbfd3d6083db32b])
+15:25:50.852 INFO - Done: [get: https://www.tnaboard.com/showthread.php?1055572-Filthy!-Dirty!-Nasty-shit!!&s=8951601ef02366b5cdbfd3d6083db32b]
+15:25:50.872 INFO - Executing: [get current url])
+15:25:50.878 INFO - Done: [get current url]
+15:25:50.891 INFO - Executing: [switch to window: CDwindow-68C2596F-3198-4C01-95BA-04CAA3C9FE70])
+15:25:50.895 INFO - Done: [switch to window: CDwindow-68C2596F-3198-4C01-95BA-04CAA3C9FE70]
+15:25:50.914 INFO - Executing: [implicit wait: 5000])
+15:25:50.917 INFO - Done: [implicit wait: 5000]
+15:25:50.933 INFO - Executing: [implicit wait: 5000])
+15:25:50.936 INFO - Done: [implicit wait: 5000]
+15:25:50.947 INFO - Executing: [find elements: By.xpath: //span[@class='threadtitle']/a])
+15:25:50.958 INFO - Done: [find elements: By.xpath: //span[@class='threadtitle']/a]
+15:25:50.969 INFO - Executing: [implicit wait: 15000])
+15:25:50.971 INFO - Done: [implicit wait: 15000]
+15:25:50.983 INFO - Executing: [find element: By.xpath: //span[@class='threadtitle']/a])
+15:25:50.992 INFO - Done: [find element: By.xpath: //span[@class='threadtitle']/a]
+15:25:51.006 INFO - Executing: [get text: 45 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //span[@class='threadtitle']/a]])
+15:25:51.024 INFO - Done: [get text: 45 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //span[@class='threadtitle']/a]]
+15:25:51.038 INFO - Executing: [implicit wait: 15000])
+15:25:51.041 INFO - Done: [implicit wait: 15000]
+15:25:51.052 INFO - Executing: [implicit wait: 5000])
+15:25:51.054 INFO - Done: [implicit wait: 5000]
+15:25:51.070 INFO - Executing: [find elements: By.xpath: //div[@class='postrow']])
+15:25:51.081 INFO - Done: [find elements: By.xpath: //div[@class='postrow']]
+15:25:51.101 INFO - Executing: [implicit wait: 15000])
+15:25:51.104 INFO - Done: [implicit wait: 15000]
+15:25:51.116 INFO - Executing: [find elements: By.xpath: //div[@class='postrow']])
+15:25:51.125 INFO - Done: [find elements: By.xpath: //div[@class='postrow']]
+15:25:51.140 INFO - Executing: [get text: 46 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //div[@class='postrow']]])
+15:25:51.172 INFO - Done: [get text: 46 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //div[@class='postrow']]]
+15:25:51.186 INFO - Executing: [implicit wait: 5000])
+15:25:51.189 INFO - Done: [implicit wait: 5000]
+15:25:51.199 INFO - Executing: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img])
+15:25:51.207 INFO - Done: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img]
+15:25:51.220 INFO - Executing: [implicit wait: 15000])
+15:25:51.223 INFO - Done: [implicit wait: 15000]
+15:25:51.237 INFO - Executing: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img])
+15:25:51.246 INFO - Done: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img]
+15:25:51.256 INFO - Executing: [get element attribute: 47 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:25:51.266 INFO - Done: [get element attribute: 47 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:25:51.274 INFO - Executing: [get current url])
+15:25:51.281 INFO - Done: [get current url]
+15:25:51.291 INFO - Executing: [page load wait: 15000])
+15:25:51.293 INFO - Done: [page load wait: 15000]
+15:25:51.307 INFO - Executing: [get: https://www.tnaboard.com/showthread.php?1055480-Birthday-in-5-days-Come-Give-Me-my-birthday-Spankings-Daddy&s=8951601ef02366b5cdbfd3d6083db32b])
+15:25:52.344 INFO - Done: [get: https://www.tnaboard.com/showthread.php?1055480-Birthday-in-5-days-Come-Give-Me-my-birthday-Spankings-Daddy&s=8951601ef02366b5cdbfd3d6083db32b]
+15:25:52.362 INFO - Executing: [get current url])
+15:25:52.371 INFO - Done: [get current url]
+15:25:52.388 INFO - Executing: [switch to window: CDwindow-68C2596F-3198-4C01-95BA-04CAA3C9FE70])
+15:25:52.392 INFO - Done: [switch to window: CDwindow-68C2596F-3198-4C01-95BA-04CAA3C9FE70]
+15:25:52.409 INFO - Executing: [implicit wait: 5000])
+15:25:52.413 INFO - Done: [implicit wait: 5000]
+15:25:52.427 INFO - Executing: [implicit wait: 5000])
+15:25:52.430 INFO - Done: [implicit wait: 5000]
+15:25:52.445 INFO - Executing: [find elements: By.xpath: //span[@class='threadtitle']/a])
+15:25:52.457 INFO - Done: [find elements: By.xpath: //span[@class='threadtitle']/a]
+15:25:52.469 INFO - Executing: [implicit wait: 15000])
+15:25:52.472 INFO - Done: [implicit wait: 15000]
+15:25:52.488 INFO - Executing: [find element: By.xpath: //span[@class='threadtitle']/a])
+15:25:52.498 INFO - Done: [find element: By.xpath: //span[@class='threadtitle']/a]
+15:25:52.507 INFO - Executing: [get text: 48 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //span[@class='threadtitle']/a]])
+15:25:52.532 INFO - Done: [get text: 48 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //span[@class='threadtitle']/a]]
+15:25:52.545 INFO - Executing: [implicit wait: 15000])
+15:25:52.548 INFO - Done: [implicit wait: 15000]
+15:25:52.560 INFO - Executing: [implicit wait: 5000])
+15:25:52.562 INFO - Done: [implicit wait: 5000]
+15:25:52.573 INFO - Executing: [find elements: By.xpath: //div[@class='postrow']])
+15:25:52.582 INFO - Done: [find elements: By.xpath: //div[@class='postrow']]
+15:25:52.597 INFO - Executing: [implicit wait: 15000])
+15:25:52.599 INFO - Done: [implicit wait: 15000]
+15:25:52.612 INFO - Executing: [find elements: By.xpath: //div[@class='postrow']])
+15:25:52.622 INFO - Done: [find elements: By.xpath: //div[@class='postrow']]
+15:25:52.630 INFO - Executing: [get text: 49 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //div[@class='postrow']]])
+15:25:52.667 INFO - Done: [get text: 49 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //div[@class='postrow']]]
+15:25:52.683 INFO - Executing: [implicit wait: 5000])
+15:25:52.689 INFO - Done: [implicit wait: 5000]
+15:25:52.705 INFO - Executing: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img])
+15:25:52.714 INFO - Done: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img]
+15:25:52.732 INFO - Executing: [implicit wait: 15000])
+15:25:52.736 INFO - Done: [implicit wait: 15000]
+15:25:52.749 INFO - Executing: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img])
+15:25:52.760 INFO - Done: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img]
+15:25:52.774 INFO - Executing: [get element attribute: 50 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:25:52.786 INFO - Done: [get element attribute: 50 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:25:52.803 INFO - Executing: [get element attribute: 51 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:25:52.814 INFO - Done: [get element attribute: 51 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:25:52.825 INFO - Executing: [get element attribute: 52 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:25:52.837 INFO - Done: [get element attribute: 52 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:25:52.846 INFO - Executing: [get element attribute: 53 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:25:52.856 INFO - Done: [get element attribute: 53 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:25:52.865 INFO - Executing: [get current url])
+15:25:52.872 INFO - Done: [get current url]
+15:25:52.886 INFO - Executing: [page load wait: 15000])
+15:25:52.890 INFO - Done: [page load wait: 15000]
+15:25:52.900 INFO - Executing: [get: https://www.tnaboard.com/showthread.php?1055466-%26%239603%3B%26%239603%3B%26%239603%3B-%26%2310008%3B%26%238500%3B-%26%2310084%3B-%26%2310008%3B%26%238500%3B-%26%239603%3B%26%239603%3B%26%239603%3B-Outcall-Specials%26%239616%3B-Tons-of-A-Reviews!-%26%239603%3B%26%239603%3B%26%239603%3B-%26%2310008%3B%26%238500%3B-%26%2310084%3B-%26%2310008%3B%26%238500%3B-%26%239603%3B%26%239603%3B%26%239603%3B&s=8951601ef02366b5cdbfd3d6083db32b])
+15:25:55.176 INFO - Done: [get: https://www.tnaboard.com/showthread.php?1055466-%26%239603%3B%26%239603%3B%26%239603%3B-%26%2310008%3B%26%238500%3B-%26%2310084%3B-%26%2310008%3B%26%238500%3B-%26%239603%3B%26%239603%3B%26%239603%3B-Outcall-Specials%26%239616%3B-Tons-of-A-Reviews!-%26%239603%3B%26%239603%3B%26%239603%3B-%26%2310008%3B%26%238500%3B-%26%2310084%3B-%26%2310008%3B%26%238500%3B-%26%239603%3B%26%239603%3B%26%239603%3B&s=8951601ef02366b5cdbfd3d6083db32b]
+15:25:55.194 INFO - Executing: [get current url])
+15:25:55.201 INFO - Done: [get current url]
+15:25:55.227 INFO - Executing: [switch to window: CDwindow-68C2596F-3198-4C01-95BA-04CAA3C9FE70])
+15:25:55.232 INFO - Done: [switch to window: CDwindow-68C2596F-3198-4C01-95BA-04CAA3C9FE70]
+15:25:55.247 INFO - Executing: [implicit wait: 5000])
+15:25:55.250 INFO - Done: [implicit wait: 5000]
+15:25:55.266 INFO - Executing: [implicit wait: 5000])
+15:25:55.269 INFO - Done: [implicit wait: 5000]
+15:25:55.297 INFO - Executing: [find elements: By.xpath: //span[@class='threadtitle']/a])
+15:25:55.313 INFO - Done: [find elements: By.xpath: //span[@class='threadtitle']/a]
+15:25:55.328 INFO - Executing: [implicit wait: 15000])
+15:25:55.332 INFO - Done: [implicit wait: 15000]
+15:25:55.364 INFO - Executing: [find element: By.xpath: //span[@class='threadtitle']/a])
+15:25:55.376 INFO - Done: [find element: By.xpath: //span[@class='threadtitle']/a]
+15:25:55.401 INFO - Executing: [get text: 54 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //span[@class='threadtitle']/a]])
+15:25:55.428 INFO - Done: [get text: 54 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //span[@class='threadtitle']/a]]
+15:25:55.447 INFO - Executing: [implicit wait: 15000])
+15:25:55.451 INFO - Done: [implicit wait: 15000]
+15:25:55.470 INFO - Executing: [implicit wait: 5000])
+15:25:55.473 INFO - Done: [implicit wait: 5000]
+15:25:55.491 INFO - Executing: [find elements: By.xpath: //div[@class='postrow']])
+15:26:00.514 INFO - Done: [find elements: By.xpath: //div[@class='postrow']]
+15:26:00.531 INFO - Executing: [implicit wait: 15000])
+15:26:00.533 INFO - Done: [implicit wait: 15000]
+15:26:00.542 INFO - Executing: [implicit wait: 5000])
+15:26:00.545 INFO - Done: [implicit wait: 5000]
+15:26:00.554 INFO - Executing: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img])
+15:26:00.568 INFO - Done: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img]
+15:26:00.580 INFO - Executing: [implicit wait: 15000])
+15:26:00.582 INFO - Done: [implicit wait: 15000]
+15:26:00.593 INFO - Executing: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img])
+15:26:00.602 INFO - Done: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img]
+15:26:00.617 INFO - Executing: [get element attribute: 55 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:26:00.629 INFO - Done: [get element attribute: 55 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:26:00.638 INFO - Executing: [get element attribute: 56 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:26:00.648 INFO - Done: [get element attribute: 56 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:26:00.656 INFO - Executing: [get element attribute: 57 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:26:00.666 INFO - Done: [get element attribute: 57 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:26:00.677 INFO - Executing: [get element attribute: 58 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:26:00.686 INFO - Done: [get element attribute: 58 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:26:00.695 INFO - Executing: [get element attribute: 59 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:26:00.704 INFO - Done: [get element attribute: 59 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:26:00.716 INFO - Executing: [get element attribute: 60 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:26:00.726 INFO - Done: [get element attribute: 60 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:26:00.738 INFO - Executing: [get element attribute: 61 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:26:00.748 INFO - Done: [get element attribute: 61 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:26:00.755 INFO - Executing: [get element attribute: 62 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:26:00.765 INFO - Done: [get element attribute: 62 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:26:00.780 INFO - Executing: [get element attribute: 63 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:26:00.794 INFO - Done: [get element attribute: 63 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:26:00.803 INFO - Executing: [get element attribute: 64 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:26:00.816 INFO - Done: [get element attribute: 64 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:26:00.824 INFO - Executing: [get element attribute: 65 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:26:00.833 INFO - Done: [get element attribute: 65 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:26:00.847 INFO - Executing: [get element attribute: 66 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:26:00.858 INFO - Done: [get element attribute: 66 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:26:00.868 INFO - Executing: [get element attribute: 67 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:26:00.879 INFO - Done: [get element attribute: 67 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:26:00.890 INFO - Executing: [get element attribute: 68 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:26:00.900 INFO - Done: [get element attribute: 68 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:26:00.911 INFO - Executing: [get element attribute: 69 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:26:00.921 INFO - Done: [get element attribute: 69 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:26:00.931 INFO - Executing: [get element attribute: 70 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:26:00.942 INFO - Done: [get element attribute: 70 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:26:00.949 INFO - Executing: [get element attribute: 71 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:26:00.960 INFO - Done: [get element attribute: 71 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:26:00.967 INFO - Executing: [get current url])
+15:26:00.976 INFO - Done: [get current url]
+15:26:00.988 INFO - Executing: [page load wait: 15000])
+15:26:00.995 INFO - Done: [page load wait: 15000]
+15:26:01.004 INFO - Executing: [get: https://www.tnaboard.com/showthread.php?1055205-Special-delivery-right-to-your-lap-%26%23128139%3B-%26%23127825%3B-Tubs-specials-curvy-gfe-princess-ready-to-cum-to-you-!!-%26%23128069%3B-%26%23128069%3B-New-pics-take-a-look-%26%23128064%3B-%26%23128064%3B-Outcalls-only-no-driver-or-driver-fee&s=8951601ef02366b5cdbfd3d6083db32b])
+15:26:02.997 INFO - Done: [get: https://www.tnaboard.com/showthread.php?1055205-Special-delivery-right-to-your-lap-%26%23128139%3B-%26%23127825%3B-Tubs-specials-curvy-gfe-princess-ready-to-cum-to-you-!!-%26%23128069%3B-%26%23128069%3B-New-pics-take-a-look-%26%23128064%3B-%26%23128064%3B-Outcalls-only-no-driver-or-driver-fee&s=8951601ef02366b5cdbfd3d6083db32b]
+15:26:03.007 INFO - Executing: [get current url])
+15:26:03.012 INFO - Done: [get current url]
+15:26:03.021 INFO - Executing: [switch to window: CDwindow-68C2596F-3198-4C01-95BA-04CAA3C9FE70])
+15:26:03.024 INFO - Done: [switch to window: CDwindow-68C2596F-3198-4C01-95BA-04CAA3C9FE70]
+15:26:03.036 INFO - Executing: [implicit wait: 5000])
+15:26:03.038 INFO - Done: [implicit wait: 5000]
+15:26:03.047 INFO - Executing: [implicit wait: 5000])
+15:26:03.049 INFO - Done: [implicit wait: 5000]
+15:26:03.058 INFO - Executing: [find elements: By.xpath: //span[@class='threadtitle']/a])
+15:26:03.067 INFO - Done: [find elements: By.xpath: //span[@class='threadtitle']/a]
+15:26:03.076 INFO - Executing: [implicit wait: 15000])
+15:26:03.079 INFO - Done: [implicit wait: 15000]
+15:26:03.094 INFO - Executing: [find element: By.xpath: //span[@class='threadtitle']/a])
+15:26:03.102 INFO - Done: [find element: By.xpath: //span[@class='threadtitle']/a]
+15:26:03.115 INFO - Executing: [get text: 72 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //span[@class='threadtitle']/a]])
+15:26:03.135 INFO - Done: [get text: 72 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //span[@class='threadtitle']/a]]
+15:26:03.143 INFO - Executing: [implicit wait: 15000])
+15:26:03.145 INFO - Done: [implicit wait: 15000]
+15:26:03.153 INFO - Executing: [implicit wait: 5000])
+15:26:03.155 INFO - Done: [implicit wait: 5000]
+15:26:03.163 INFO - Executing: [find elements: By.xpath: //div[@class='postrow']])
+15:26:03.171 INFO - Done: [find elements: By.xpath: //div[@class='postrow']]
+15:26:03.179 INFO - Executing: [implicit wait: 15000])
+15:26:03.181 INFO - Done: [implicit wait: 15000]
+15:26:03.194 INFO - Executing: [find elements: By.xpath: //div[@class='postrow']])
+15:26:03.202 INFO - Done: [find elements: By.xpath: //div[@class='postrow']]
+15:26:03.209 INFO - Executing: [get text: 73 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //div[@class='postrow']]])
+15:26:03.268 INFO - Done: [get text: 73 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //div[@class='postrow']]]
+15:26:03.279 INFO - Executing: [implicit wait: 5000])
+15:26:03.281 INFO - Done: [implicit wait: 5000]
+15:26:03.291 INFO - Executing: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img])
+15:26:08.300 INFO - Done: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img]
+15:26:08.309 INFO - Executing: [implicit wait: 15000])
+15:26:08.314 INFO - Done: [implicit wait: 15000]
+15:26:08.322 INFO - Executing: [get current url])
+15:26:08.328 INFO - Done: [get current url]
+15:26:08.338 INFO - Executing: [page load wait: 15000])
+15:26:08.340 INFO - Done: [page load wait: 15000]
+15:26:08.351 INFO - Executing: [get: https://www.tnaboard.com/showthread.php?1055164-%26%23128139%3B-One-of-a-Kind-European-Beauty%26%23128139%3B-Legs-For-Days-With-Curves-To-Ride-On-%26%23127940%3B&s=8951601ef02366b5cdbfd3d6083db32b])
+15:26:09.686 INFO - Done: [get: https://www.tnaboard.com/showthread.php?1055164-%26%23128139%3B-One-of-a-Kind-European-Beauty%26%23128139%3B-Legs-For-Days-With-Curves-To-Ride-On-%26%23127940%3B&s=8951601ef02366b5cdbfd3d6083db32b]
+15:26:09.699 INFO - Executing: [get current url])
+15:26:09.707 INFO - Done: [get current url]
+15:26:09.723 INFO - Executing: [switch to window: CDwindow-68C2596F-3198-4C01-95BA-04CAA3C9FE70])
+15:26:09.726 INFO - Done: [switch to window: CDwindow-68C2596F-3198-4C01-95BA-04CAA3C9FE70]
+15:26:09.739 INFO - Executing: [implicit wait: 5000])
+15:26:09.741 INFO - Done: [implicit wait: 5000]
+15:26:09.751 INFO - Executing: [implicit wait: 5000])
+15:26:09.754 INFO - Done: [implicit wait: 5000]
+15:26:09.762 INFO - Executing: [find elements: By.xpath: //span[@class='threadtitle']/a])
+15:26:09.771 INFO - Done: [find elements: By.xpath: //span[@class='threadtitle']/a]
+15:26:09.781 INFO - Executing: [implicit wait: 15000])
+15:26:09.783 INFO - Done: [implicit wait: 15000]
+15:26:09.792 INFO - Executing: [find element: By.xpath: //span[@class='threadtitle']/a])
+15:26:09.801 INFO - Done: [find element: By.xpath: //span[@class='threadtitle']/a]
+15:26:09.808 INFO - Executing: [get text: 74 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //span[@class='threadtitle']/a]])
+15:26:09.826 INFO - Done: [get text: 74 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //span[@class='threadtitle']/a]]
+15:26:09.835 INFO - Executing: [implicit wait: 15000])
+15:26:09.837 INFO - Done: [implicit wait: 15000]
+15:26:09.846 INFO - Executing: [implicit wait: 5000])
+15:26:09.849 INFO - Done: [implicit wait: 5000]
+15:26:09.857 INFO - Executing: [find elements: By.xpath: //div[@class='postrow']])
+15:26:09.865 INFO - Done: [find elements: By.xpath: //div[@class='postrow']]
+15:26:09.875 INFO - Executing: [implicit wait: 15000])
+15:26:09.878 INFO - Done: [implicit wait: 15000]
+15:26:09.889 INFO - Executing: [find elements: By.xpath: //div[@class='postrow']])
+15:26:09.898 INFO - Done: [find elements: By.xpath: //div[@class='postrow']]
+15:26:09.907 INFO - Executing: [get text: 75 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //div[@class='postrow']]])
+15:26:09.947 INFO - Done: [get text: 75 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //div[@class='postrow']]]
+15:26:09.958 INFO - Executing: [implicit wait: 5000])
+15:26:09.960 INFO - Done: [implicit wait: 5000]
+15:26:09.975 INFO - Executing: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img])
+15:26:09.985 INFO - Done: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img]
+15:26:09.994 INFO - Executing: [implicit wait: 15000])
+15:26:09.996 INFO - Done: [implicit wait: 15000]
+15:26:10.006 INFO - Executing: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img])
+15:26:10.017 INFO - Done: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img]
+15:26:10.035 INFO - Executing: [get element attribute: 76 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:26:10.045 INFO - Done: [get element attribute: 76 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:26:10.060 INFO - Executing: [get element attribute: 77 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:26:10.070 INFO - Done: [get element attribute: 77 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:26:10.076 INFO - Executing: [get current url])
+15:26:10.081 INFO - Done: [get current url]
+15:26:10.093 INFO - Executing: [page load wait: 15000])
+15:26:10.098 INFO - Done: [page load wait: 15000]
+15:26:10.112 INFO - Executing: [get: https://www.tnaboard.com/showthread.php?1054950-%26%239603%3B%26%239603%3B%26%239603%3B-%26%2310008%3B%26%238500%3B-%26%2310084%3B-%26%2310008%3B%26%238500%3B-%26%239603%3B%26%239603%3B%26%239603%3B-Outcall-Specials%26%239616%3B-Tons-of-A-Reviews!-%26%239603%3B%26%239603%3B%26%239603%3B-%26%2310008%3B%26%238500%3B-%26%2310084%3B-%26%2310008%3B%26%238500%3B-%26%239603%3B%26%239603%3B%26%239603%3B&s=8951601ef02366b5cdbfd3d6083db32b])
+15:26:10.744 INFO - Done: [get: https://www.tnaboard.com/showthread.php?1054950-%26%239603%3B%26%239603%3B%26%239603%3B-%26%2310008%3B%26%238500%3B-%26%2310084%3B-%26%2310008%3B%26%238500%3B-%26%239603%3B%26%239603%3B%26%239603%3B-Outcall-Specials%26%239616%3B-Tons-of-A-Reviews!-%26%239603%3B%26%239603%3B%26%239603%3B-%26%2310008%3B%26%238500%3B-%26%2310084%3B-%26%2310008%3B%26%238500%3B-%26%239603%3B%26%239603%3B%26%239603%3B&s=8951601ef02366b5cdbfd3d6083db32b]
+15:26:10.781 INFO - Executing: [get current url])
+15:26:10.801 INFO - Done: [get current url]
+15:26:10.816 INFO - Executing: [switch to window: CDwindow-68C2596F-3198-4C01-95BA-04CAA3C9FE70])
+15:26:10.818 INFO - Done: [switch to window: CDwindow-68C2596F-3198-4C01-95BA-04CAA3C9FE70]
+15:26:10.830 INFO - Executing: [implicit wait: 5000])
+15:26:10.833 INFO - Done: [implicit wait: 5000]
+15:26:10.843 INFO - Executing: [implicit wait: 5000])
+15:26:10.846 INFO - Done: [implicit wait: 5000]
+15:26:10.856 INFO - Executing: [find elements: By.xpath: //span[@class='threadtitle']/a])
+15:26:10.866 INFO - Done: [find elements: By.xpath: //span[@class='threadtitle']/a]
+15:26:10.874 INFO - Executing: [implicit wait: 15000])
+15:26:10.876 INFO - Done: [implicit wait: 15000]
+15:26:10.891 INFO - Executing: [find element: By.xpath: //span[@class='threadtitle']/a])
+15:26:10.904 INFO - Done: [find element: By.xpath: //span[@class='threadtitle']/a]
+15:26:10.916 INFO - Executing: [get text: 78 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //span[@class='threadtitle']/a]])
+15:26:10.938 INFO - Done: [get text: 78 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //span[@class='threadtitle']/a]]
+15:26:10.948 INFO - Executing: [implicit wait: 15000])
+15:26:10.951 INFO - Done: [implicit wait: 15000]
+15:26:10.965 INFO - Executing: [implicit wait: 5000])
+15:26:10.968 INFO - Done: [implicit wait: 5000]
+15:26:10.982 INFO - Executing: [find elements: By.xpath: //div[@class='postrow']])
+15:26:16.016 INFO - Done: [find elements: By.xpath: //div[@class='postrow']]
+15:26:16.033 INFO - Executing: [implicit wait: 15000])
+15:26:16.039 INFO - Done: [implicit wait: 15000]
+15:26:16.053 INFO - Executing: [implicit wait: 5000])
+15:26:16.059 INFO - Done: [implicit wait: 5000]
+15:26:16.072 INFO - Executing: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img])
+15:26:16.086 INFO - Done: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img]
+15:26:16.094 INFO - Executing: [implicit wait: 15000])
+15:26:16.097 INFO - Done: [implicit wait: 15000]
+15:26:16.120 INFO - Executing: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img])
+15:26:16.131 INFO - Done: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img]
+15:26:16.156 INFO - Executing: [get element attribute: 79 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:26:16.167 INFO - Done: [get element attribute: 79 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:26:16.176 INFO - Executing: [get element attribute: 80 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:26:16.186 INFO - Done: [get element attribute: 80 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:26:16.195 INFO - Executing: [get element attribute: 81 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:26:16.205 INFO - Done: [get element attribute: 81 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:26:16.216 INFO - Executing: [get element attribute: 82 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:26:16.225 INFO - Done: [get element attribute: 82 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:26:16.233 INFO - Executing: [get element attribute: 83 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:26:16.242 INFO - Done: [get element attribute: 83 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:26:16.253 INFO - Executing: [get element attribute: 84 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:26:16.262 INFO - Done: [get element attribute: 84 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:26:16.276 INFO - Executing: [get element attribute: 85 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:26:16.285 INFO - Done: [get element attribute: 85 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:26:16.294 INFO - Executing: [get element attribute: 86 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:26:16.304 INFO - Done: [get element attribute: 86 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:26:16.311 INFO - Executing: [get element attribute: 87 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:26:16.321 INFO - Done: [get element attribute: 87 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:26:16.330 INFO - Executing: [get element attribute: 88 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:26:16.342 INFO - Done: [get element attribute: 88 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:26:16.355 INFO - Executing: [get element attribute: 89 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:26:16.368 INFO - Done: [get element attribute: 89 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:26:16.383 INFO - Executing: [get element attribute: 90 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:26:16.396 INFO - Done: [get element attribute: 90 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:26:16.413 INFO - Executing: [get element attribute: 91 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:26:16.424 INFO - Done: [get element attribute: 91 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:26:16.437 INFO - Executing: [get element attribute: 92 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:26:16.448 INFO - Done: [get element attribute: 92 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:26:16.457 INFO - Executing: [get element attribute: 93 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:26:16.469 INFO - Done: [get element attribute: 93 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:26:16.476 INFO - Executing: [get element attribute: 94 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:26:16.486 INFO - Done: [get element attribute: 94 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:26:16.501 INFO - Executing: [get element attribute: 95 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:26:16.511 INFO - Done: [get element attribute: 95 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:26:16.519 INFO - Executing: [get current url])
+15:26:16.523 INFO - Done: [get current url]
+15:26:16.531 INFO - Executing: [page load wait: 15000])
+15:26:16.534 INFO - Done: [page load wait: 15000]
+15:26:16.555 INFO - Executing: [get: https://www.tnaboard.com/showthread.php?1054800-%26%2365533%3B%26%2365533%3B-Come-Spread-My-Legs-amp-Get-In-Where-You-Squeeze-In-%26%2365533%3B%26%2365533%3B&s=8951601ef02366b5cdbfd3d6083db32b])
+15:26:17.740 INFO - Done: [get: https://www.tnaboard.com/showthread.php?1054800-%26%2365533%3B%26%2365533%3B-Come-Spread-My-Legs-amp-Get-In-Where-You-Squeeze-In-%26%2365533%3B%26%2365533%3B&s=8951601ef02366b5cdbfd3d6083db32b]
+15:26:17.748 INFO - Executing: [get current url])
+15:26:17.756 INFO - Done: [get current url]
+15:26:17.767 INFO - Executing: [switch to window: CDwindow-68C2596F-3198-4C01-95BA-04CAA3C9FE70])
+15:26:17.771 INFO - Done: [switch to window: CDwindow-68C2596F-3198-4C01-95BA-04CAA3C9FE70]
+15:26:17.784 INFO - Executing: [implicit wait: 5000])
+15:26:17.789 INFO - Done: [implicit wait: 5000]
+15:26:17.798 INFO - Executing: [implicit wait: 5000])
+15:26:17.804 INFO - Done: [implicit wait: 5000]
+15:26:17.816 INFO - Executing: [find elements: By.xpath: //span[@class='threadtitle']/a])
+15:26:17.826 INFO - Done: [find elements: By.xpath: //span[@class='threadtitle']/a]
+15:26:17.836 INFO - Executing: [implicit wait: 15000])
+15:26:17.839 INFO - Done: [implicit wait: 15000]
+15:26:17.848 INFO - Executing: [find element: By.xpath: //span[@class='threadtitle']/a])
+15:26:17.857 INFO - Done: [find element: By.xpath: //span[@class='threadtitle']/a]
+15:26:17.869 INFO - Executing: [get text: 96 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //span[@class='threadtitle']/a]])
+15:26:17.886 INFO - Done: [get text: 96 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //span[@class='threadtitle']/a]]
+15:26:17.894 INFO - Executing: [implicit wait: 15000])
+15:26:17.896 INFO - Done: [implicit wait: 15000]
+15:26:17.907 INFO - Executing: [implicit wait: 5000])
+15:26:17.909 INFO - Done: [implicit wait: 5000]
+15:26:17.923 INFO - Executing: [find elements: By.xpath: //div[@class='postrow']])
+15:26:22.947 INFO - Done: [find elements: By.xpath: //div[@class='postrow']]
+15:26:22.959 INFO - Executing: [implicit wait: 15000])
+15:26:22.961 INFO - Done: [implicit wait: 15000]
+15:26:22.972 INFO - Executing: [implicit wait: 5000])
+15:26:22.975 INFO - Done: [implicit wait: 5000]
+15:26:22.984 INFO - Executing: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img])
+15:26:28.032 INFO - Done: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img]
+15:26:28.041 INFO - Executing: [implicit wait: 15000])
+15:26:28.043 INFO - Done: [implicit wait: 15000]
+15:26:28.051 INFO - Executing: [get current url])
+15:26:28.057 INFO - Done: [get current url]
+15:26:28.064 INFO - Executing: [page load wait: 15000])
+15:26:28.066 INFO - Done: [page load wait: 15000]
+15:26:28.077 INFO - Executing: [get: https://www.tnaboard.com/showthread.php?1054739-Warning-I-love-what-I-Do&s=8951601ef02366b5cdbfd3d6083db32b])
+15:26:29.207 INFO - Done: [get: https://www.tnaboard.com/showthread.php?1054739-Warning-I-love-what-I-Do&s=8951601ef02366b5cdbfd3d6083db32b]
+15:26:29.220 INFO - Executing: [get current url])
+15:26:29.226 INFO - Done: [get current url]
+15:26:29.236 INFO - Executing: [switch to window: CDwindow-68C2596F-3198-4C01-95BA-04CAA3C9FE70])
+15:26:29.239 INFO - Done: [switch to window: CDwindow-68C2596F-3198-4C01-95BA-04CAA3C9FE70]
+15:26:29.250 INFO - Executing: [implicit wait: 5000])
+15:26:29.252 INFO - Done: [implicit wait: 5000]
+15:26:29.265 INFO - Executing: [implicit wait: 5000])
+15:26:29.267 INFO - Done: [implicit wait: 5000]
+15:26:29.277 INFO - Executing: [find elements: By.xpath: //span[@class='threadtitle']/a])
+15:26:29.286 INFO - Done: [find elements: By.xpath: //span[@class='threadtitle']/a]
+15:26:29.295 INFO - Executing: [implicit wait: 15000])
+15:26:29.297 INFO - Done: [implicit wait: 15000]
+15:26:29.308 INFO - Executing: [find element: By.xpath: //span[@class='threadtitle']/a])
+15:26:29.316 INFO - Done: [find element: By.xpath: //span[@class='threadtitle']/a]
+15:26:29.330 INFO - Executing: [get text: 97 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //span[@class='threadtitle']/a]])
+15:26:29.349 INFO - Done: [get text: 97 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //span[@class='threadtitle']/a]]
+15:26:29.359 INFO - Executing: [implicit wait: 15000])
+15:26:29.362 INFO - Done: [implicit wait: 15000]
+15:26:29.369 INFO - Executing: [implicit wait: 5000])
+15:26:29.371 INFO - Done: [implicit wait: 5000]
+15:26:29.380 INFO - Executing: [find elements: By.xpath: //div[@class='postrow']])
+15:26:29.388 INFO - Done: [find elements: By.xpath: //div[@class='postrow']]
+15:26:29.395 INFO - Executing: [implicit wait: 15000])
+15:26:29.397 INFO - Done: [implicit wait: 15000]
+15:26:29.407 INFO - Executing: [find elements: By.xpath: //div[@class='postrow']])
+15:26:29.415 INFO - Done: [find elements: By.xpath: //div[@class='postrow']]
+15:26:29.425 INFO - Executing: [get text: 98 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //div[@class='postrow']]])
+15:26:29.465 INFO - Done: [get text: 98 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //div[@class='postrow']]]
+15:26:29.474 INFO - Executing: [implicit wait: 5000])
+15:26:29.477 INFO - Done: [implicit wait: 5000]
+15:26:29.488 INFO - Executing: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img])
+15:26:29.496 INFO - Done: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img]
+15:26:29.507 INFO - Executing: [implicit wait: 15000])
+15:26:29.509 INFO - Done: [implicit wait: 15000]
+15:26:29.525 INFO - Executing: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img])
+15:26:29.538 INFO - Done: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img]
+15:26:29.553 INFO - Executing: [get element attribute: 99 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:26:29.565 INFO - Done: [get element attribute: 99 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:26:29.575 INFO - Executing: [get element attribute: 100 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:26:29.585 INFO - Done: [get element attribute: 100 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:26:29.594 INFO - Executing: [get element attribute: 101 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:26:29.604 INFO - Done: [get element attribute: 101 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:26:29.623 INFO - Executing: [get current url])
+15:26:29.628 INFO - Done: [get current url]
+15:26:29.637 INFO - Executing: [page load wait: 15000])
+15:26:29.639 INFO - Done: [page load wait: 15000]
+15:26:29.654 INFO - Executing: [get: https://www.tnaboard.com/showthread.php?1054738-Warning-I-love-what-I-Do&s=8951601ef02366b5cdbfd3d6083db32b])
+15:26:30.067 INFO - Done: [get: https://www.tnaboard.com/showthread.php?1054738-Warning-I-love-what-I-Do&s=8951601ef02366b5cdbfd3d6083db32b]
+15:26:30.075 INFO - Executing: [get current url])
+15:26:30.081 INFO - Done: [get current url]
+15:26:30.091 INFO - Executing: [switch to window: CDwindow-68C2596F-3198-4C01-95BA-04CAA3C9FE70])
+15:26:30.094 INFO - Done: [switch to window: CDwindow-68C2596F-3198-4C01-95BA-04CAA3C9FE70]
+15:26:30.102 INFO - Executing: [implicit wait: 5000])
+15:26:30.104 INFO - Done: [implicit wait: 5000]
+15:26:30.114 INFO - Executing: [implicit wait: 5000])
+15:26:30.116 INFO - Done: [implicit wait: 5000]
+15:26:30.125 INFO - Executing: [find elements: By.xpath: //span[@class='threadtitle']/a])
+15:26:30.133 INFO - Done: [find elements: By.xpath: //span[@class='threadtitle']/a]
+15:26:30.141 INFO - Executing: [implicit wait: 15000])
+15:26:30.143 INFO - Done: [implicit wait: 15000]
+15:26:30.154 INFO - Executing: [find element: By.xpath: //span[@class='threadtitle']/a])
+15:26:30.164 INFO - Done: [find element: By.xpath: //span[@class='threadtitle']/a]
+15:26:30.171 INFO - Executing: [get text: 102 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //span[@class='threadtitle']/a]])
+15:26:30.196 INFO - Done: [get text: 102 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //span[@class='threadtitle']/a]]
+15:26:30.203 INFO - Executing: [implicit wait: 15000])
+15:26:30.206 INFO - Done: [implicit wait: 15000]
+15:26:30.216 INFO - Executing: [implicit wait: 5000])
+15:26:30.219 INFO - Done: [implicit wait: 5000]
+15:26:30.230 INFO - Executing: [find elements: By.xpath: //div[@class='postrow']])
+15:26:30.259 INFO - Done: [find elements: By.xpath: //div[@class='postrow']]
+15:26:30.270 INFO - Executing: [implicit wait: 15000])
+15:26:30.273 INFO - Done: [implicit wait: 15000]
+15:26:30.288 INFO - Executing: [find elements: By.xpath: //div[@class='postrow']])
+15:26:30.298 INFO - Done: [find elements: By.xpath: //div[@class='postrow']]
+15:26:30.313 INFO - Executing: [get text: 103 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //div[@class='postrow']]])
+15:26:30.346 INFO - Done: [get text: 103 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //div[@class='postrow']]]
+15:26:30.362 INFO - Executing: [implicit wait: 5000])
+15:26:30.365 INFO - Done: [implicit wait: 5000]
+15:26:30.372 INFO - Executing: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img])
+15:26:30.382 INFO - Done: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img]
+15:26:30.389 INFO - Executing: [implicit wait: 15000])
+15:26:30.393 INFO - Done: [implicit wait: 15000]
+15:26:30.400 INFO - Executing: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img])
+15:26:30.410 INFO - Done: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img]
+15:26:30.418 INFO - Executing: [get element attribute: 104 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:26:30.428 INFO - Done: [get element attribute: 104 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:26:30.444 INFO - Executing: [get element attribute: 105 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:26:30.453 INFO - Done: [get element attribute: 105 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:26:30.465 INFO - Executing: [get element attribute: 106 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:26:30.478 INFO - Done: [get element attribute: 106 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:26:30.497 INFO - Executing: [get current url])
+15:26:30.501 INFO - Done: [get current url]
+15:26:30.511 INFO - Executing: [page load wait: 15000])
+15:26:30.515 INFO - Done: [page load wait: 15000]
+15:26:30.531 INFO - Executing: [get: https://www.tnaboard.com/showthread.php?1054707-Stunning-green-eyed-ginger-wants-to-show-you-what-makes-redheads-the-best-lovers&s=8951601ef02366b5cdbfd3d6083db32b])
+15:26:31.703 INFO - Done: [get: https://www.tnaboard.com/showthread.php?1054707-Stunning-green-eyed-ginger-wants-to-show-you-what-makes-redheads-the-best-lovers&s=8951601ef02366b5cdbfd3d6083db32b]
+15:26:31.713 INFO - Executing: [get current url])
+15:26:31.724 INFO - Done: [get current url]
+15:26:31.735 INFO - Executing: [switch to window: CDwindow-68C2596F-3198-4C01-95BA-04CAA3C9FE70])
+15:26:31.738 INFO - Done: [switch to window: CDwindow-68C2596F-3198-4C01-95BA-04CAA3C9FE70]
+15:26:31.748 INFO - Executing: [implicit wait: 5000])
+15:26:31.749 INFO - Done: [implicit wait: 5000]
+15:26:31.759 INFO - Executing: [implicit wait: 5000])
+15:26:31.761 INFO - Done: [implicit wait: 5000]
+15:26:31.769 INFO - Executing: [find elements: By.xpath: //span[@class='threadtitle']/a])
+15:26:31.778 INFO - Done: [find elements: By.xpath: //span[@class='threadtitle']/a]
+15:26:31.786 INFO - Executing: [implicit wait: 15000])
+15:26:31.788 INFO - Done: [implicit wait: 15000]
+15:26:31.798 INFO - Executing: [find element: By.xpath: //span[@class='threadtitle']/a])
+15:26:31.806 INFO - Done: [find element: By.xpath: //span[@class='threadtitle']/a]
+15:26:31.817 INFO - Executing: [get text: 107 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //span[@class='threadtitle']/a]])
+15:26:31.843 INFO - Done: [get text: 107 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //span[@class='threadtitle']/a]]
+15:26:31.852 INFO - Executing: [implicit wait: 15000])
+15:26:31.854 INFO - Done: [implicit wait: 15000]
+15:26:31.871 INFO - Executing: [implicit wait: 5000])
+15:26:31.874 INFO - Done: [implicit wait: 5000]
+15:26:31.884 INFO - Executing: [find elements: By.xpath: //div[@class='postrow']])
+15:26:36.936 INFO - Done: [find elements: By.xpath: //div[@class='postrow']]
+15:26:36.945 INFO - Executing: [implicit wait: 15000])
+15:26:36.948 INFO - Done: [implicit wait: 15000]
+15:26:36.956 INFO - Executing: [implicit wait: 5000])
+15:26:36.959 INFO - Done: [implicit wait: 5000]
+15:26:36.967 INFO - Executing: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img])
+15:26:36.976 INFO - Done: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img]
+15:26:36.984 INFO - Executing: [implicit wait: 15000])
+15:26:36.986 INFO - Done: [implicit wait: 15000]
+15:26:36.994 INFO - Executing: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img])
+15:26:37.002 INFO - Done: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img]
+15:26:37.011 INFO - Executing: [get element attribute: 108 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:26:37.026 INFO - Done: [get element attribute: 108 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:26:37.034 INFO - Executing: [get element attribute: 109 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:26:37.043 INFO - Done: [get element attribute: 109 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:26:37.054 INFO - Executing: [get current url])
+15:26:37.071 INFO - Done: [get current url]
+15:26:37.085 INFO - Executing: [page load wait: 15000])
+15:26:37.087 INFO - Done: [page load wait: 15000]
+15:26:37.097 INFO - Executing: [get: https://www.tnaboard.com/showthread.php?1054603-____-%26%239884%3BPNW-Best-ELITE-Courtesan%26%239884%3B-_______-*Limited-IC*-(OC-TUBS-Specials!!)*-gt-gt-PREBOOK-Solo-DUOS-Trios-!!-lt-lt&s=8951601ef02366b5cdbfd3d6083db32b])
+15:26:38.935 INFO - Done: [get: https://www.tnaboard.com/showthread.php?1054603-____-%26%239884%3BPNW-Best-ELITE-Courtesan%26%239884%3B-_______-*Limited-IC*-(OC-TUBS-Specials!!)*-gt-gt-PREBOOK-Solo-DUOS-Trios-!!-lt-lt&s=8951601ef02366b5cdbfd3d6083db32b]
+15:26:38.946 INFO - Executing: [get current url])
+15:26:38.950 INFO - Done: [get current url]
+15:26:38.960 INFO - Executing: [switch to window: CDwindow-68C2596F-3198-4C01-95BA-04CAA3C9FE70])
+15:26:38.962 INFO - Done: [switch to window: CDwindow-68C2596F-3198-4C01-95BA-04CAA3C9FE70]
+15:26:38.971 INFO - Executing: [implicit wait: 5000])
+15:26:38.973 INFO - Done: [implicit wait: 5000]
+15:26:38.989 INFO - Executing: [implicit wait: 5000])
+15:26:38.992 INFO - Done: [implicit wait: 5000]
+15:26:39.001 INFO - Executing: [find elements: By.xpath: //span[@class='threadtitle']/a])
+15:26:39.012 INFO - Done: [find elements: By.xpath: //span[@class='threadtitle']/a]
+15:26:39.019 INFO - Executing: [implicit wait: 15000])
+15:26:39.022 INFO - Done: [implicit wait: 15000]
+15:26:39.031 INFO - Executing: [find element: By.xpath: //span[@class='threadtitle']/a])
+15:26:39.039 INFO - Done: [find element: By.xpath: //span[@class='threadtitle']/a]
+15:26:39.052 INFO - Executing: [get text: 110 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //span[@class='threadtitle']/a]])
+15:26:39.073 INFO - Done: [get text: 110 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //span[@class='threadtitle']/a]]
+15:26:39.084 INFO - Executing: [implicit wait: 15000])
+15:26:39.086 INFO - Done: [implicit wait: 15000]
+15:26:39.096 INFO - Executing: [implicit wait: 5000])
+15:26:39.099 INFO - Done: [implicit wait: 5000]
+15:26:39.106 INFO - Executing: [find elements: By.xpath: //div[@class='postrow']])
+15:26:44.145 INFO - Done: [find elements: By.xpath: //div[@class='postrow']]
+15:26:44.155 INFO - Executing: [implicit wait: 15000])
+15:26:44.159 INFO - Done: [implicit wait: 15000]
+15:26:44.168 INFO - Executing: [implicit wait: 5000])
+15:26:44.170 INFO - Done: [implicit wait: 5000]
+15:26:44.189 INFO - Executing: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img])
+15:26:49.236 INFO - Done: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img]
+15:26:49.254 INFO - Executing: [implicit wait: 15000])
+15:26:49.256 INFO - Done: [implicit wait: 15000]
+15:26:49.264 INFO - Executing: [get current url])
+15:26:49.269 INFO - Done: [get current url]
+15:26:49.279 INFO - Executing: [page load wait: 15000])
+15:26:49.281 INFO - Done: [page load wait: 15000]
+15:26:49.297 INFO - Executing: [get: https://www.tnaboard.com/showthread.php?1054598-%26%23128536%3B-%26%23128068%3B-TACOMA-INCALL-SPECIALS-80-120-160-200-Witty-Sweet-AVAILABLE-NOW&s=8951601ef02366b5cdbfd3d6083db32b])
+15:26:49.985 INFO - Done: [get: https://www.tnaboard.com/showthread.php?1054598-%26%23128536%3B-%26%23128068%3B-TACOMA-INCALL-SPECIALS-80-120-160-200-Witty-Sweet-AVAILABLE-NOW&s=8951601ef02366b5cdbfd3d6083db32b]
+15:26:50.002 INFO - Executing: [get current url])
+15:26:50.055 INFO - Done: [get current url]
+15:26:50.083 INFO - Executing: [switch to window: CDwindow-68C2596F-3198-4C01-95BA-04CAA3C9FE70])
+15:26:50.090 INFO - Done: [switch to window: CDwindow-68C2596F-3198-4C01-95BA-04CAA3C9FE70]
+15:26:50.106 INFO - Executing: [implicit wait: 5000])
+15:26:50.110 INFO - Done: [implicit wait: 5000]
+15:26:50.138 INFO - Executing: [implicit wait: 5000])
+15:26:50.140 INFO - Done: [implicit wait: 5000]
+15:26:50.152 INFO - Executing: [find elements: By.xpath: //span[@class='threadtitle']/a])
+15:26:50.279 INFO - Done: [find elements: By.xpath: //span[@class='threadtitle']/a]
+15:26:50.298 INFO - Executing: [implicit wait: 15000])
+15:26:50.306 INFO - Done: [implicit wait: 15000]
+15:26:50.369 INFO - Executing: [find element: By.xpath: //span[@class='threadtitle']/a])
+15:26:50.428 INFO - Done: [find element: By.xpath: //span[@class='threadtitle']/a]
+15:26:50.436 INFO - Executing: [get text: 111 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //span[@class='threadtitle']/a]])
+15:26:50.475 INFO - Done: [get text: 111 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //span[@class='threadtitle']/a]]
+15:26:50.488 INFO - Executing: [implicit wait: 15000])
+15:26:50.495 INFO - Done: [implicit wait: 15000]
+15:26:50.509 INFO - Executing: [implicit wait: 5000])
+15:26:50.514 INFO - Done: [implicit wait: 5000]
+15:26:50.531 INFO - Executing: [find elements: By.xpath: //div[@class='postrow']])
+15:26:55.548 INFO - Done: [find elements: By.xpath: //div[@class='postrow']]
+15:26:55.563 INFO - Executing: [implicit wait: 15000])
+15:26:55.567 INFO - Done: [implicit wait: 15000]
+15:26:55.588 INFO - Executing: [implicit wait: 5000])
+15:26:55.600 INFO - Done: [implicit wait: 5000]
+15:26:55.634 INFO - Executing: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img])
+15:27:00.684 INFO - Done: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img]
+15:27:00.707 INFO - Executing: [implicit wait: 15000])
+15:27:00.714 INFO - Done: [implicit wait: 15000]
+15:27:00.735 INFO - Executing: [get current url])
+15:27:00.747 INFO - Done: [get current url]
+15:27:00.764 INFO - Executing: [page load wait: 15000])
+15:27:00.766 INFO - Done: [page load wait: 15000]
+15:27:00.780 INFO - Executing: [get: https://www.tnaboard.com/showthread.php?1054505-Naughty-Blonde-Bombshell-Kenzie-Outcall-May-8th-)&s=8951601ef02366b5cdbfd3d6083db32b])
+15:27:02.656 INFO - Done: [get: https://www.tnaboard.com/showthread.php?1054505-Naughty-Blonde-Bombshell-Kenzie-Outcall-May-8th-)&s=8951601ef02366b5cdbfd3d6083db32b]
+15:27:02.665 INFO - Executing: [get current url])
+15:27:02.672 INFO - Done: [get current url]
+15:27:02.682 INFO - Executing: [switch to window: CDwindow-68C2596F-3198-4C01-95BA-04CAA3C9FE70])
+15:27:02.686 INFO - Done: [switch to window: CDwindow-68C2596F-3198-4C01-95BA-04CAA3C9FE70]
+15:27:02.695 INFO - Executing: [implicit wait: 5000])
+15:27:02.697 INFO - Done: [implicit wait: 5000]
+15:27:02.708 INFO - Executing: [implicit wait: 5000])
+15:27:02.710 INFO - Done: [implicit wait: 5000]
+15:27:02.717 INFO - Executing: [find elements: By.xpath: //span[@class='threadtitle']/a])
+15:27:02.726 INFO - Done: [find elements: By.xpath: //span[@class='threadtitle']/a]
+15:27:02.734 INFO - Executing: [implicit wait: 15000])
+15:27:02.735 INFO - Done: [implicit wait: 15000]
+15:27:02.744 INFO - Executing: [find element: By.xpath: //span[@class='threadtitle']/a])
+15:27:02.753 INFO - Done: [find element: By.xpath: //span[@class='threadtitle']/a]
+15:27:02.760 INFO - Executing: [get text: 112 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //span[@class='threadtitle']/a]])
+15:27:02.784 INFO - Done: [get text: 112 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //span[@class='threadtitle']/a]]
+15:27:02.792 INFO - Executing: [implicit wait: 15000])
+15:27:02.794 INFO - Done: [implicit wait: 15000]
+15:27:02.802 INFO - Executing: [implicit wait: 5000])
+15:27:02.804 INFO - Done: [implicit wait: 5000]
+15:27:02.812 INFO - Executing: [find elements: By.xpath: //div[@class='postrow']])
+15:27:02.826 INFO - Done: [find elements: By.xpath: //div[@class='postrow']]
+15:27:02.833 INFO - Executing: [implicit wait: 15000])
+15:27:02.835 INFO - Done: [implicit wait: 15000]
+15:27:02.842 INFO - Executing: [find elements: By.xpath: //div[@class='postrow']])
+15:27:02.850 INFO - Done: [find elements: By.xpath: //div[@class='postrow']]
+15:27:02.858 INFO - Executing: [get text: 113 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //div[@class='postrow']]])
+15:27:02.920 INFO - Done: [get text: 113 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //div[@class='postrow']]]
+15:27:02.931 INFO - Executing: [implicit wait: 5000])
+15:27:02.933 INFO - Done: [implicit wait: 5000]
+15:27:02.946 INFO - Executing: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img])
+15:27:02.955 INFO - Done: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img]
+15:27:02.967 INFO - Executing: [implicit wait: 15000])
+15:27:02.969 INFO - Done: [implicit wait: 15000]
+15:27:02.977 INFO - Executing: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img])
+15:27:02.984 INFO - Done: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img]
+15:27:03.001 INFO - Executing: [get element attribute: 114 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:27:03.035 INFO - Done: [get element attribute: 114 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:27:03.050 INFO - Executing: [get element attribute: 115 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:27:03.075 INFO - Done: [get element attribute: 115 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:27:03.081 INFO - Executing: [get element attribute: 116 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:27:03.091 INFO - Done: [get element attribute: 116 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:27:03.098 INFO - Executing: [get current url])
+15:27:03.102 INFO - Done: [get current url]
+15:27:03.109 INFO - Executing: [page load wait: 15000])
+15:27:03.111 INFO - Done: [page load wait: 15000]
+15:27:03.118 INFO - Executing: [get: https://www.tnaboard.com/showthread.php?1054417-Visiting-Skagit-County-until-Monday-morning!-%26%2310084%3BLowVolume%26%2310084%3BEverett-ATF-GFE%26%2310084%3BStunning-brunette-Bombshell-Available-now-%26%2310084%3B&s=8951601ef02366b5cdbfd3d6083db32b])
+15:27:04.815 INFO - Done: [get: https://www.tnaboard.com/showthread.php?1054417-Visiting-Skagit-County-until-Monday-morning!-%26%2310084%3BLowVolume%26%2310084%3BEverett-ATF-GFE%26%2310084%3BStunning-brunette-Bombshell-Available-now-%26%2310084%3B&s=8951601ef02366b5cdbfd3d6083db32b]
+15:27:04.823 INFO - Executing: [get current url])
+15:27:04.829 INFO - Done: [get current url]
+15:27:04.846 INFO - Executing: [switch to window: CDwindow-68C2596F-3198-4C01-95BA-04CAA3C9FE70])
+15:27:04.848 INFO - Done: [switch to window: CDwindow-68C2596F-3198-4C01-95BA-04CAA3C9FE70]
+15:27:04.858 INFO - Executing: [implicit wait: 5000])
+15:27:04.860 INFO - Done: [implicit wait: 5000]
+15:27:04.867 INFO - Executing: [implicit wait: 5000])
+15:27:04.869 INFO - Done: [implicit wait: 5000]
+15:27:04.879 INFO - Executing: [find elements: By.xpath: //span[@class='threadtitle']/a])
+15:27:04.891 INFO - Done: [find elements: By.xpath: //span[@class='threadtitle']/a]
+15:27:04.899 INFO - Executing: [implicit wait: 15000])
+15:27:04.902 INFO - Done: [implicit wait: 15000]
+15:27:04.914 INFO - Executing: [find element: By.xpath: //span[@class='threadtitle']/a])
+15:27:04.923 INFO - Done: [find element: By.xpath: //span[@class='threadtitle']/a]
+15:27:04.930 INFO - Executing: [get text: 117 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //span[@class='threadtitle']/a]])
+15:27:04.948 INFO - Done: [get text: 117 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //span[@class='threadtitle']/a]]
+15:27:04.955 INFO - Executing: [implicit wait: 15000])
+15:27:04.957 INFO - Done: [implicit wait: 15000]
+15:27:04.974 INFO - Executing: [implicit wait: 5000])
+15:27:04.976 INFO - Done: [implicit wait: 5000]
+15:27:04.989 INFO - Executing: [find elements: By.xpath: //div[@class='postrow']])
+15:27:04.997 INFO - Done: [find elements: By.xpath: //div[@class='postrow']]
+15:27:05.005 INFO - Executing: [implicit wait: 15000])
+15:27:05.008 INFO - Done: [implicit wait: 15000]
+15:27:05.021 INFO - Executing: [find elements: By.xpath: //div[@class='postrow']])
+15:27:05.031 INFO - Done: [find elements: By.xpath: //div[@class='postrow']]
+15:27:05.042 INFO - Executing: [get text: 118 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //div[@class='postrow']]])
+15:27:05.092 INFO - Done: [get text: 118 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //div[@class='postrow']]]
+15:27:05.102 INFO - Executing: [implicit wait: 5000])
+15:27:05.104 INFO - Done: [implicit wait: 5000]
+15:27:05.116 INFO - Executing: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img])
+15:27:05.125 INFO - Done: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img]
+15:27:05.139 INFO - Executing: [implicit wait: 15000])
+15:27:05.141 INFO - Done: [implicit wait: 15000]
+15:27:05.151 INFO - Executing: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img])
+15:27:05.164 INFO - Done: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img]
+15:27:05.174 INFO - Executing: [get element attribute: 119 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:27:05.185 INFO - Done: [get element attribute: 119 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:27:05.192 INFO - Executing: [get element attribute: 120 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:27:05.203 INFO - Done: [get element attribute: 120 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:27:05.210 INFO - Executing: [get current url])
+15:27:05.216 INFO - Done: [get current url]
+15:27:05.225 INFO - Executing: [page load wait: 15000])
+15:27:05.227 INFO - Done: [page load wait: 15000]
+15:27:05.241 INFO - Executing: [get: https://www.tnaboard.com/showthread.php?1053662-%26%23128142%3B-%26%23128142%3B-TNA-s-1-Bunny-is-Back-%26%23128142%3B-BUSTY-BLONDE-XXXtra-HOT-BABE-%26%23128142%3B-SEEKS-NAUGHTY-MATE-%26%23128142%3B-HOT-VIP-SPECIALS-%26%23128142%3B&s=8951601ef02366b5cdbfd3d6083db32b])
+15:27:06.584 INFO - Done: [get: https://www.tnaboard.com/showthread.php?1053662-%26%23128142%3B-%26%23128142%3B-TNA-s-1-Bunny-is-Back-%26%23128142%3B-BUSTY-BLONDE-XXXtra-HOT-BABE-%26%23128142%3B-SEEKS-NAUGHTY-MATE-%26%23128142%3B-HOT-VIP-SPECIALS-%26%23128142%3B&s=8951601ef02366b5cdbfd3d6083db32b]
+15:27:06.604 INFO - Executing: [get current url])
+15:27:06.616 INFO - Done: [get current url]
+15:27:06.639 INFO - Executing: [switch to window: CDwindow-68C2596F-3198-4C01-95BA-04CAA3C9FE70])
+15:27:06.642 INFO - Done: [switch to window: CDwindow-68C2596F-3198-4C01-95BA-04CAA3C9FE70]
+15:27:06.655 INFO - Executing: [implicit wait: 5000])
+15:27:06.658 INFO - Done: [implicit wait: 5000]
+15:27:06.671 INFO - Executing: [implicit wait: 5000])
+15:27:06.673 INFO - Done: [implicit wait: 5000]
+15:27:06.685 INFO - Executing: [find elements: By.xpath: //span[@class='threadtitle']/a])
+15:27:06.699 INFO - Done: [find elements: By.xpath: //span[@class='threadtitle']/a]
+15:27:06.707 INFO - Executing: [implicit wait: 15000])
+15:27:06.709 INFO - Done: [implicit wait: 15000]
+15:27:06.722 INFO - Executing: [find element: By.xpath: //span[@class='threadtitle']/a])
+15:27:06.735 INFO - Done: [find element: By.xpath: //span[@class='threadtitle']/a]
+15:27:06.742 INFO - Executing: [get text: 121 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //span[@class='threadtitle']/a]])
+15:27:06.769 INFO - Done: [get text: 121 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //span[@class='threadtitle']/a]]
+15:27:06.779 INFO - Executing: [implicit wait: 15000])
+15:27:06.785 INFO - Done: [implicit wait: 15000]
+15:27:06.800 INFO - Executing: [implicit wait: 5000])
+15:27:06.802 INFO - Done: [implicit wait: 5000]
+15:27:06.811 INFO - Executing: [find elements: By.xpath: //div[@class='postrow']])
+15:27:06.823 INFO - Done: [find elements: By.xpath: //div[@class='postrow']]
+15:27:06.836 INFO - Executing: [implicit wait: 15000])
+15:27:06.839 INFO - Done: [implicit wait: 15000]
+15:27:06.851 INFO - Executing: [find elements: By.xpath: //div[@class='postrow']])
+15:27:06.864 INFO - Done: [find elements: By.xpath: //div[@class='postrow']]
+15:27:06.879 INFO - Executing: [get text: 122 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //div[@class='postrow']]])
+15:27:06.957 INFO - Done: [get text: 122 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //div[@class='postrow']]]
+15:27:06.999 INFO - Executing: [implicit wait: 5000])
+15:27:07.002 INFO - Done: [implicit wait: 5000]
+15:27:07.020 INFO - Executing: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img])
+15:27:12.025 INFO - Done: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img]
+15:27:12.032 INFO - Executing: [implicit wait: 15000])
+15:27:12.034 INFO - Done: [implicit wait: 15000]
+15:27:12.057 INFO - Executing: [get current url])
+15:27:12.071 INFO - Done: [get current url]
+15:27:12.083 INFO - Executing: [page load wait: 15000])
+15:27:12.085 INFO - Done: [page load wait: 15000]
+15:27:12.093 INFO - Executing: [get: https://www.tnaboard.com/showthread.php?1053607-Sweet-summer-in-walla-walla&s=8951601ef02366b5cdbfd3d6083db32b])
+15:27:12.574 INFO - Done: [get: https://www.tnaboard.com/showthread.php?1053607-Sweet-summer-in-walla-walla&s=8951601ef02366b5cdbfd3d6083db32b]
+15:27:12.581 INFO - Executing: [get current url])
+15:27:12.588 INFO - Done: [get current url]
+15:27:12.601 INFO - Executing: [switch to window: CDwindow-68C2596F-3198-4C01-95BA-04CAA3C9FE70])
+15:27:12.603 INFO - Done: [switch to window: CDwindow-68C2596F-3198-4C01-95BA-04CAA3C9FE70]
+15:27:12.613 INFO - Executing: [implicit wait: 5000])
+15:27:12.615 INFO - Done: [implicit wait: 5000]
+15:27:12.631 INFO - Executing: [implicit wait: 5000])
+15:27:12.634 INFO - Done: [implicit wait: 5000]
+15:27:12.643 INFO - Executing: [find elements: By.xpath: //span[@class='threadtitle']/a])
+15:27:12.661 INFO - Done: [find elements: By.xpath: //span[@class='threadtitle']/a]
+15:27:12.670 INFO - Executing: [implicit wait: 15000])
+15:27:12.673 INFO - Done: [implicit wait: 15000]
+15:27:12.682 INFO - Executing: [find element: By.xpath: //span[@class='threadtitle']/a])
+15:27:12.691 INFO - Done: [find element: By.xpath: //span[@class='threadtitle']/a]
+15:27:12.701 INFO - Executing: [get text: 123 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //span[@class='threadtitle']/a]])
+15:27:12.722 INFO - Done: [get text: 123 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //span[@class='threadtitle']/a]]
+15:27:12.730 INFO - Executing: [implicit wait: 15000])
+15:27:12.732 INFO - Done: [implicit wait: 15000]
+15:27:12.739 INFO - Executing: [implicit wait: 5000])
+15:27:12.741 INFO - Done: [implicit wait: 5000]
+15:27:12.750 INFO - Executing: [find elements: By.xpath: //div[@class='postrow']])
+15:27:12.758 INFO - Done: [find elements: By.xpath: //div[@class='postrow']]
+15:27:12.766 INFO - Executing: [implicit wait: 15000])
+15:27:12.768 INFO - Done: [implicit wait: 15000]
+15:27:12.777 INFO - Executing: [find elements: By.xpath: //div[@class='postrow']])
+15:27:12.784 INFO - Done: [find elements: By.xpath: //div[@class='postrow']]
+15:27:12.791 INFO - Executing: [get text: 124 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //div[@class='postrow']]])
+15:27:12.821 INFO - Done: [get text: 124 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //div[@class='postrow']]]
+15:27:12.838 INFO - Executing: [implicit wait: 5000])
+15:27:12.840 INFO - Done: [implicit wait: 5000]
+15:27:12.853 INFO - Executing: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img])
+15:27:17.881 INFO - Done: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img]
+15:27:17.892 INFO - Executing: [implicit wait: 15000])
+15:27:17.896 INFO - Done: [implicit wait: 15000]
+15:27:17.904 INFO - Executing: [get current url])
+15:27:17.915 INFO - Done: [get current url]
+15:27:17.922 INFO - Executing: [page load wait: 15000])
+15:27:17.923 INFO - Done: [page load wait: 15000]
+15:27:17.936 INFO - Executing: [get: https://www.tnaboard.com/showthread.php?1053586-%26%23128150%3B-%26%2311088%3BNO-DRIVER%26%2311088%3B(PuRrRky-BoObIeS-amp-bUbBlEy-BoOtY)90HH-175HR(%A1sKiLled-REVIEWS%A1)%26%23128293%3B-hOt-amp-ReAdY%26%23128166%3B-ALL-NIGHT-specials206-851-3441(O-C-only)-ITS-MY-BDAY-MONTH&s=8951601ef02366b5cdbfd3d6083db32b])
+15:27:19.106 INFO - Done: [get: https://www.tnaboard.com/showthread.php?1053586-%26%23128150%3B-%26%2311088%3BNO-DRIVER%26%2311088%3B(PuRrRky-BoObIeS-amp-bUbBlEy-BoOtY)90HH-175HR(%A1sKiLled-REVIEWS%A1)%26%23128293%3B-hOt-amp-ReAdY%26%23128166%3B-ALL-NIGHT-specials206-851-3441(O-C-only)-ITS-MY-BDAY-MONTH&s=8951601ef02366b5cdbfd3d6083db32b]
+15:27:19.116 INFO - Executing: [get current url])
+15:27:19.122 INFO - Done: [get current url]
+15:27:19.132 INFO - Executing: [switch to window: CDwindow-68C2596F-3198-4C01-95BA-04CAA3C9FE70])
+15:27:19.135 INFO - Done: [switch to window: CDwindow-68C2596F-3198-4C01-95BA-04CAA3C9FE70]
+15:27:19.148 INFO - Executing: [implicit wait: 5000])
+15:27:19.150 INFO - Done: [implicit wait: 5000]
+15:27:19.165 INFO - Executing: [implicit wait: 5000])
+15:27:19.169 INFO - Done: [implicit wait: 5000]
+15:27:19.178 INFO - Executing: [find elements: By.xpath: //span[@class='threadtitle']/a])
+15:27:19.188 INFO - Done: [find elements: By.xpath: //span[@class='threadtitle']/a]
+15:27:19.199 INFO - Executing: [implicit wait: 15000])
+15:27:19.202 INFO - Done: [implicit wait: 15000]
+15:27:19.209 INFO - Executing: [find element: By.xpath: //span[@class='threadtitle']/a])
+15:27:19.219 INFO - Done: [find element: By.xpath: //span[@class='threadtitle']/a]
+15:27:19.226 INFO - Executing: [get text: 125 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //span[@class='threadtitle']/a]])
+15:27:19.249 INFO - Done: [get text: 125 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //span[@class='threadtitle']/a]]
+15:27:19.256 INFO - Executing: [implicit wait: 15000])
+15:27:19.257 INFO - Done: [implicit wait: 15000]
+15:27:19.268 INFO - Executing: [implicit wait: 5000])
+15:27:19.269 INFO - Done: [implicit wait: 5000]
+15:27:19.286 INFO - Executing: [find elements: By.xpath: //div[@class='postrow']])
+15:27:24.324 INFO - Done: [find elements: By.xpath: //div[@class='postrow']]
+15:27:24.335 INFO - Executing: [implicit wait: 15000])
+15:27:24.337 INFO - Done: [implicit wait: 15000]
+15:27:24.345 INFO - Executing: [implicit wait: 5000])
+15:27:24.347 INFO - Done: [implicit wait: 5000]
+15:27:24.355 INFO - Executing: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img])
+15:27:24.374 INFO - Done: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img]
+15:27:24.388 INFO - Executing: [implicit wait: 15000])
+15:27:24.390 INFO - Done: [implicit wait: 15000]
+15:27:24.398 INFO - Executing: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img])
+15:27:24.406 INFO - Done: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img]
+15:27:24.415 INFO - Executing: [get element attribute: 126 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:27:24.426 INFO - Done: [get element attribute: 126 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:27:24.432 INFO - Executing: [get current url])
+15:27:24.436 INFO - Done: [get current url]
+15:27:24.443 INFO - Executing: [page load wait: 15000])
+15:27:24.445 INFO - Done: [page load wait: 15000]
+15:27:24.452 INFO - Executing: [get: https://www.tnaboard.com/showthread.php?1053372-%26%23128139%3B-Allow-me-to-take-you-on-your-INTIMATE-journey-HIGHLY-REVIEWED-amp-providing-QUALITY-discreet-companionship-fit-for-a-king%26%23128081%3B-By-Appointment-Only-%26%2310084%3B-This&s=8951601ef02366b5cdbfd3d6083db32b])
+15:27:25.042 INFO - Done: [get: https://www.tnaboard.com/showthread.php?1053372-%26%23128139%3B-Allow-me-to-take-you-on-your-INTIMATE-journey-HIGHLY-REVIEWED-amp-providing-QUALITY-discreet-companionship-fit-for-a-king%26%23128081%3B-By-Appointment-Only-%26%2310084%3B-This&s=8951601ef02366b5cdbfd3d6083db32b]
+15:27:25.056 INFO - Executing: [get current url])
+15:27:25.081 INFO - Done: [get current url]
+15:27:25.094 INFO - Executing: [switch to window: CDwindow-68C2596F-3198-4C01-95BA-04CAA3C9FE70])
+15:27:25.098 INFO - Done: [switch to window: CDwindow-68C2596F-3198-4C01-95BA-04CAA3C9FE70]
+15:27:25.108 INFO - Executing: [implicit wait: 5000])
+15:27:25.110 INFO - Done: [implicit wait: 5000]
+15:27:25.119 INFO - Executing: [implicit wait: 5000])
+15:27:25.121 INFO - Done: [implicit wait: 5000]
+15:27:25.132 INFO - Executing: [find elements: By.xpath: //span[@class='threadtitle']/a])
+15:27:25.150 INFO - Done: [find elements: By.xpath: //span[@class='threadtitle']/a]
+15:27:25.165 INFO - Executing: [implicit wait: 15000])
+15:27:25.185 INFO - Done: [implicit wait: 15000]
+15:27:25.202 INFO - Executing: [find element: By.xpath: //span[@class='threadtitle']/a])
+15:27:25.249 INFO - Done: [find element: By.xpath: //span[@class='threadtitle']/a]
+15:27:25.260 INFO - Executing: [get text: 127 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //span[@class='threadtitle']/a]])
+15:27:25.304 INFO - Done: [get text: 127 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //span[@class='threadtitle']/a]]
+15:27:25.310 INFO - Executing: [implicit wait: 15000])
+15:27:25.312 INFO - Done: [implicit wait: 15000]
+15:27:25.323 INFO - Executing: [implicit wait: 5000])
+15:27:25.328 INFO - Done: [implicit wait: 5000]
+15:27:25.337 INFO - Executing: [find elements: By.xpath: //div[@class='postrow']])
+15:27:25.350 INFO - Done: [find elements: By.xpath: //div[@class='postrow']]
+15:27:25.366 INFO - Executing: [implicit wait: 15000])
+15:27:25.372 INFO - Done: [implicit wait: 15000]
+15:27:25.382 INFO - Executing: [find elements: By.xpath: //div[@class='postrow']])
+15:27:25.395 INFO - Done: [find elements: By.xpath: //div[@class='postrow']]
+15:27:25.407 INFO - Executing: [get text: 128 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //div[@class='postrow']]])
+15:27:25.474 INFO - Done: [get text: 128 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //div[@class='postrow']]]
+15:27:25.487 INFO - Executing: [implicit wait: 5000])
+15:27:25.493 INFO - Done: [implicit wait: 5000]
+15:27:25.500 INFO - Executing: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img])
+15:27:25.527 INFO - Done: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img]
+15:27:25.536 INFO - Executing: [implicit wait: 15000])
+15:27:25.543 INFO - Done: [implicit wait: 15000]
+15:27:25.565 INFO - Executing: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img])
+15:27:25.586 INFO - Done: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img]
+15:27:25.599 INFO - Executing: [get element attribute: 129 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:27:25.620 INFO - Done: [get element attribute: 129 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:27:25.642 INFO - Executing: [get element attribute: 130 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:27:25.659 INFO - Done: [get element attribute: 130 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:27:25.669 INFO - Executing: [get element attribute: 131 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:27:25.682 INFO - Done: [get element attribute: 131 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:27:25.695 INFO - Executing: [get element attribute: 132 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:27:25.721 INFO - Done: [get element attribute: 132 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:27:25.731 INFO - Executing: [get element attribute: 133 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:27:25.746 INFO - Done: [get element attribute: 133 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:27:25.757 INFO - Executing: [get current url])
+15:27:25.777 INFO - Done: [get current url]
+15:27:25.789 INFO - Executing: [page load wait: 15000])
+15:27:25.793 INFO - Done: [page load wait: 15000]
+15:27:25.808 INFO - Executing: [get: https://www.tnaboard.com/showthread.php?1053358-New-pics!!!-b-e-a-utiful-exotic-princess-4-quot-11-spinner-young-amp-amp-ready-d-duo-avail-2-incall-i-bite-not-bark-d&s=8951601ef02366b5cdbfd3d6083db32b])
+15:27:26.530 INFO - Done: [get: https://www.tnaboard.com/showthread.php?1053358-New-pics!!!-b-e-a-utiful-exotic-princess-4-quot-11-spinner-young-amp-amp-ready-d-duo-avail-2-incall-i-bite-not-bark-d&s=8951601ef02366b5cdbfd3d6083db32b]
+15:27:26.545 INFO - Executing: [get current url])
+15:27:26.556 INFO - Done: [get current url]
+15:27:26.565 INFO - Executing: [switch to window: CDwindow-68C2596F-3198-4C01-95BA-04CAA3C9FE70])
+15:27:26.572 INFO - Done: [switch to window: CDwindow-68C2596F-3198-4C01-95BA-04CAA3C9FE70]
+15:27:26.588 INFO - Executing: [implicit wait: 5000])
+15:27:26.594 INFO - Done: [implicit wait: 5000]
+15:27:26.620 INFO - Executing: [implicit wait: 5000])
+15:27:26.626 INFO - Done: [implicit wait: 5000]
+15:27:26.636 INFO - Executing: [find elements: By.xpath: //span[@class='threadtitle']/a])
+15:27:26.650 INFO - Done: [find elements: By.xpath: //span[@class='threadtitle']/a]
+15:27:26.664 INFO - Executing: [implicit wait: 15000])
+15:27:26.667 INFO - Done: [implicit wait: 15000]
+15:27:26.691 INFO - Executing: [find element: By.xpath: //span[@class='threadtitle']/a])
+15:27:26.704 INFO - Done: [find element: By.xpath: //span[@class='threadtitle']/a]
+15:27:26.714 INFO - Executing: [get text: 134 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //span[@class='threadtitle']/a]])
+15:27:26.744 INFO - Done: [get text: 134 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //span[@class='threadtitle']/a]]
+15:27:26.753 INFO - Executing: [implicit wait: 15000])
+15:27:26.758 INFO - Done: [implicit wait: 15000]
+15:27:26.775 INFO - Executing: [implicit wait: 5000])
+15:27:26.777 INFO - Done: [implicit wait: 5000]
+15:27:26.785 INFO - Executing: [find elements: By.xpath: //div[@class='postrow']])
+15:27:26.800 INFO - Done: [find elements: By.xpath: //div[@class='postrow']]
+15:27:26.812 INFO - Executing: [implicit wait: 15000])
+15:27:26.814 INFO - Done: [implicit wait: 15000]
+15:27:26.825 INFO - Executing: [find elements: By.xpath: //div[@class='postrow']])
+15:27:26.835 INFO - Done: [find elements: By.xpath: //div[@class='postrow']]
+15:27:26.851 INFO - Executing: [get text: 135 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //div[@class='postrow']]])
+15:27:26.924 INFO - Done: [get text: 135 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //div[@class='postrow']]]
+15:27:26.934 INFO - Executing: [implicit wait: 5000])
+15:27:26.940 INFO - Done: [implicit wait: 5000]
+15:27:26.950 INFO - Executing: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img])
+15:27:26.974 INFO - Done: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img]
+15:27:26.982 INFO - Executing: [implicit wait: 15000])
+15:27:26.989 INFO - Done: [implicit wait: 15000]
+15:27:27.014 INFO - Executing: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img])
+15:27:27.028 INFO - Done: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img]
+15:27:27.040 INFO - Executing: [get element attribute: 136 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:27:27.055 INFO - Done: [get element attribute: 136 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:27:27.066 INFO - Executing: [get element attribute: 137 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:27:27.081 INFO - Done: [get element attribute: 137 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:27:27.093 INFO - Executing: [get current url])
+15:27:27.100 INFO - Done: [get current url]
+15:27:27.114 INFO - Executing: [page load wait: 15000])
+15:27:27.117 INFO - Done: [page load wait: 15000]
+15:27:27.130 INFO - Executing: [get: https://www.tnaboard.com/showthread.php?1053225-New-to-the-board!-Come-meet-me-%26%23128525%3B-%26%23128525%3B&s=8951601ef02366b5cdbfd3d6083db32b])
+15:27:28.301 INFO - Done: [get: https://www.tnaboard.com/showthread.php?1053225-New-to-the-board!-Come-meet-me-%26%23128525%3B-%26%23128525%3B&s=8951601ef02366b5cdbfd3d6083db32b]
+15:27:28.308 INFO - Executing: [get current url])
+15:27:28.322 INFO - Done: [get current url]
+15:27:28.329 INFO - Executing: [switch to window: CDwindow-68C2596F-3198-4C01-95BA-04CAA3C9FE70])
+15:27:28.332 INFO - Done: [switch to window: CDwindow-68C2596F-3198-4C01-95BA-04CAA3C9FE70]
+15:27:28.338 INFO - Executing: [implicit wait: 5000])
+15:27:28.340 INFO - Done: [implicit wait: 5000]
+15:27:28.349 INFO - Executing: [implicit wait: 5000])
+15:27:28.351 INFO - Done: [implicit wait: 5000]
+15:27:28.361 INFO - Executing: [find elements: By.xpath: //span[@class='threadtitle']/a])
+15:27:28.378 INFO - Done: [find elements: By.xpath: //span[@class='threadtitle']/a]
+15:27:28.385 INFO - Executing: [implicit wait: 15000])
+15:27:28.387 INFO - Done: [implicit wait: 15000]
+15:27:28.398 INFO - Executing: [find element: By.xpath: //span[@class='threadtitle']/a])
+15:27:28.406 INFO - Done: [find element: By.xpath: //span[@class='threadtitle']/a]
+15:27:28.412 INFO - Executing: [get text: 138 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //span[@class='threadtitle']/a]])
+15:27:28.435 INFO - Done: [get text: 138 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //span[@class='threadtitle']/a]]
+15:27:28.442 INFO - Executing: [implicit wait: 15000])
+15:27:28.444 INFO - Done: [implicit wait: 15000]
+15:27:28.451 INFO - Executing: [implicit wait: 5000])
+15:27:28.453 INFO - Done: [implicit wait: 5000]
+15:27:28.466 INFO - Executing: [find elements: By.xpath: //div[@class='postrow']])
+15:27:28.475 INFO - Done: [find elements: By.xpath: //div[@class='postrow']]
+15:27:28.484 INFO - Executing: [implicit wait: 15000])
+15:27:28.485 INFO - Done: [implicit wait: 15000]
+15:27:28.492 INFO - Executing: [find elements: By.xpath: //div[@class='postrow']])
+15:27:28.500 INFO - Done: [find elements: By.xpath: //div[@class='postrow']]
+15:27:28.507 INFO - Executing: [get text: 139 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //div[@class='postrow']]])
+15:27:28.546 INFO - Done: [get text: 139 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //div[@class='postrow']]]
+15:27:28.555 INFO - Executing: [get text: 140 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //div[@class='postrow']]])
+15:27:28.584 INFO - Done: [get text: 140 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //div[@class='postrow']]]
+15:27:28.591 INFO - Executing: [implicit wait: 5000])
+15:27:28.593 INFO - Done: [implicit wait: 5000]
+15:27:28.600 INFO - Executing: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img])
+15:27:28.620 INFO - Done: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img]
+15:27:28.627 INFO - Executing: [implicit wait: 15000])
+15:27:28.629 INFO - Done: [implicit wait: 15000]
+15:27:28.637 INFO - Executing: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img])
+15:27:28.646 INFO - Done: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img]
+15:27:28.653 INFO - Executing: [get element attribute: 141 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:27:28.670 INFO - Done: [get element attribute: 141 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:27:28.676 INFO - Executing: [get element attribute: 142 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:27:28.685 INFO - Done: [get element attribute: 142 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:27:28.692 INFO - Executing: [get element attribute: 143 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:27:28.701 INFO - Done: [get element attribute: 143 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:27:28.709 INFO - Executing: [get current url])
+15:27:28.722 INFO - Done: [get current url]
+15:27:28.735 INFO - Executing: [page load wait: 15000])
+15:27:28.737 INFO - Done: [page load wait: 15000]
+15:27:28.744 INFO - Executing: [get: https://www.tnaboard.com/showthread.php?1053016-%26%23128150%3B-%26%2311088%3BNO-DRIVER%26%2311088%3B(PuRrRky-BoObIeS-amp-bUbBlEy-BoOtY)90HH-190HR(%A1sKiLled-REVIEWS%A1)%26%23128293%3B-hOt-amp-ReAdY%26%23128166%3B-ALL-NIGHT-specials206-851-3441(O-C-only)&s=8951601ef02366b5cdbfd3d6083db32b])
+15:27:29.134 INFO - Done: [get: https://www.tnaboard.com/showthread.php?1053016-%26%23128150%3B-%26%2311088%3BNO-DRIVER%26%2311088%3B(PuRrRky-BoObIeS-amp-bUbBlEy-BoOtY)90HH-190HR(%A1sKiLled-REVIEWS%A1)%26%23128293%3B-hOt-amp-ReAdY%26%23128166%3B-ALL-NIGHT-specials206-851-3441(O-C-only)&s=8951601ef02366b5cdbfd3d6083db32b]
+15:27:29.143 INFO - Executing: [get current url])
+15:27:29.156 INFO - Done: [get current url]
+15:27:29.164 INFO - Executing: [switch to window: CDwindow-68C2596F-3198-4C01-95BA-04CAA3C9FE70])
+15:27:29.170 INFO - Done: [switch to window: CDwindow-68C2596F-3198-4C01-95BA-04CAA3C9FE70]
+15:27:29.189 INFO - Executing: [implicit wait: 5000])
+15:27:29.191 INFO - Done: [implicit wait: 5000]
+15:27:29.202 INFO - Executing: [implicit wait: 5000])
+15:27:29.204 INFO - Done: [implicit wait: 5000]
+15:27:29.215 INFO - Executing: [find elements: By.xpath: //span[@class='threadtitle']/a])
+15:27:29.238 INFO - Done: [find elements: By.xpath: //span[@class='threadtitle']/a]
+15:27:29.245 INFO - Executing: [implicit wait: 15000])
+15:27:29.246 INFO - Done: [implicit wait: 15000]
+15:27:29.254 INFO - Executing: [find element: By.xpath: //span[@class='threadtitle']/a])
+15:27:29.275 INFO - Done: [find element: By.xpath: //span[@class='threadtitle']/a]
+15:27:29.283 INFO - Executing: [get text: 144 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //span[@class='threadtitle']/a]])
+15:27:29.301 INFO - Done: [get text: 144 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //span[@class='threadtitle']/a]]
+15:27:29.312 INFO - Executing: [implicit wait: 15000])
+15:27:29.314 INFO - Done: [implicit wait: 15000]
+15:27:29.328 INFO - Executing: [implicit wait: 5000])
+15:27:29.330 INFO - Done: [implicit wait: 5000]
+15:27:29.340 INFO - Executing: [find elements: By.xpath: //div[@class='postrow']])
+15:27:34.393 INFO - Done: [find elements: By.xpath: //div[@class='postrow']]
+15:27:34.401 INFO - Executing: [implicit wait: 15000])
+15:27:34.402 INFO - Done: [implicit wait: 15000]
+15:27:34.409 INFO - Executing: [implicit wait: 5000])
+15:27:34.411 INFO - Done: [implicit wait: 5000]
+15:27:34.421 INFO - Executing: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img])
+15:27:34.428 INFO - Done: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img]
+15:27:34.435 INFO - Executing: [implicit wait: 15000])
+15:27:34.437 INFO - Done: [implicit wait: 15000]
+15:27:34.444 INFO - Executing: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img])
+15:27:34.452 INFO - Done: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img]
+15:27:34.463 INFO - Executing: [get element attribute: 145 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:27:34.476 INFO - Done: [get element attribute: 145 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:27:34.484 INFO - Executing: [get current url])
+15:27:34.488 INFO - Done: [get current url]
+15:27:34.497 INFO - Executing: [page load wait: 15000])
+15:27:34.499 INFO - Done: [page load wait: 15000]
+15:27:34.507 INFO - Executing: [get: https://www.tnaboard.com/showthread.php?1052908-WENATCHEE-(AVAILABLE-NOW-)W-E-T-SeXy%26%23128139%3B-Aiming-to-please%26%23127825%3B-%26%23128064%3B-BBW-ready-now%26%23128571%3B-INCALL-AVAILABLE-PECIALS&s=8951601ef02366b5cdbfd3d6083db32b])
+15:27:35.192 INFO - Done: [get: https://www.tnaboard.com/showthread.php?1052908-WENATCHEE-(AVAILABLE-NOW-)W-E-T-SeXy%26%23128139%3B-Aiming-to-please%26%23127825%3B-%26%23128064%3B-BBW-ready-now%26%23128571%3B-INCALL-AVAILABLE-PECIALS&s=8951601ef02366b5cdbfd3d6083db32b]
+15:27:35.201 INFO - Executing: [get current url])
+15:27:35.221 INFO - Done: [get current url]
+15:27:35.231 INFO - Executing: [switch to window: CDwindow-68C2596F-3198-4C01-95BA-04CAA3C9FE70])
+15:27:35.238 INFO - Done: [switch to window: CDwindow-68C2596F-3198-4C01-95BA-04CAA3C9FE70]
+15:27:35.245 INFO - Executing: [implicit wait: 5000])
+15:27:35.246 INFO - Done: [implicit wait: 5000]
+15:27:35.258 INFO - Executing: [implicit wait: 5000])
+15:27:35.259 INFO - Done: [implicit wait: 5000]
+15:27:35.267 INFO - Executing: [find elements: By.xpath: //span[@class='threadtitle']/a])
+15:27:35.281 INFO - Done: [find elements: By.xpath: //span[@class='threadtitle']/a]
+15:27:35.297 INFO - Executing: [implicit wait: 15000])
+15:27:35.298 INFO - Done: [implicit wait: 15000]
+15:27:35.307 INFO - Executing: [find element: By.xpath: //span[@class='threadtitle']/a])
+15:27:35.331 INFO - Done: [find element: By.xpath: //span[@class='threadtitle']/a]
+15:27:35.348 INFO - Executing: [get text: 146 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //span[@class='threadtitle']/a]])
+15:27:35.372 INFO - Done: [get text: 146 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //span[@class='threadtitle']/a]]
+15:27:35.386 INFO - Executing: [implicit wait: 15000])
+15:27:35.388 INFO - Done: [implicit wait: 15000]
+15:27:35.405 INFO - Executing: [implicit wait: 5000])
+15:27:35.409 INFO - Done: [implicit wait: 5000]
+15:27:35.420 INFO - Executing: [find elements: By.xpath: //div[@class='postrow']])
+15:27:35.434 INFO - Done: [find elements: By.xpath: //div[@class='postrow']]
+15:27:35.452 INFO - Executing: [implicit wait: 15000])
+15:27:35.454 INFO - Done: [implicit wait: 15000]
+15:27:35.467 INFO - Executing: [find elements: By.xpath: //div[@class='postrow']])
+15:27:35.482 INFO - Done: [find elements: By.xpath: //div[@class='postrow']]
+15:27:35.499 INFO - Executing: [get text: 147 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //div[@class='postrow']]])
+15:27:35.551 INFO - Done: [get text: 147 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //div[@class='postrow']]]
+15:27:35.565 INFO - Executing: [implicit wait: 5000])
+15:27:35.567 INFO - Done: [implicit wait: 5000]
+15:27:35.577 INFO - Executing: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img])
+15:27:40.598 INFO - Done: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img]
+15:27:40.614 INFO - Executing: [implicit wait: 15000])
+15:27:40.616 INFO - Done: [implicit wait: 15000]
+15:27:40.630 INFO - Executing: [get current url])
+15:27:40.638 INFO - Done: [get current url]
+15:27:40.647 INFO - Executing: [page load wait: 15000])
+15:27:40.650 INFO - Done: [page load wait: 15000]
+15:27:40.662 INFO - Executing: [get: https://www.tnaboard.com/showthread.php?1052661-%26%23128150%3B-%26%2311088%3BNO-DRIVER%26%2311088%3B(PuRrRky-BoObIeS-amp-bUbBlEy-BoOtY)90HH-190HR(%A1sKiLled-REVIEWS%A1)%26%23128293%3B-hOt-amp-ReAdY%26%23128166%3B-ALL-NIGHT-specials206-851-3441(O-C-only)&s=8951601ef02366b5cdbfd3d6083db32b])
+15:27:41.702 INFO - Done: [get: https://www.tnaboard.com/showthread.php?1052661-%26%23128150%3B-%26%2311088%3BNO-DRIVER%26%2311088%3B(PuRrRky-BoObIeS-amp-bUbBlEy-BoOtY)90HH-190HR(%A1sKiLled-REVIEWS%A1)%26%23128293%3B-hOt-amp-ReAdY%26%23128166%3B-ALL-NIGHT-specials206-851-3441(O-C-only)&s=8951601ef02366b5cdbfd3d6083db32b]
+15:27:41.720 INFO - Executing: [get current url])
+15:27:41.730 INFO - Done: [get current url]
+15:27:41.745 INFO - Executing: [switch to window: CDwindow-68C2596F-3198-4C01-95BA-04CAA3C9FE70])
+15:27:41.749 INFO - Done: [switch to window: CDwindow-68C2596F-3198-4C01-95BA-04CAA3C9FE70]
+15:27:41.762 INFO - Executing: [implicit wait: 5000])
+15:27:41.766 INFO - Done: [implicit wait: 5000]
+15:27:41.781 INFO - Executing: [implicit wait: 5000])
+15:27:41.784 INFO - Done: [implicit wait: 5000]
+15:27:41.797 INFO - Executing: [find elements: By.xpath: //span[@class='threadtitle']/a])
+15:27:41.824 INFO - Done: [find elements: By.xpath: //span[@class='threadtitle']/a]
+15:27:41.831 INFO - Executing: [implicit wait: 15000])
+15:27:41.833 INFO - Done: [implicit wait: 15000]
+15:27:41.846 INFO - Executing: [find element: By.xpath: //span[@class='threadtitle']/a])
+15:27:41.872 INFO - Done: [find element: By.xpath: //span[@class='threadtitle']/a]
+15:27:41.882 INFO - Executing: [get text: 148 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //span[@class='threadtitle']/a]])
+15:27:41.925 INFO - Done: [get text: 148 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //span[@class='threadtitle']/a]]
+15:27:41.935 INFO - Executing: [implicit wait: 15000])
+15:27:41.940 INFO - Done: [implicit wait: 15000]
+15:27:41.948 INFO - Executing: [implicit wait: 5000])
+15:27:41.950 INFO - Done: [implicit wait: 5000]
+15:27:41.969 INFO - Executing: [find elements: By.xpath: //div[@class='postrow']])
+15:27:46.998 INFO - Done: [find elements: By.xpath: //div[@class='postrow']]
+15:27:47.007 INFO - Executing: [implicit wait: 15000])
+15:27:47.012 INFO - Done: [implicit wait: 15000]
+15:27:47.021 INFO - Executing: [implicit wait: 5000])
+15:27:47.025 INFO - Done: [implicit wait: 5000]
+15:27:47.033 INFO - Executing: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img])
+15:27:47.041 INFO - Done: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img]
+15:27:47.048 INFO - Executing: [implicit wait: 15000])
+15:27:47.050 INFO - Done: [implicit wait: 15000]
+15:27:47.057 INFO - Executing: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img])
+15:27:47.075 INFO - Done: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img]
+15:27:47.084 INFO - Executing: [get element attribute: 149 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:27:47.094 INFO - Done: [get element attribute: 149 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:27:47.101 INFO - Executing: [get current url])
+15:27:47.106 INFO - Done: [get current url]
+15:27:47.113 INFO - Executing: [page load wait: 15000])
+15:27:47.115 INFO - Done: [page load wait: 15000]
+15:27:47.122 INFO - Executing: [get: https://www.tnaboard.com/showthread.php?1052414-NEW*NEW-PLANS-I-M-HOSTING-IN-SKAGIT-WED-amp-THU-2-DAYS-FROM-NOW!-Pre-book-now-only-a-few-appointments-available-Specials-In-or-out-24-7-2days-only&s=8951601ef02366b5cdbfd3d6083db32b])
+15:27:47.722 INFO - Done: [get: https://www.tnaboard.com/showthread.php?1052414-NEW*NEW-PLANS-I-M-HOSTING-IN-SKAGIT-WED-amp-THU-2-DAYS-FROM-NOW!-Pre-book-now-only-a-few-appointments-available-Specials-In-or-out-24-7-2days-only&s=8951601ef02366b5cdbfd3d6083db32b]
+15:27:47.737 INFO - Executing: [get current url])
+15:27:47.757 INFO - Done: [get current url]
+15:27:47.767 INFO - Executing: [switch to window: CDwindow-68C2596F-3198-4C01-95BA-04CAA3C9FE70])
+15:27:47.770 INFO - Done: [switch to window: CDwindow-68C2596F-3198-4C01-95BA-04CAA3C9FE70]
+15:27:47.778 INFO - Executing: [implicit wait: 5000])
+15:27:47.780 INFO - Done: [implicit wait: 5000]
+15:27:47.795 INFO - Executing: [implicit wait: 5000])
+15:27:47.797 INFO - Done: [implicit wait: 5000]
+15:27:47.806 INFO - Executing: [find elements: By.xpath: //span[@class='threadtitle']/a])
+15:27:47.831 INFO - Done: [find elements: By.xpath: //span[@class='threadtitle']/a]
+15:27:47.838 INFO - Executing: [implicit wait: 15000])
+15:27:47.839 INFO - Done: [implicit wait: 15000]
+15:27:47.846 INFO - Executing: [find element: By.xpath: //span[@class='threadtitle']/a])
+15:27:47.855 INFO - Done: [find element: By.xpath: //span[@class='threadtitle']/a]
+15:27:47.861 INFO - Executing: [get text: 150 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //span[@class='threadtitle']/a]])
+15:27:47.891 INFO - Done: [get text: 150 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //span[@class='threadtitle']/a]]
+15:27:47.899 INFO - Executing: [implicit wait: 15000])
+15:27:47.902 INFO - Done: [implicit wait: 15000]
+15:27:47.910 INFO - Executing: [implicit wait: 5000])
+15:27:47.912 INFO - Done: [implicit wait: 5000]
+15:27:47.919 INFO - Executing: [find elements: By.xpath: //div[@class='postrow']])
+15:27:52.932 INFO - Done: [find elements: By.xpath: //div[@class='postrow']]
+15:27:52.950 INFO - Executing: [implicit wait: 15000])
+15:27:52.952 INFO - Done: [implicit wait: 15000]
+15:27:52.964 INFO - Executing: [implicit wait: 5000])
+15:27:52.966 INFO - Done: [implicit wait: 5000]
+15:27:52.976 INFO - Executing: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img])
+15:27:52.983 INFO - Done: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img]
+15:27:52.990 INFO - Executing: [implicit wait: 15000])
+15:27:52.991 INFO - Done: [implicit wait: 15000]
+15:27:53.002 INFO - Executing: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img])
+15:27:53.020 INFO - Done: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img]
+15:27:53.027 INFO - Executing: [get element attribute: 151 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:27:53.036 INFO - Done: [get element attribute: 151 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:27:53.041 INFO - Executing: [get element attribute: 152 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:27:53.050 INFO - Done: [get element attribute: 152 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:27:53.055 INFO - Executing: [get current url])
+15:27:53.072 INFO - Done: [get current url]
+15:27:53.078 INFO - Executing: [page load wait: 15000])
+15:27:53.079 INFO - Done: [page load wait: 15000]
+15:27:53.086 INFO - Executing: [get: https://www.tnaboard.com/showthread.php?1052236-Ms-NovaFanning-only-in-town-for-short-time!!!-CALL-NOW!!-HIGHLY-ADDICTED-PETITE-BLONDE-SPINNER!!!&s=8951601ef02366b5cdbfd3d6083db32b])
+15:27:54.851 INFO - Done: [get: https://www.tnaboard.com/showthread.php?1052236-Ms-NovaFanning-only-in-town-for-short-time!!!-CALL-NOW!!-HIGHLY-ADDICTED-PETITE-BLONDE-SPINNER!!!&s=8951601ef02366b5cdbfd3d6083db32b]
+15:27:54.857 INFO - Executing: [get current url])
+15:27:54.871 INFO - Done: [get current url]
+15:27:54.879 INFO - Executing: [switch to window: CDwindow-68C2596F-3198-4C01-95BA-04CAA3C9FE70])
+15:27:54.882 INFO - Done: [switch to window: CDwindow-68C2596F-3198-4C01-95BA-04CAA3C9FE70]
+15:27:54.888 INFO - Executing: [implicit wait: 5000])
+15:27:54.889 INFO - Done: [implicit wait: 5000]
+15:27:54.896 INFO - Executing: [implicit wait: 5000])
+15:27:54.898 INFO - Done: [implicit wait: 5000]
+15:27:54.905 INFO - Executing: [find elements: By.xpath: //span[@class='threadtitle']/a])
+15:27:54.925 INFO - Done: [find elements: By.xpath: //span[@class='threadtitle']/a]
+15:27:54.941 INFO - Executing: [implicit wait: 15000])
+15:27:54.943 INFO - Done: [implicit wait: 15000]
+15:27:54.950 INFO - Executing: [find element: By.xpath: //span[@class='threadtitle']/a])
+15:27:54.971 INFO - Done: [find element: By.xpath: //span[@class='threadtitle']/a]
+15:27:54.977 INFO - Executing: [get text: 153 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //span[@class='threadtitle']/a]])
+15:27:54.996 INFO - Done: [get text: 153 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //span[@class='threadtitle']/a]]
+15:27:55.003 INFO - Executing: [implicit wait: 15000])
+15:27:55.005 INFO - Done: [implicit wait: 15000]
+15:27:55.012 INFO - Executing: [implicit wait: 5000])
+15:27:55.015 INFO - Done: [implicit wait: 5000]
+15:27:55.022 INFO - Executing: [find elements: By.xpath: //div[@class='postrow']])
+15:27:55.029 INFO - Done: [find elements: By.xpath: //div[@class='postrow']]
+15:27:55.040 INFO - Executing: [implicit wait: 15000])
+15:27:55.042 INFO - Done: [implicit wait: 15000]
+15:27:55.051 INFO - Executing: [find elements: By.xpath: //div[@class='postrow']])
+15:27:55.125 INFO - Done: [find elements: By.xpath: //div[@class='postrow']]
+15:27:55.135 INFO - Executing: [get text: 154 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //div[@class='postrow']]])
+15:27:55.249 INFO - Done: [get text: 154 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //div[@class='postrow']]]
+15:27:55.285 INFO - Executing: [implicit wait: 5000])
+15:27:55.322 INFO - Done: [implicit wait: 5000]
+15:27:55.366 INFO - Executing: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img])
+15:27:55.492 INFO - Done: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img]
+15:27:55.510 INFO - Executing: [implicit wait: 15000])
+15:27:55.515 INFO - Done: [implicit wait: 15000]
+15:27:55.526 INFO - Executing: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img])
+15:27:55.546 INFO - Done: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img]
+15:27:55.576 INFO - Executing: [get element attribute: 155 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:27:55.600 INFO - Done: [get element attribute: 155 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:27:55.610 INFO - Executing: [get element attribute: 156 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:27:55.635 INFO - Done: [get element attribute: 156 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:27:55.643 INFO - Executing: [get element attribute: 157 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:27:55.670 INFO - Done: [get element attribute: 157 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:27:55.694 INFO - Executing: [get element attribute: 158 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:27:55.734 INFO - Done: [get element attribute: 158 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:27:55.752 INFO - Executing: [get element attribute: 159 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:27:55.790 INFO - Done: [get element attribute: 159 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:27:55.810 INFO - Executing: [get element attribute: 160 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:27:55.852 INFO - Done: [get element attribute: 160 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:27:55.877 INFO - Executing: [get current url])
+15:27:55.919 INFO - Done: [get current url]
+15:27:55.933 INFO - Executing: [page load wait: 15000])
+15:27:55.938 INFO - Done: [page load wait: 15000]
+15:27:55.962 INFO - Executing: [get: https://www.tnaboard.com/showthread.php?1052201-To-The-Gentleman-Who-Prefers-Quality-Over-Quantity-%26%23127872%3B-%26%23128081%3B-Highly-Reviewed%26%23128081%3B-%26%23127872%3B-90HH-180HR(IN-amp-OUT)-206-851-3441&s=8951601ef02366b5cdbfd3d6083db32b])
+15:27:56.659 INFO - Done: [get: https://www.tnaboard.com/showthread.php?1052201-To-The-Gentleman-Who-Prefers-Quality-Over-Quantity-%26%23127872%3B-%26%23128081%3B-Highly-Reviewed%26%23128081%3B-%26%23127872%3B-90HH-180HR(IN-amp-OUT)-206-851-3441&s=8951601ef02366b5cdbfd3d6083db32b]
+15:27:56.693 INFO - Executing: [get current url])
+15:27:56.715 INFO - Done: [get current url]
+15:27:56.745 INFO - Executing: [switch to window: CDwindow-68C2596F-3198-4C01-95BA-04CAA3C9FE70])
+15:27:56.751 INFO - Done: [switch to window: CDwindow-68C2596F-3198-4C01-95BA-04CAA3C9FE70]
+15:27:56.762 INFO - Executing: [implicit wait: 5000])
+15:27:56.767 INFO - Done: [implicit wait: 5000]
+15:27:56.782 INFO - Executing: [implicit wait: 5000])
+15:27:56.786 INFO - Done: [implicit wait: 5000]
+15:27:56.797 INFO - Executing: [find elements: By.xpath: //span[@class='threadtitle']/a])
+15:27:56.822 INFO - Done: [find elements: By.xpath: //span[@class='threadtitle']/a]
+15:27:56.831 INFO - Executing: [implicit wait: 15000])
+15:27:56.836 INFO - Done: [implicit wait: 15000]
+15:27:56.848 INFO - Executing: [find element: By.xpath: //span[@class='threadtitle']/a])
+15:27:56.864 INFO - Done: [find element: By.xpath: //span[@class='threadtitle']/a]
+15:27:56.881 INFO - Executing: [get text: 161 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //span[@class='threadtitle']/a]])
+15:27:56.917 INFO - Done: [get text: 161 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //span[@class='threadtitle']/a]]
+15:27:56.936 INFO - Executing: [implicit wait: 15000])
+15:27:56.939 INFO - Done: [implicit wait: 15000]
+15:27:56.962 INFO - Executing: [implicit wait: 5000])
+15:27:56.965 INFO - Done: [implicit wait: 5000]
+15:27:56.991 INFO - Executing: [find elements: By.xpath: //div[@class='postrow']])
+15:28:02.050 INFO - Done: [find elements: By.xpath: //div[@class='postrow']]
+15:28:02.067 INFO - Executing: [implicit wait: 15000])
+15:28:02.069 INFO - Done: [implicit wait: 15000]
+15:28:02.077 INFO - Executing: [implicit wait: 5000])
+15:28:02.079 INFO - Done: [implicit wait: 5000]
+15:28:02.090 INFO - Executing: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img])
+15:28:02.098 INFO - Done: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img]
+15:28:02.108 INFO - Executing: [implicit wait: 15000])
+15:28:02.110 INFO - Done: [implicit wait: 15000]
+15:28:02.122 INFO - Executing: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img])
+15:28:02.130 INFO - Done: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img]
+15:28:02.136 INFO - Executing: [get element attribute: 162 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:28:02.146 INFO - Done: [get element attribute: 162 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:28:02.151 INFO - Executing: [get current url])
+15:28:02.156 INFO - Done: [get current url]
+15:28:02.164 INFO - Executing: [page load wait: 15000])
+15:28:02.165 INFO - Done: [page load wait: 15000]
+15:28:02.172 INFO - Executing: [get: https://www.tnaboard.com/showthread.php?1051935-%26%23128139%3B-%26%23128139%3B-open-availability%26%23128139%3B-%26%23128139%3B-and-some-sweet-ass-specials-today%26%23128151%3B-%26%23128151%3B&s=8951601ef02366b5cdbfd3d6083db32b])
+15:28:03.487 INFO - Done: [get: https://www.tnaboard.com/showthread.php?1051935-%26%23128139%3B-%26%23128139%3B-open-availability%26%23128139%3B-%26%23128139%3B-and-some-sweet-ass-specials-today%26%23128151%3B-%26%23128151%3B&s=8951601ef02366b5cdbfd3d6083db32b]
+15:28:03.494 INFO - Executing: [get current url])
+15:28:03.498 INFO - Done: [get current url]
+15:28:03.508 INFO - Executing: [switch to window: CDwindow-68C2596F-3198-4C01-95BA-04CAA3C9FE70])
+15:28:03.510 INFO - Done: [switch to window: CDwindow-68C2596F-3198-4C01-95BA-04CAA3C9FE70]
+15:28:03.517 INFO - Executing: [implicit wait: 5000])
+15:28:03.519 INFO - Done: [implicit wait: 5000]
+15:28:03.527 INFO - Executing: [implicit wait: 5000])
+15:28:03.529 INFO - Done: [implicit wait: 5000]
+15:28:03.542 INFO - Executing: [find elements: By.xpath: //span[@class='threadtitle']/a])
+15:28:03.550 INFO - Done: [find elements: By.xpath: //span[@class='threadtitle']/a]
+15:28:03.558 INFO - Executing: [implicit wait: 15000])
+15:28:03.560 INFO - Done: [implicit wait: 15000]
+15:28:03.571 INFO - Executing: [find element: By.xpath: //span[@class='threadtitle']/a])
+15:28:03.579 INFO - Done: [find element: By.xpath: //span[@class='threadtitle']/a]
+15:28:03.586 INFO - Executing: [get text: 163 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //span[@class='threadtitle']/a]])
+15:28:03.605 INFO - Done: [get text: 163 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //span[@class='threadtitle']/a]]
+15:28:03.614 INFO - Executing: [implicit wait: 15000])
+15:28:03.616 INFO - Done: [implicit wait: 15000]
+15:28:03.624 INFO - Executing: [implicit wait: 5000])
+15:28:03.626 INFO - Done: [implicit wait: 5000]
+15:28:03.634 INFO - Executing: [find elements: By.xpath: //div[@class='postrow']])
+15:28:08.649 INFO - Done: [find elements: By.xpath: //div[@class='postrow']]
+15:28:08.658 INFO - Executing: [implicit wait: 15000])
+15:28:08.660 INFO - Done: [implicit wait: 15000]
+15:28:08.669 INFO - Executing: [implicit wait: 5000])
+15:28:08.670 INFO - Done: [implicit wait: 5000]
+15:28:08.677 INFO - Executing: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img])
+15:28:08.688 INFO - Done: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img]
+15:28:08.697 INFO - Executing: [implicit wait: 15000])
+15:28:08.700 INFO - Done: [implicit wait: 15000]
+15:28:08.709 INFO - Executing: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img])
+15:28:08.718 INFO - Done: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img]
+15:28:08.727 INFO - Executing: [get element attribute: 164 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:28:08.739 INFO - Done: [get element attribute: 164 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:28:08.750 INFO - Executing: [get element attribute: 165 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:28:08.761 INFO - Done: [get element attribute: 165 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:28:08.771 INFO - Executing: [get element attribute: 166 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:28:08.783 INFO - Done: [get element attribute: 166 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:28:08.791 INFO - Executing: [get current url])
+15:28:08.795 INFO - Done: [get current url]
+15:28:08.803 INFO - Executing: [page load wait: 15000])
+15:28:08.805 INFO - Done: [page load wait: 15000]
+15:28:08.813 INFO - Executing: [get: https://www.tnaboard.com/showthread.php?1051611-SKAGIT-COUNTY!!!-Review-special%26%239989%3B%26%23127800%3B-INCALL-OUTCALL%26%23127976%3B-The-hottest-UKRAINIAN-GODDESS-AROUND%26%23128133%3B-%26%23128081%3B&s=8951601ef02366b5cdbfd3d6083db32b])
+15:28:10.593 INFO - Done: [get: https://www.tnaboard.com/showthread.php?1051611-SKAGIT-COUNTY!!!-Review-special%26%239989%3B%26%23127800%3B-INCALL-OUTCALL%26%23127976%3B-The-hottest-UKRAINIAN-GODDESS-AROUND%26%23128133%3B-%26%23128081%3B&s=8951601ef02366b5cdbfd3d6083db32b]
+15:28:10.599 INFO - Executing: [get current url])
+15:28:10.604 INFO - Done: [get current url]
+15:28:10.615 INFO - Executing: [switch to window: CDwindow-68C2596F-3198-4C01-95BA-04CAA3C9FE70])
+15:28:10.617 INFO - Done: [switch to window: CDwindow-68C2596F-3198-4C01-95BA-04CAA3C9FE70]
+15:28:10.625 INFO - Executing: [implicit wait: 5000])
+15:28:10.627 INFO - Done: [implicit wait: 5000]
+15:28:10.634 INFO - Executing: [implicit wait: 5000])
+15:28:10.636 INFO - Done: [implicit wait: 5000]
+15:28:10.650 INFO - Executing: [find elements: By.xpath: //span[@class='threadtitle']/a])
+15:28:10.659 INFO - Done: [find elements: By.xpath: //span[@class='threadtitle']/a]
+15:28:10.665 INFO - Executing: [implicit wait: 15000])
+15:28:10.667 INFO - Done: [implicit wait: 15000]
+15:28:10.676 INFO - Executing: [find element: By.xpath: //span[@class='threadtitle']/a])
+15:28:10.684 INFO - Done: [find element: By.xpath: //span[@class='threadtitle']/a]
+15:28:10.693 INFO - Executing: [get text: 167 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //span[@class='threadtitle']/a]])
+15:28:10.712 INFO - Done: [get text: 167 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //span[@class='threadtitle']/a]]
+15:28:10.718 INFO - Executing: [implicit wait: 15000])
+15:28:10.720 INFO - Done: [implicit wait: 15000]
+15:28:10.730 INFO - Executing: [implicit wait: 5000])
+15:28:10.732 INFO - Done: [implicit wait: 5000]
+15:28:10.738 INFO - Executing: [find elements: By.xpath: //div[@class='postrow']])
+15:28:10.747 INFO - Done: [find elements: By.xpath: //div[@class='postrow']]
+15:28:10.754 INFO - Executing: [implicit wait: 15000])
+15:28:10.756 INFO - Done: [implicit wait: 15000]
+15:28:10.771 INFO - Executing: [find elements: By.xpath: //div[@class='postrow']])
+15:28:10.784 INFO - Done: [find elements: By.xpath: //div[@class='postrow']]
+15:28:10.797 INFO - Executing: [get text: 168 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //div[@class='postrow']]])
+15:28:10.838 INFO - Done: [get text: 168 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //div[@class='postrow']]]
+15:28:10.848 INFO - Executing: [implicit wait: 5000])
+15:28:10.849 INFO - Done: [implicit wait: 5000]
+15:28:10.868 INFO - Executing: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img])
+15:28:10.879 INFO - Done: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img]
+15:28:10.886 INFO - Executing: [implicit wait: 15000])
+15:28:10.888 INFO - Done: [implicit wait: 15000]
+15:28:10.898 INFO - Executing: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img])
+15:28:10.909 INFO - Done: [find elements: By.xpath: //*[contains(@id,'post_message')]/blockquote/img]
+15:28:10.916 INFO - Executing: [get element attribute: 169 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:28:10.926 INFO - Done: [get element attribute: 169 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:28:10.934 INFO - Executing: [get element attribute: 170 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:28:10.945 INFO - Done: [get element attribute: 170 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:28:10.952 INFO - Executing: [get element attribute: 171 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:28:10.964 INFO - Done: [get element attribute: 171 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:28:10.972 INFO - Executing: [get element attribute: 172 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:28:10.983 INFO - Done: [get element attribute: 172 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:28:10.991 INFO - Executing: [get element attribute: 173 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src])
+15:28:11.001 INFO - Done: [get element attribute: 173 [[ChromeDriver: chrome on MAC (3c8837afd787b733a353a7d053008837)] -> xpath: //*[contains(@id,'post_message')]/blockquote/img], src]
+15:28:11.008 INFO - Executing: [get current url])
+15:28:11.013 INFO - Done: [get current url]
+15:28:11.020 INFO - Executing: [page load wait: 15000])
+15:28:11.022 INFO - Done: [page load wait: 15000]
+15:28:11.033 INFO - Executing: [get: https://www.tnaboard.com/forumdisplay.php?98-WA-Provider-Ads&s=&pp=30&prefixid=wa_statewide&field_dvb_service_type=Escort])
+15:28:11.862 INFO - Done: [get: https://www.tnaboard.com/forumdisplay.php?98-WA-Provider-Ads&s=&pp=30&prefixid=wa_statewide&field_dvb_service_type=Escort]
+15:28:11.873 INFO - Executing: [get current url])
+15:28:11.879 INFO - Done: [get current url]
+15:28:11.886 INFO - Executing: [switch to window: CDwindow-68C2596F-3198-4C01-95BA-04CAA3C9FE70])
+15:28:11.889 INFO - Done: [switch to window: CDwindow-68C2596F-3198-4C01-95BA-04CAA3C9FE70]
+15:28:11.912 INFO - Executing: [delete session: d0616839-7b23-4f50-b893-e6f1801c0309])
+15:28:12.122 INFO - Done: [delete session: d0616839-7b23-4f50-b893-e6f1801c0309]
+15:36:24.757 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, browserName=chrome, version=, platform=MAC}]])
+15:36:24.758 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, browserName=chrome, version=, platform=MAC}]
+Starting ChromeDriver 2.21.371459 (36d3d07f660ff2bc1bf28a75d1cdabed0983e7c4) on port 2897
+Only local connections are allowed.
+15:36:25.566 INFO - Done: [new session: Capabilities [{acceptSslCerts=true, browserName=chrome, version=, platform=MAC}]]
+15:36:25.889 INFO - Executing: [delete all cookies])
+15:36:25.899 INFO - Done: [delete all cookies]
+15:36:25.915 INFO - Executing: [maximise window])
+15:36:26.202 INFO - Done: [maximise window]
+15:36:26.214 INFO - Executing: [get current window handle])
+15:36:26.215 INFO - Done: [get current window handle]
+15:36:26.229 INFO - Executing: [implicit wait: 20000])
+15:36:26.230 INFO - Done: [implicit wait: 20000]
+15:36:26.245 INFO - Executing: [get current url])
+15:36:26.250 INFO - Done: [get current url]
+15:36:26.261 INFO - Executing: [page load wait: 20000])
+15:36:26.263 INFO - Done: [page load wait: 20000]
+15:36:26.279 INFO - Executing: [get: https://seattle.craigslist.org/search/cta?query=generator&sort=pricedsc&hasPic=1&searchNearby=2&nearbyArea=217&nearbyArea=471&nearbyArea=466&nearbyArea=461&nearbyArea=177&nearbyArea=325&min_price=100&max_price=500&condition=10&condition=20&condition=30&condition=40&condition=50])
+15:36:27.807 INFO - Done: [get: https://seattle.craigslist.org/search/cta?query=generator&sort=pricedsc&hasPic=1&searchNearby=2&nearbyArea=217&nearbyArea=471&nearbyArea=466&nearbyArea=461&nearbyArea=177&nearbyArea=325&min_price=100&max_price=500&condition=10&condition=20&condition=30&condition=40&condition=50]
+15:36:27.829 INFO - Executing: [get current url])
+15:36:27.834 INFO - Done: [get current url]
+15:36:27.859 INFO - Executing: [switch to window: CDwindow-1444E87E-328D-47AC-9F92-04DFBCBACE80])
+15:36:27.861 INFO - Done: [switch to window: CDwindow-1444E87E-328D-47AC-9F92-04DFBCBACE80]
+15:36:27.883 INFO - Executing: [implicit wait: 10000])
+15:36:27.885 INFO - Done: [implicit wait: 10000]
+15:36:27.899 INFO - Executing: [find elements: By.xpath: //input[@id='query']])
+15:36:27.917 INFO - Done: [find elements: By.xpath: //input[@id='query']]
+15:36:27.939 INFO - Executing: [implicit wait: 20000])
+15:36:27.942 INFO - Done: [implicit wait: 20000]
+15:36:27.954 INFO - Executing: [implicit wait: 10000])
+15:36:27.956 INFO - Done: [implicit wait: 10000]
+15:36:27.967 INFO - Executing: [find elements: By.xpath: //span[@class='pl']/a])
+15:36:38.013 INFO - Done: [find elements: By.xpath: //span[@class='pl']/a]
+15:36:38.021 INFO - Executing: [implicit wait: 20000])
+15:36:38.022 INFO - Done: [implicit wait: 20000]
+15:36:38.035 INFO - Executing: [take screenshot])
+15:36:38.341 INFO - Done: [take screenshot]
+15:36:38.507 INFO - Executing: [delete session: b1b53434-9f4d-4d49-bb4b-9f00187e82f7])
+15:36:38.584 INFO - Done: [delete session: b1b53434-9f4d-4d49-bb4b-9f00187e82f7]
+Build was aborted
+Aborted by [8mha:AAAAmx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzOEgZ+/dLi1CL9xLz8vMrc/NJiAJjzDjjEAAAA[0manonymous
+Finished: ABORTED

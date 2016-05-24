@@ -1,0 +1,15 @@
+Started by user [8mha:AAAAnx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzeEgZh/dLi1CL94myL5KLUktT8opTMVACTJTwWyAAAAA==[0mjames arasim 
+Building on master in workspace /var/jenkins_home/workspace/StuffedAnimalWar
+Cloning the remote Git repository
+Cloning repository https://github.com/jimarasim/nodeDevelopment.git
+ > git init /var/jenkins_home/workspace/StuffedAnimalWar # timeout=10
+Fetching upstream changes from https://github.com/jimarasim/nodeDevelopment.git
+ > git --version # timeout=10
+using .gitcredentials to set credentials
+ > git config --local credential.username jimarasim # timeout=10
+ > git config --local credential.helper store --file=/tmp/git6957740046212466380.credentials # timeout=10
+ > git -c core.askpass=true fetch --tags --progress https://github.com/jimarasim/nodeDevelopment.git +refs/heads/*:refs/remotes/origin/*
+ > git config --local --remove-section credential # timeout=10
+Build was aborted
+Aborted by [8mha:AAAAnx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzeEgZh/dLi1CL94myL5KLUktT8opTMVACTJTwWyAAAAA==[0mjames arasim 
+Finished: ABORTED

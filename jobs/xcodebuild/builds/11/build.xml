@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<build>
+  <actions>
+    <hudson.model.CauseAction>
+      <causes>
+        <hudson.model.Cause_-UserIdCause>
+          <userId>sk8creteordie</userId>
+        </hudson.model.Cause_-UserIdCause>
+      </causes>
+    </hudson.model.CauseAction>
+    <hudson.plugins.git.util.BuildData plugin="git@2.4.2">
+      <buildsByBranchName>
+        <entry>
+          <string>refs/remotes/origin/develop</string>
+          <hudson.plugins.git.util.Build>
+            <marked plugin="git-client@1.19.6">
+              <sha1>8af5d632de0c4fd64e530d4a5ca7ee1818b08022</sha1>
+              <branches class="list">
+                <hudson.plugins.git.Branch>
+                  <sha1 reference="../../../sha1"/>
+                  <name>refs/remotes/origin/develop</name>
+                </hudson.plugins.git.Branch>
+              </branches>
+            </marked>
+            <revision reference="../marked"/>
+            <hudsonBuildNumber>11</hudsonBuildNumber>
+          </hudson.plugins.git.util.Build>
+        </entry>
+      </buildsByBranchName>
+      <lastBuild reference="../buildsByBranchName/entry/hudson.plugins.git.util.Build"/>
+      <scmName></scmName>
+      <remoteUrls>
+        <string>https://github.com/jaemzware/pagebasedsample.git</string>
+      </remoteUrls>
+    </hudson.plugins.git.util.BuildData>
+    <hudson.plugins.git.GitTagAction plugin="git@2.4.2">
+      <tags class="hudson.util.CopyOnWriteMap$Tree">
+        <entry>
+          <string>refs/remotes/origin/develop</string>
+          <list/>
+        </entry>
+      </tags>
+      <ws>/Users/jameskarasim/Downloads/installed/dockerjenkins_slave/workspace/xcodebuild</ws>
+    </hudson.plugins.git.GitTagAction>
+    <hudson.scm.SCMRevisionState_-None/>
+    <com.sonyericsson.rebuild.RebuildAction plugin="rebuild@1.25"/>
+  </actions>
+  <queueId>49</queueId>
+  <timestamp>1458019650840</timestamp>
+  <startTime>1458019650851</startTime>
+  <result>SUCCESS</result>
+  <duration>100172</duration>
+  <charset>UTF-8</charset>
+  <keepLog>false</keepLog>
+  <builtOn>computer</builtOn>
+  <workspace>/Users/jameskarasim/Downloads/installed/dockerjenkins_slave/workspace/xcodebuild</workspace>
+  <hudsonVersion>1.642.2</hudsonVersion>
+  <scm class="hudson.plugins.git.GitChangeLogParser" plugin="git@2.4.2">
+    <authorOrCommitter>false</authorOrCommitter>
+  </scm>
+  <culprits class="com.google.common.collect.RegularImmutableSortedSet">
+    <string>jaemzware</string>
+  </culprits>
+</build>

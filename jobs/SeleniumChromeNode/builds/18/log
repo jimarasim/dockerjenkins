@@ -1,0 +1,113 @@
+Started by user [8mha:AAAAnx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzeEgZh/dLi1CL94myL5KLUktT8opTMVACTJTwWyAAAAA==[0mjames arasim 
+Building remotely on [8mha:AAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAwOoBn6yfm5BaUlqUVwBgAX+IaIxwAAAA==[0mcomputer (osx) in workspace /Users/jameskarasim/Downloads/installed/dockerjenkins_slave/workspace/SeleniumChromeNode
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/jimarasim/SeleniumCodeBase.git # timeout=10
+Fetching upstream changes from https://github.com/jimarasim/SeleniumCodeBase.git
+ > git --version # timeout=10
+using .gitcredentials to set credentials
+ > git config --local credential.username jimarasim # timeout=10
+ > git config --local credential.helper store --file=/var/folders/2v/_37nrjt5655fc4zbvn61yqkc0000gn/T/git239303058595158136.credentials # timeout=10
+ > git -c core.askpass=true fetch --tags --progress https://github.com/jimarasim/SeleniumCodeBase.git +refs/heads/*:refs/remotes/origin/*
+ > git config --local --remove-section credential # timeout=10
+ > git rev-parse refs/remotes/origin/develop^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/develop^{commit} # timeout=10
+Checking out Revision a1ebc6abb98d3ad742e455086744b84ef08b3074 (refs/remotes/origin/develop)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f a1ebc6abb98d3ad742e455086744b84ef08b3074
+ > git rev-list a1ebc6abb98d3ad742e455086744b84ef08b3074 # timeout=10
+[SeleniumChromeNode] $ /bin/sh -xe /var/folders/2v/_37nrjt5655fc4zbvn61yqkc0000gn/T/hudson4122328870492411288.sh
++ cd SeleniumGrid
++ java -Dwebdriver.chrome.driver=chromedrivermac -jar selenium-server-standalone-2.52.0.jar -role node -browser platform=MAC,browserName=chrome,maxInstances=5,seleniumProtocol=WebDriver,acceptSslCerts=true -hub http://192.168.99.100:4444/grid/register -port 5561
+13:33:21.158 INFO - Launching a Selenium Grid node
+13:33:21.221 INFO - Adding platform=MAC,browserName=chrome,maxInstances=5,seleniumProtocol=WebDriver,acceptSslCerts=true
+13:33:21.607 INFO - Java: Oracle Corporation 25.45-b02
+13:33:21.607 INFO - OS: Mac OS X 10.11.5 x86_64
+13:33:21.616 INFO - v2.52.0, with Core v2.52.0. Built from revision 4c2593c
+13:33:21.688 INFO - Driver provider org.openqa.selenium.ie.InternetExplorerDriver registration is skipped:
+registration capabilities Capabilities [{ensureCleanSession=true, browserName=internet explorer, version=, platform=WINDOWS}] does not match the current platform MAC
+13:33:21.688 INFO - Driver provider org.openqa.selenium.edge.EdgeDriver registration is skipped:
+registration capabilities Capabilities [{browserName=MicrosoftEdge, version=, platform=WINDOWS}] does not match the current platform MAC
+13:33:21.688 INFO - Driver class not found: com.opera.core.systems.OperaDriver
+13:33:21.691 INFO - Driver provider com.opera.core.systems.OperaDriver is not registered
+13:33:21.759 WARN - Failed to start: SocketListener0@0.0.0.0:5561
+
+-------------------------------
+Running as a grid node:
+-------------------------------
+
+Usage: java -jar selenium-server.jar -role node [options]
+
+  -host:
+    <IP | hostname> : usually not needed and determined
+      automatically. For exotic network configuration, network with
+      VPN, specifying the host might be necessary.
+
+  -port:
+    <xxxx> : the port the remote/hub will listen on. Default to 4444.
+
+  -cleanupCycle:
+    <XXXX> in ms. How often a proxy will check for timed out thread.
+
+  -timeout:
+    <XXXX>  the timeout in seconds before the hub automatically ends
+      a test that hasn't had any activity in the last X seconds. The
+      browser will be released for another test to use. This typically
+      takes care of the client crashes.
+
+  -browserTimeout:
+    The timeout in seconds a browser can hang
+
+  -hub:
+    <http://localhost:4444/grid/register> : the url that will be used
+      to post the registration request. This option takes precedence
+      over -hubHost and -hubPort options.
+
+  -hubHost:
+    <IP | hostname> : the host address of a hub the registration
+      request should be sent to. Default to localhost. Option -hub
+      takes precedence over this option.
+
+  -hubPort:
+    <xxxx> : the port listened by a hub the registration request
+      should be sent to. Default to 4444. Option -hub takes precedence
+      over this option.
+
+  -proxy:
+    the class that will be used to represent the node. By default
+      org.openqa.grid.selenium.proxy.DefaultRemoteProxy.
+
+  -maxSession:
+    max number of tests that can run at the same time on the node,
+      independently of the browser used.
+
+  -registerCycle:
+    how often in ms the node will try to register itself again.Allow
+      to restart the hub without having to restart the nodes.
+
+  -nodePolling:
+    in ms. Interval between alive checks of node how often the hub
+      checks if the node is still alive.
+
+  -unregisterIfStillDownAfter:
+    in ms. If the node remains down for more than
+      unregisterIfStillDownAfter millisec, it will disappear from the
+      hub.Default is 1min.
+
+  -downPollingLimit:
+    node is marked as down after downPollingLimit alive checks.
+
+  -nodeStatusCheckTimeout:
+    in ms. Connection and socket timeout which is used for node alive
+      check.
+
+This synopsis lists options available in node role only. To get help
+  on the command line options available for other roles run the server
+  with -help name and the corresponding -role name value.
+java.net.BindException: Selenium is already running on port 5561. Or some other service is.
+	at org.openqa.selenium.server.SeleniumServer.start(SeleniumServer.java:509)
+	at org.openqa.selenium.server.SeleniumServer.boot(SeleniumServer.java:321)
+	at org.openqa.grid.internal.utils.SelfRegisteringRemote.startRemoteServer(SelfRegisteringRemote.java:102)
+	at org.openqa.grid.selenium.GridLauncher$3.launch(GridLauncher.java:92)
+	at org.openqa.grid.selenium.GridLauncher.main(GridLauncher.java:127)
+Finished: SUCCESS

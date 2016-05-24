@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<hudson.maven.MavenBuild plugin="maven-plugin@2.12.1">
+  <actions>
+    <com.sonyericsson.rebuild.RebuildAction plugin="rebuild@1.25"/>
+  </actions>
+  <queueId>-1</queueId>
+  <timestamp>1462842227730</timestamp>
+  <startTime>1462842237318</startTime>
+  <result>NOT_BUILT</result>
+  <duration>15</duration>
+  <charset>UTF-8</charset>
+  <keepLog>false</keepLog>
+  <builtOn></builtOn>
+  <workspace>/var/jenkins_home/workspace/VerifyLogos</workspace>
+</hudson.maven.MavenBuild>

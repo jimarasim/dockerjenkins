@@ -1,0 +1,13 @@
+Started by timer
+Building in workspace /var/jenkins_home/jobs/externalIp/workspace
+No emails were triggered.
+[workspace] $ /bin/sh -xe /tmp/hudson6209820819336274788.sh
++ curl ifconfig.me
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:02 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:03 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:04 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:05 --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:06 --:--:--     0100    13    0    13    0     0      1      0 --:--:--  0:00:07 --:--:--     2
+67.137.12.10
+Email was triggered for: Success
+Sending email for trigger: Success
+Sending email to: jaemzware@hotmail.com
+Finished: SUCCESS

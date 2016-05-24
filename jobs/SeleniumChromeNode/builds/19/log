@@ -1,0 +1,794 @@
+Started by user [8mha:AAAAnx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzeEgZh/dLi1CL94myL5KLUktT8opTMVACTJTwWyAAAAA==[0mjames arasim 
+Building remotely on [8mha:AAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAwOoBn6yfm5BaUlqUVwBgAX+IaIxwAAAA==[0mcomputer (osx) in workspace /Users/jameskarasim/Downloads/installed/dockerjenkins_slave/workspace/SeleniumChromeNode
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/jimarasim/SeleniumCodeBase.git # timeout=10
+Fetching upstream changes from https://github.com/jimarasim/SeleniumCodeBase.git
+ > git --version # timeout=10
+using .gitcredentials to set credentials
+ > git config --local credential.username jimarasim # timeout=10
+ > git config --local credential.helper store --file=/var/folders/2v/_37nrjt5655fc4zbvn61yqkc0000gn/T/git5872497245905287429.credentials # timeout=10
+ > git -c core.askpass=true fetch --tags --progress https://github.com/jimarasim/SeleniumCodeBase.git +refs/heads/*:refs/remotes/origin/*
+ > git config --local --remove-section credential # timeout=10
+ > git rev-parse refs/remotes/origin/develop^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/develop^{commit} # timeout=10
+Checking out Revision a1ebc6abb98d3ad742e455086744b84ef08b3074 (refs/remotes/origin/develop)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f a1ebc6abb98d3ad742e455086744b84ef08b3074
+ > git rev-list a1ebc6abb98d3ad742e455086744b84ef08b3074 # timeout=10
+[SeleniumChromeNode] $ /bin/sh -xe /var/folders/2v/_37nrjt5655fc4zbvn61yqkc0000gn/T/hudson4218937761980893310.sh
++ cd SeleniumGrid
++ java -Dwebdriver.chrome.driver=chromedrivermac -jar selenium-server-standalone-2.52.0.jar -role node -browser platform=MAC,browserName=chrome,maxInstances=5,seleniumProtocol=WebDriver,acceptSslCerts=true -hub http://192.168.99.100:4444/grid/register -port 5561
+08:48:47.915 INFO - Launching a Selenium Grid node
+08:48:47.968 INFO - Adding platform=MAC,browserName=chrome,maxInstances=5,seleniumProtocol=WebDriver,acceptSslCerts=true
+08:48:48.512 INFO - Java: Oracle Corporation 25.45-b02
+08:48:48.513 INFO - OS: Mac OS X 10.11.5 x86_64
+08:48:48.520 INFO - v2.52.0, with Core v2.52.0. Built from revision 4c2593c
+08:48:48.581 INFO - Driver provider org.openqa.selenium.ie.InternetExplorerDriver registration is skipped:
+registration capabilities Capabilities [{ensureCleanSession=true, browserName=internet explorer, version=, platform=WINDOWS}] does not match the current platform MAC
+08:48:48.581 INFO - Driver provider org.openqa.selenium.edge.EdgeDriver registration is skipped:
+registration capabilities Capabilities [{browserName=MicrosoftEdge, version=, platform=WINDOWS}] does not match the current platform MAC
+08:48:48.582 INFO - Driver class not found: com.opera.core.systems.OperaDriver
+08:48:48.582 INFO - Driver provider com.opera.core.systems.OperaDriver is not registered
+08:48:48.642 INFO - Selenium Grid node is up and ready to register to the hub
+08:48:48.666 INFO - Starting auto registration thread. Will try to register every 5000 ms.
+08:48:48.666 INFO - Registering the node to the hub: http://192.168.99.100:4444/grid/register
+08:48:48.703 INFO - The node is registered to the hub and ready to use
+09:30:30.274 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, browserName=chrome, version=, platform=MAC}]])
+09:30:30.291 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, browserName=chrome, version=, platform=MAC}]
+Starting ChromeDriver 2.21.371459 (36d3d07f660ff2bc1bf28a75d1cdabed0983e7c4) on port 8721
+Only local connections are allowed.
+09:30:31.267 INFO - Done: [new session: Capabilities [{acceptSslCerts=true, browserName=chrome, version=, platform=MAC}]]
+09:30:31.735 INFO - Executing: [delete all cookies])
+09:30:31.748 INFO - Done: [delete all cookies]
+09:30:31.767 INFO - Executing: [maximise window])
+09:30:32.040 INFO - Done: [maximise window]
+09:30:32.053 INFO - Executing: [get current window handle])
+09:30:32.056 INFO - Done: [get current window handle]
+09:30:32.077 INFO - Executing: [implicit wait: 20000])
+09:30:32.081 INFO - Done: [implicit wait: 20000]
+09:30:32.098 INFO - Executing: [get current url])
+09:30:32.106 INFO - Done: [get current url]
+09:30:32.132 INFO - Executing: [page load wait: 20000])
+09:30:32.135 INFO - Done: [page load wait: 20000]
+09:30:32.147 INFO - Executing: [get: http://jaemzware.com])
+09:30:34.310 INFO - Done: [get: http://jaemzware.com]
+09:30:34.351 INFO - Executing: [get current url])
+09:30:34.363 INFO - Done: [get current url]
+09:30:34.388 INFO - Executing: [switch to window: CDwindow-4200983C-EB69-440D-B5D3-50B1863B77FD])
+09:30:34.395 INFO - Done: [switch to window: CDwindow-4200983C-EB69-440D-B5D3-50B1863B77FD]
+09:30:34.456 INFO - Executing: [implicit wait: 10000])
+09:30:34.459 INFO - Done: [implicit wait: 10000]
+09:30:34.488 INFO - Executing: [find elements: By.xpath: //body])
+09:30:34.531 INFO - Done: [find elements: By.xpath: //body]
+09:30:34.579 INFO - Executing: [implicit wait: 20000])
+09:30:34.583 INFO - Done: [implicit wait: 20000]
+09:30:34.598 INFO - Executing: [implicit wait: 10000])
+09:30:34.600 INFO - Done: [implicit wait: 10000]
+09:30:34.621 INFO - Executing: [find elements: By.xpath: //a])
+09:30:34.641 INFO - Done: [find elements: By.xpath: //a]
+09:30:34.684 INFO - Executing: [implicit wait: 20000])
+09:30:34.689 INFO - Done: [implicit wait: 20000]
+09:30:34.710 INFO - Executing: [find elements: By.xpath: //a])
+09:30:34.743 INFO - Done: [find elements: By.xpath: //a]
+09:30:34.773 INFO - Executing: [get element attribute: 1 [[ChromeDriver: chrome on MAC (e663176f67d63de0707c06ab6e171fb0)] -> xpath: //a], href])
+09:30:34.788 INFO - Done: [get element attribute: 1 [[ChromeDriver: chrome on MAC (e663176f67d63de0707c06ab6e171fb0)] -> xpath: //a], href]
+09:30:34.807 INFO - Executing: [get element attribute: 2 [[ChromeDriver: chrome on MAC (e663176f67d63de0707c06ab6e171fb0)] -> xpath: //a], href])
+09:30:34.822 INFO - Done: [get element attribute: 2 [[ChromeDriver: chrome on MAC (e663176f67d63de0707c06ab6e171fb0)] -> xpath: //a], href]
+09:30:34.831 INFO - Executing: [get element attribute: 3 [[ChromeDriver: chrome on MAC (e663176f67d63de0707c06ab6e171fb0)] -> xpath: //a], href])
+09:30:34.842 INFO - Done: [get element attribute: 3 [[ChromeDriver: chrome on MAC (e663176f67d63de0707c06ab6e171fb0)] -> xpath: //a], href]
+09:30:34.854 INFO - Executing: [get element attribute: 4 [[ChromeDriver: chrome on MAC (e663176f67d63de0707c06ab6e171fb0)] -> xpath: //a], href])
+09:30:34.865 INFO - Done: [get element attribute: 4 [[ChromeDriver: chrome on MAC (e663176f67d63de0707c06ab6e171fb0)] -> xpath: //a], href]
+09:30:34.877 INFO - Executing: [get element attribute: 5 [[ChromeDriver: chrome on MAC (e663176f67d63de0707c06ab6e171fb0)] -> xpath: //a], href])
+09:30:34.888 INFO - Done: [get element attribute: 5 [[ChromeDriver: chrome on MAC (e663176f67d63de0707c06ab6e171fb0)] -> xpath: //a], href]
+09:30:34.899 INFO - Executing: [get element attribute: 6 [[ChromeDriver: chrome on MAC (e663176f67d63de0707c06ab6e171fb0)] -> xpath: //a], href])
+09:30:34.909 INFO - Done: [get element attribute: 6 [[ChromeDriver: chrome on MAC (e663176f67d63de0707c06ab6e171fb0)] -> xpath: //a], href]
+09:30:34.920 INFO - Executing: [get element attribute: 7 [[ChromeDriver: chrome on MAC (e663176f67d63de0707c06ab6e171fb0)] -> xpath: //a], href])
+09:30:34.929 INFO - Done: [get element attribute: 7 [[ChromeDriver: chrome on MAC (e663176f67d63de0707c06ab6e171fb0)] -> xpath: //a], href]
+09:30:34.941 INFO - Executing: [get element attribute: 8 [[ChromeDriver: chrome on MAC (e663176f67d63de0707c06ab6e171fb0)] -> xpath: //a], href])
+09:30:34.952 INFO - Done: [get element attribute: 8 [[ChromeDriver: chrome on MAC (e663176f67d63de0707c06ab6e171fb0)] -> xpath: //a], href]
+09:30:34.963 INFO - Executing: [get element attribute: 9 [[ChromeDriver: chrome on MAC (e663176f67d63de0707c06ab6e171fb0)] -> xpath: //a], href])
+09:30:34.975 INFO - Done: [get element attribute: 9 [[ChromeDriver: chrome on MAC (e663176f67d63de0707c06ab6e171fb0)] -> xpath: //a], href]
+09:30:34.987 INFO - Executing: [get element attribute: 10 [[ChromeDriver: chrome on MAC (e663176f67d63de0707c06ab6e171fb0)] -> xpath: //a], href])
+09:30:34.996 INFO - Done: [get element attribute: 10 [[ChromeDriver: chrome on MAC (e663176f67d63de0707c06ab6e171fb0)] -> xpath: //a], href]
+09:30:35.012 INFO - Executing: [get element attribute: 11 [[ChromeDriver: chrome on MAC (e663176f67d63de0707c06ab6e171fb0)] -> xpath: //a], href])
+09:30:35.024 INFO - Done: [get element attribute: 11 [[ChromeDriver: chrome on MAC (e663176f67d63de0707c06ab6e171fb0)] -> xpath: //a], href]
+09:30:35.040 INFO - Executing: [get element attribute: 12 [[ChromeDriver: chrome on MAC (e663176f67d63de0707c06ab6e171fb0)] -> xpath: //a], href])
+09:30:35.050 INFO - Done: [get element attribute: 12 [[ChromeDriver: chrome on MAC (e663176f67d63de0707c06ab6e171fb0)] -> xpath: //a], href]
+09:30:35.061 INFO - Executing: [get element attribute: 13 [[ChromeDriver: chrome on MAC (e663176f67d63de0707c06ab6e171fb0)] -> xpath: //a], href])
+09:30:35.073 INFO - Done: [get element attribute: 13 [[ChromeDriver: chrome on MAC (e663176f67d63de0707c06ab6e171fb0)] -> xpath: //a], href]
+09:30:35.082 INFO - Executing: [get element attribute: 14 [[ChromeDriver: chrome on MAC (e663176f67d63de0707c06ab6e171fb0)] -> xpath: //a], href])
+09:30:35.092 INFO - Done: [get element attribute: 14 [[ChromeDriver: chrome on MAC (e663176f67d63de0707c06ab6e171fb0)] -> xpath: //a], href]
+09:30:35.104 INFO - Executing: [get element attribute: 15 [[ChromeDriver: chrome on MAC (e663176f67d63de0707c06ab6e171fb0)] -> xpath: //a], href])
+09:30:35.114 INFO - Done: [get element attribute: 15 [[ChromeDriver: chrome on MAC (e663176f67d63de0707c06ab6e171fb0)] -> xpath: //a], href]
+09:30:35.130 INFO - Executing: [get element attribute: 16 [[ChromeDriver: chrome on MAC (e663176f67d63de0707c06ab6e171fb0)] -> xpath: //a], href])
+09:30:35.142 INFO - Done: [get element attribute: 16 [[ChromeDriver: chrome on MAC (e663176f67d63de0707c06ab6e171fb0)] -> xpath: //a], href]
+09:30:35.152 INFO - Executing: [get element attribute: 17 [[ChromeDriver: chrome on MAC (e663176f67d63de0707c06ab6e171fb0)] -> xpath: //a], href])
+09:30:35.163 INFO - Done: [get element attribute: 17 [[ChromeDriver: chrome on MAC (e663176f67d63de0707c06ab6e171fb0)] -> xpath: //a], href]
+09:30:35.175 INFO - Executing: [get element attribute: 18 [[ChromeDriver: chrome on MAC (e663176f67d63de0707c06ab6e171fb0)] -> xpath: //a], href])
+09:30:35.188 INFO - Done: [get element attribute: 18 [[ChromeDriver: chrome on MAC (e663176f67d63de0707c06ab6e171fb0)] -> xpath: //a], href]
+09:30:35.195 INFO - Executing: [get element attribute: 19 [[ChromeDriver: chrome on MAC (e663176f67d63de0707c06ab6e171fb0)] -> xpath: //a], href])
+09:30:35.207 INFO - Done: [get element attribute: 19 [[ChromeDriver: chrome on MAC (e663176f67d63de0707c06ab6e171fb0)] -> xpath: //a], href]
+09:31:12.437 INFO - Executing: [delete session: 95a303c1-8ab4-407c-abe4-3c44a0bba2ac])
+09:31:12.522 INFO - Done: [delete session: 95a303c1-8ab4-407c-abe4-3c44a0bba2ac]
+09:45:19.454 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, browserName=chrome, version=, platform=MAC}]])
+09:45:19.456 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, browserName=chrome, version=, platform=MAC}]
+Starting ChromeDriver 2.21.371459 (36d3d07f660ff2bc1bf28a75d1cdabed0983e7c4) on port 45574
+Only local connections are allowed.
+09:45:20.269 INFO - Done: [new session: Capabilities [{acceptSslCerts=true, browserName=chrome, version=, platform=MAC}]]
+09:45:20.724 INFO - Executing: [delete all cookies])
+09:45:20.738 INFO - Done: [delete all cookies]
+09:45:20.754 INFO - Executing: [maximise window])
+09:45:21.009 INFO - Done: [maximise window]
+09:45:21.031 INFO - Executing: [get current window handle])
+09:45:21.033 INFO - Done: [get current window handle]
+09:45:21.047 INFO - Executing: [implicit wait: 20000])
+09:45:21.049 INFO - Done: [implicit wait: 20000]
+09:45:21.069 INFO - Executing: [get current url])
+09:45:21.076 INFO - Done: [get current url]
+09:45:21.092 INFO - Executing: [page load wait: 20000])
+09:45:21.096 INFO - Done: [page load wait: 20000]
+09:45:21.110 INFO - Executing: [get: http://jaemzware.com])
+09:45:22.535 INFO - Done: [get: http://jaemzware.com]
+09:45:22.570 INFO - Executing: [get current url])
+09:45:22.578 INFO - Done: [get current url]
+09:45:22.603 INFO - Executing: [take screenshot])
+09:45:23.217 INFO - Done: [take screenshot]
+09:45:23.486 INFO - Executing: [switch to window: CDwindow-3B4299EC-08CC-40D0-8A17-6544A79E6E35])
+09:45:23.490 INFO - Done: [switch to window: CDwindow-3B4299EC-08CC-40D0-8A17-6544A79E6E35]
+09:45:23.527 INFO - Executing: [implicit wait: 10000])
+09:45:23.529 INFO - Done: [implicit wait: 10000]
+09:45:23.543 INFO - Executing: [find elements: By.xpath: //body])
+09:45:23.567 INFO - Done: [find elements: By.xpath: //body]
+09:45:23.594 INFO - Executing: [implicit wait: 20000])
+09:45:23.597 INFO - Done: [implicit wait: 20000]
+09:45:23.614 INFO - Executing: [implicit wait: 10000])
+09:45:23.617 INFO - Done: [implicit wait: 10000]
+09:45:23.631 INFO - Executing: [find elements: By.xpath: //a])
+09:45:23.652 INFO - Done: [find elements: By.xpath: //a]
+09:45:23.679 INFO - Executing: [implicit wait: 20000])
+09:45:23.682 INFO - Done: [implicit wait: 20000]
+09:45:23.694 INFO - Executing: [find elements: By.xpath: //a])
+09:45:23.714 INFO - Done: [find elements: By.xpath: //a]
+09:45:23.742 INFO - Executing: [get element attribute: 1 [[ChromeDriver: chrome on MAC (50fb1193f210c80edf01c2a1f4d16119)] -> xpath: //a], href])
+09:45:23.754 INFO - Done: [get element attribute: 1 [[ChromeDriver: chrome on MAC (50fb1193f210c80edf01c2a1f4d16119)] -> xpath: //a], href]
+09:45:23.768 INFO - Executing: [get element attribute: 2 [[ChromeDriver: chrome on MAC (50fb1193f210c80edf01c2a1f4d16119)] -> xpath: //a], href])
+09:45:23.782 INFO - Done: [get element attribute: 2 [[ChromeDriver: chrome on MAC (50fb1193f210c80edf01c2a1f4d16119)] -> xpath: //a], href]
+09:45:23.790 INFO - Executing: [get element attribute: 3 [[ChromeDriver: chrome on MAC (50fb1193f210c80edf01c2a1f4d16119)] -> xpath: //a], href])
+09:45:23.802 INFO - Done: [get element attribute: 3 [[ChromeDriver: chrome on MAC (50fb1193f210c80edf01c2a1f4d16119)] -> xpath: //a], href]
+09:45:23.816 INFO - Executing: [get element attribute: 4 [[ChromeDriver: chrome on MAC (50fb1193f210c80edf01c2a1f4d16119)] -> xpath: //a], href])
+09:45:23.828 INFO - Done: [get element attribute: 4 [[ChromeDriver: chrome on MAC (50fb1193f210c80edf01c2a1f4d16119)] -> xpath: //a], href]
+09:45:23.837 INFO - Executing: [get element attribute: 5 [[ChromeDriver: chrome on MAC (50fb1193f210c80edf01c2a1f4d16119)] -> xpath: //a], href])
+09:45:23.848 INFO - Done: [get element attribute: 5 [[ChromeDriver: chrome on MAC (50fb1193f210c80edf01c2a1f4d16119)] -> xpath: //a], href]
+09:45:23.859 INFO - Executing: [get element attribute: 6 [[ChromeDriver: chrome on MAC (50fb1193f210c80edf01c2a1f4d16119)] -> xpath: //a], href])
+09:45:23.870 INFO - Done: [get element attribute: 6 [[ChromeDriver: chrome on MAC (50fb1193f210c80edf01c2a1f4d16119)] -> xpath: //a], href]
+09:45:23.892 INFO - Executing: [get element attribute: 7 [[ChromeDriver: chrome on MAC (50fb1193f210c80edf01c2a1f4d16119)] -> xpath: //a], href])
+09:45:23.903 INFO - Done: [get element attribute: 7 [[ChromeDriver: chrome on MAC (50fb1193f210c80edf01c2a1f4d16119)] -> xpath: //a], href]
+09:45:23.916 INFO - Executing: [get element attribute: 8 [[ChromeDriver: chrome on MAC (50fb1193f210c80edf01c2a1f4d16119)] -> xpath: //a], href])
+09:45:23.929 INFO - Done: [get element attribute: 8 [[ChromeDriver: chrome on MAC (50fb1193f210c80edf01c2a1f4d16119)] -> xpath: //a], href]
+09:45:23.940 INFO - Executing: [get element attribute: 9 [[ChromeDriver: chrome on MAC (50fb1193f210c80edf01c2a1f4d16119)] -> xpath: //a], href])
+09:45:23.953 INFO - Done: [get element attribute: 9 [[ChromeDriver: chrome on MAC (50fb1193f210c80edf01c2a1f4d16119)] -> xpath: //a], href]
+09:45:23.984 INFO - Executing: [get element attribute: 10 [[ChromeDriver: chrome on MAC (50fb1193f210c80edf01c2a1f4d16119)] -> xpath: //a], href])
+09:45:24.000 INFO - Done: [get element attribute: 10 [[ChromeDriver: chrome on MAC (50fb1193f210c80edf01c2a1f4d16119)] -> xpath: //a], href]
+09:45:24.018 INFO - Executing: [get element attribute: 11 [[ChromeDriver: chrome on MAC (50fb1193f210c80edf01c2a1f4d16119)] -> xpath: //a], href])
+09:45:24.033 INFO - Done: [get element attribute: 11 [[ChromeDriver: chrome on MAC (50fb1193f210c80edf01c2a1f4d16119)] -> xpath: //a], href]
+09:45:24.047 INFO - Executing: [get element attribute: 12 [[ChromeDriver: chrome on MAC (50fb1193f210c80edf01c2a1f4d16119)] -> xpath: //a], href])
+09:45:24.058 INFO - Done: [get element attribute: 12 [[ChromeDriver: chrome on MAC (50fb1193f210c80edf01c2a1f4d16119)] -> xpath: //a], href]
+09:45:24.070 INFO - Executing: [get element attribute: 13 [[ChromeDriver: chrome on MAC (50fb1193f210c80edf01c2a1f4d16119)] -> xpath: //a], href])
+09:45:24.080 INFO - Done: [get element attribute: 13 [[ChromeDriver: chrome on MAC (50fb1193f210c80edf01c2a1f4d16119)] -> xpath: //a], href]
+09:45:24.096 INFO - Executing: [get element attribute: 14 [[ChromeDriver: chrome on MAC (50fb1193f210c80edf01c2a1f4d16119)] -> xpath: //a], href])
+09:45:24.105 INFO - Done: [get element attribute: 14 [[ChromeDriver: chrome on MAC (50fb1193f210c80edf01c2a1f4d16119)] -> xpath: //a], href]
+09:45:24.117 INFO - Executing: [get element attribute: 15 [[ChromeDriver: chrome on MAC (50fb1193f210c80edf01c2a1f4d16119)] -> xpath: //a], href])
+09:45:24.128 INFO - Done: [get element attribute: 15 [[ChromeDriver: chrome on MAC (50fb1193f210c80edf01c2a1f4d16119)] -> xpath: //a], href]
+09:45:24.139 INFO - Executing: [get element attribute: 16 [[ChromeDriver: chrome on MAC (50fb1193f210c80edf01c2a1f4d16119)] -> xpath: //a], href])
+09:45:24.152 INFO - Done: [get element attribute: 16 [[ChromeDriver: chrome on MAC (50fb1193f210c80edf01c2a1f4d16119)] -> xpath: //a], href]
+09:45:24.162 INFO - Executing: [get element attribute: 17 [[ChromeDriver: chrome on MAC (50fb1193f210c80edf01c2a1f4d16119)] -> xpath: //a], href])
+09:45:24.172 INFO - Done: [get element attribute: 17 [[ChromeDriver: chrome on MAC (50fb1193f210c80edf01c2a1f4d16119)] -> xpath: //a], href]
+09:45:24.197 INFO - Executing: [get element attribute: 18 [[ChromeDriver: chrome on MAC (50fb1193f210c80edf01c2a1f4d16119)] -> xpath: //a], href])
+09:45:24.212 INFO - Done: [get element attribute: 18 [[ChromeDriver: chrome on MAC (50fb1193f210c80edf01c2a1f4d16119)] -> xpath: //a], href]
+09:45:24.222 INFO - Executing: [get element attribute: 19 [[ChromeDriver: chrome on MAC (50fb1193f210c80edf01c2a1f4d16119)] -> xpath: //a], href])
+09:45:24.237 INFO - Done: [get element attribute: 19 [[ChromeDriver: chrome on MAC (50fb1193f210c80edf01c2a1f4d16119)] -> xpath: //a], href]
+09:46:01.933 INFO - Executing: [delete session: 3f411fe3-330a-4aa2-8f79-946b362b1786])
+09:46:02.008 INFO - Done: [delete session: 3f411fe3-330a-4aa2-8f79-946b362b1786]
+10:04:31.190 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, browserName=chrome, version=, platform=MAC}]])
+10:04:31.191 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, browserName=chrome, version=, platform=MAC}]
+Starting ChromeDriver 2.21.371459 (36d3d07f660ff2bc1bf28a75d1cdabed0983e7c4) on port 45723
+Only local connections are allowed.
+10:04:31.962 INFO - Done: [new session: Capabilities [{acceptSslCerts=true, browserName=chrome, version=, platform=MAC}]]
+10:04:32.412 INFO - Executing: [delete all cookies])
+10:04:32.426 INFO - Done: [delete all cookies]
+10:04:32.443 INFO - Executing: [maximise window])
+10:04:32.730 INFO - Done: [maximise window]
+10:04:32.752 INFO - Executing: [get current window handle])
+10:04:32.756 INFO - Done: [get current window handle]
+10:04:32.768 INFO - Executing: [implicit wait: 20000])
+10:04:32.773 INFO - Done: [implicit wait: 20000]
+10:04:32.792 INFO - Executing: [get current url])
+10:04:32.798 INFO - Done: [get current url]
+10:04:32.813 INFO - Executing: [page load wait: 20000])
+10:04:32.816 INFO - Done: [page load wait: 20000]
+10:04:32.836 INFO - Executing: [get: http://jaemzware.com])
+10:04:34.588 INFO - Done: [get: http://jaemzware.com]
+10:04:34.618 INFO - Executing: [get current url])
+10:04:34.626 INFO - Done: [get current url]
+10:04:34.644 INFO - Executing: [take screenshot])
+10:04:35.142 INFO - Done: [take screenshot]
+10:04:35.390 INFO - Executing: [switch to window: CDwindow-7E60B2E5-CE88-4EE5-9F7F-BE3C41052FCD])
+10:04:35.393 INFO - Done: [switch to window: CDwindow-7E60B2E5-CE88-4EE5-9F7F-BE3C41052FCD]
+10:04:35.420 INFO - Executing: [implicit wait: 10000])
+10:04:35.425 INFO - Done: [implicit wait: 10000]
+10:04:35.440 INFO - Executing: [find elements: By.xpath: //body])
+10:04:35.465 INFO - Done: [find elements: By.xpath: //body]
+10:04:35.494 INFO - Executing: [implicit wait: 20000])
+10:04:35.496 INFO - Done: [implicit wait: 20000]
+10:04:35.516 INFO - Executing: [implicit wait: 10000])
+10:04:35.519 INFO - Done: [implicit wait: 10000]
+10:04:35.532 INFO - Executing: [find elements: By.xpath: //a])
+10:04:35.551 INFO - Done: [find elements: By.xpath: //a]
+10:04:35.572 INFO - Executing: [implicit wait: 20000])
+10:04:35.575 INFO - Done: [implicit wait: 20000]
+10:04:35.586 INFO - Executing: [find elements: By.xpath: //a])
+10:04:35.605 INFO - Done: [find elements: By.xpath: //a]
+10:04:35.639 INFO - Executing: [get element attribute: 1 [[ChromeDriver: chrome on MAC (9252b72ce5fc3d5864da62d2f1ccc0ae)] -> xpath: //a], href])
+10:04:35.650 INFO - Done: [get element attribute: 1 [[ChromeDriver: chrome on MAC (9252b72ce5fc3d5864da62d2f1ccc0ae)] -> xpath: //a], href]
+10:04:35.662 INFO - Executing: [get element attribute: 2 [[ChromeDriver: chrome on MAC (9252b72ce5fc3d5864da62d2f1ccc0ae)] -> xpath: //a], href])
+10:04:35.673 INFO - Done: [get element attribute: 2 [[ChromeDriver: chrome on MAC (9252b72ce5fc3d5864da62d2f1ccc0ae)] -> xpath: //a], href]
+10:04:35.686 INFO - Executing: [get element attribute: 3 [[ChromeDriver: chrome on MAC (9252b72ce5fc3d5864da62d2f1ccc0ae)] -> xpath: //a], href])
+10:04:35.697 INFO - Done: [get element attribute: 3 [[ChromeDriver: chrome on MAC (9252b72ce5fc3d5864da62d2f1ccc0ae)] -> xpath: //a], href]
+10:04:35.713 INFO - Executing: [get element attribute: 4 [[ChromeDriver: chrome on MAC (9252b72ce5fc3d5864da62d2f1ccc0ae)] -> xpath: //a], href])
+10:04:35.728 INFO - Done: [get element attribute: 4 [[ChromeDriver: chrome on MAC (9252b72ce5fc3d5864da62d2f1ccc0ae)] -> xpath: //a], href]
+10:04:35.746 INFO - Executing: [get element attribute: 5 [[ChromeDriver: chrome on MAC (9252b72ce5fc3d5864da62d2f1ccc0ae)] -> xpath: //a], href])
+10:04:35.758 INFO - Done: [get element attribute: 5 [[ChromeDriver: chrome on MAC (9252b72ce5fc3d5864da62d2f1ccc0ae)] -> xpath: //a], href]
+10:04:35.767 INFO - Executing: [get element attribute: 6 [[ChromeDriver: chrome on MAC (9252b72ce5fc3d5864da62d2f1ccc0ae)] -> xpath: //a], href])
+10:04:35.778 INFO - Done: [get element attribute: 6 [[ChromeDriver: chrome on MAC (9252b72ce5fc3d5864da62d2f1ccc0ae)] -> xpath: //a], href]
+10:04:35.789 INFO - Executing: [get element attribute: 7 [[ChromeDriver: chrome on MAC (9252b72ce5fc3d5864da62d2f1ccc0ae)] -> xpath: //a], href])
+10:04:35.799 INFO - Done: [get element attribute: 7 [[ChromeDriver: chrome on MAC (9252b72ce5fc3d5864da62d2f1ccc0ae)] -> xpath: //a], href]
+10:04:35.810 INFO - Executing: [get element attribute: 8 [[ChromeDriver: chrome on MAC (9252b72ce5fc3d5864da62d2f1ccc0ae)] -> xpath: //a], href])
+10:04:35.820 INFO - Done: [get element attribute: 8 [[ChromeDriver: chrome on MAC (9252b72ce5fc3d5864da62d2f1ccc0ae)] -> xpath: //a], href]
+10:04:35.831 INFO - Executing: [get element attribute: 9 [[ChromeDriver: chrome on MAC (9252b72ce5fc3d5864da62d2f1ccc0ae)] -> xpath: //a], href])
+10:04:35.843 INFO - Done: [get element attribute: 9 [[ChromeDriver: chrome on MAC (9252b72ce5fc3d5864da62d2f1ccc0ae)] -> xpath: //a], href]
+10:04:35.858 INFO - Executing: [get element attribute: 10 [[ChromeDriver: chrome on MAC (9252b72ce5fc3d5864da62d2f1ccc0ae)] -> xpath: //a], href])
+10:04:35.874 INFO - Done: [get element attribute: 10 [[ChromeDriver: chrome on MAC (9252b72ce5fc3d5864da62d2f1ccc0ae)] -> xpath: //a], href]
+10:04:35.887 INFO - Executing: [get element attribute: 11 [[ChromeDriver: chrome on MAC (9252b72ce5fc3d5864da62d2f1ccc0ae)] -> xpath: //a], href])
+10:04:35.898 INFO - Done: [get element attribute: 11 [[ChromeDriver: chrome on MAC (9252b72ce5fc3d5864da62d2f1ccc0ae)] -> xpath: //a], href]
+10:04:35.910 INFO - Executing: [get element attribute: 12 [[ChromeDriver: chrome on MAC (9252b72ce5fc3d5864da62d2f1ccc0ae)] -> xpath: //a], href])
+10:04:35.923 INFO - Done: [get element attribute: 12 [[ChromeDriver: chrome on MAC (9252b72ce5fc3d5864da62d2f1ccc0ae)] -> xpath: //a], href]
+10:04:35.930 INFO - Executing: [get element attribute: 13 [[ChromeDriver: chrome on MAC (9252b72ce5fc3d5864da62d2f1ccc0ae)] -> xpath: //a], href])
+10:04:35.942 INFO - Done: [get element attribute: 13 [[ChromeDriver: chrome on MAC (9252b72ce5fc3d5864da62d2f1ccc0ae)] -> xpath: //a], href]
+10:04:35.952 INFO - Executing: [get element attribute: 14 [[ChromeDriver: chrome on MAC (9252b72ce5fc3d5864da62d2f1ccc0ae)] -> xpath: //a], href])
+10:04:35.961 INFO - Done: [get element attribute: 14 [[ChromeDriver: chrome on MAC (9252b72ce5fc3d5864da62d2f1ccc0ae)] -> xpath: //a], href]
+10:04:35.974 INFO - Executing: [get element attribute: 15 [[ChromeDriver: chrome on MAC (9252b72ce5fc3d5864da62d2f1ccc0ae)] -> xpath: //a], href])
+10:04:35.985 INFO - Done: [get element attribute: 15 [[ChromeDriver: chrome on MAC (9252b72ce5fc3d5864da62d2f1ccc0ae)] -> xpath: //a], href]
+10:04:35.994 INFO - Executing: [get element attribute: 16 [[ChromeDriver: chrome on MAC (9252b72ce5fc3d5864da62d2f1ccc0ae)] -> xpath: //a], href])
+10:04:36.004 INFO - Done: [get element attribute: 16 [[ChromeDriver: chrome on MAC (9252b72ce5fc3d5864da62d2f1ccc0ae)] -> xpath: //a], href]
+10:04:36.017 INFO - Executing: [get element attribute: 17 [[ChromeDriver: chrome on MAC (9252b72ce5fc3d5864da62d2f1ccc0ae)] -> xpath: //a], href])
+10:04:36.028 INFO - Done: [get element attribute: 17 [[ChromeDriver: chrome on MAC (9252b72ce5fc3d5864da62d2f1ccc0ae)] -> xpath: //a], href]
+10:04:36.043 INFO - Executing: [get element attribute: 18 [[ChromeDriver: chrome on MAC (9252b72ce5fc3d5864da62d2f1ccc0ae)] -> xpath: //a], href])
+10:04:36.056 INFO - Done: [get element attribute: 18 [[ChromeDriver: chrome on MAC (9252b72ce5fc3d5864da62d2f1ccc0ae)] -> xpath: //a], href]
+10:04:36.063 INFO - Executing: [get element attribute: 19 [[ChromeDriver: chrome on MAC (9252b72ce5fc3d5864da62d2f1ccc0ae)] -> xpath: //a], href])
+10:04:36.075 INFO - Done: [get element attribute: 19 [[ChromeDriver: chrome on MAC (9252b72ce5fc3d5864da62d2f1ccc0ae)] -> xpath: //a], href]
+10:05:15.851 INFO - Executing: [delete session: eebbc656-1172-4814-bc0d-ac959c9d3134])
+10:05:15.930 INFO - Done: [delete session: eebbc656-1172-4814-bc0d-ac959c9d3134]
+10:07:21.805 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, browserName=chrome, version=, platform=MAC}]])
+10:07:21.806 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, browserName=chrome, version=, platform=MAC}]
+Starting ChromeDriver 2.21.371459 (36d3d07f660ff2bc1bf28a75d1cdabed0983e7c4) on port 42362
+Only local connections are allowed.
+10:07:22.856 INFO - Done: [new session: Capabilities [{acceptSslCerts=true, browserName=chrome, version=, platform=MAC}]]
+10:07:23.348 INFO - Executing: [delete all cookies])
+10:07:23.361 INFO - Done: [delete all cookies]
+10:07:23.381 INFO - Executing: [maximise window])
+10:07:23.649 INFO - Done: [maximise window]
+10:07:23.660 INFO - Executing: [get current window handle])
+10:07:23.663 INFO - Done: [get current window handle]
+10:07:23.716 INFO - Executing: [implicit wait: 20000])
+10:07:23.723 INFO - Done: [implicit wait: 20000]
+10:07:23.745 INFO - Executing: [get current url])
+10:07:23.755 INFO - Done: [get current url]
+10:07:23.795 INFO - Executing: [page load wait: 20000])
+10:07:23.798 INFO - Done: [page load wait: 20000]
+10:07:23.843 INFO - Executing: [get: http://jaemzware.com])
+10:07:25.803 INFO - Done: [get: http://jaemzware.com]
+10:07:25.833 INFO - Executing: [get current url])
+10:07:25.840 INFO - Done: [get current url]
+10:07:25.857 INFO - Executing: [take screenshot])
+10:07:26.341 INFO - Done: [take screenshot]
+10:07:26.603 INFO - Executing: [switch to window: CDwindow-FB5673D8-9E2A-436A-AFFA-3C3AD6A3024F])
+10:07:26.607 INFO - Done: [switch to window: CDwindow-FB5673D8-9E2A-436A-AFFA-3C3AD6A3024F]
+10:07:26.635 INFO - Executing: [implicit wait: 10000])
+10:07:26.637 INFO - Done: [implicit wait: 10000]
+10:07:26.651 INFO - Executing: [find elements: By.xpath: //body])
+10:07:26.677 INFO - Done: [find elements: By.xpath: //body]
+10:07:26.704 INFO - Executing: [implicit wait: 20000])
+10:07:26.706 INFO - Done: [implicit wait: 20000]
+10:07:26.729 INFO - Executing: [implicit wait: 10000])
+10:07:26.731 INFO - Done: [implicit wait: 10000]
+10:07:26.745 INFO - Executing: [find elements: By.xpath: //a])
+10:07:26.771 INFO - Done: [find elements: By.xpath: //a]
+10:07:26.796 INFO - Executing: [implicit wait: 20000])
+10:07:26.798 INFO - Done: [implicit wait: 20000]
+10:07:26.810 INFO - Executing: [find elements: By.xpath: //a])
+10:07:26.837 INFO - Done: [find elements: By.xpath: //a]
+10:07:26.857 INFO - Executing: [get element attribute: 1 [[ChromeDriver: chrome on MAC (b84c3a502716d0e94be8fe3b118d17ce)] -> xpath: //a], href])
+10:07:26.870 INFO - Done: [get element attribute: 1 [[ChromeDriver: chrome on MAC (b84c3a502716d0e94be8fe3b118d17ce)] -> xpath: //a], href]
+10:07:26.876 INFO - Executing: [get element attribute: 2 [[ChromeDriver: chrome on MAC (b84c3a502716d0e94be8fe3b118d17ce)] -> xpath: //a], href])
+10:07:26.889 INFO - Done: [get element attribute: 2 [[ChromeDriver: chrome on MAC (b84c3a502716d0e94be8fe3b118d17ce)] -> xpath: //a], href]
+10:07:26.907 INFO - Executing: [get element attribute: 3 [[ChromeDriver: chrome on MAC (b84c3a502716d0e94be8fe3b118d17ce)] -> xpath: //a], href])
+10:07:26.953 INFO - Done: [get element attribute: 3 [[ChromeDriver: chrome on MAC (b84c3a502716d0e94be8fe3b118d17ce)] -> xpath: //a], href]
+10:07:26.990 INFO - Executing: [get element attribute: 4 [[ChromeDriver: chrome on MAC (b84c3a502716d0e94be8fe3b118d17ce)] -> xpath: //a], href])
+10:07:27.012 INFO - Done: [get element attribute: 4 [[ChromeDriver: chrome on MAC (b84c3a502716d0e94be8fe3b118d17ce)] -> xpath: //a], href]
+10:07:27.031 INFO - Executing: [get element attribute: 5 [[ChromeDriver: chrome on MAC (b84c3a502716d0e94be8fe3b118d17ce)] -> xpath: //a], href])
+10:07:27.046 INFO - Done: [get element attribute: 5 [[ChromeDriver: chrome on MAC (b84c3a502716d0e94be8fe3b118d17ce)] -> xpath: //a], href]
+10:07:27.058 INFO - Executing: [get element attribute: 6 [[ChromeDriver: chrome on MAC (b84c3a502716d0e94be8fe3b118d17ce)] -> xpath: //a], href])
+10:07:27.076 INFO - Done: [get element attribute: 6 [[ChromeDriver: chrome on MAC (b84c3a502716d0e94be8fe3b118d17ce)] -> xpath: //a], href]
+10:07:27.090 INFO - Executing: [get element attribute: 7 [[ChromeDriver: chrome on MAC (b84c3a502716d0e94be8fe3b118d17ce)] -> xpath: //a], href])
+10:07:27.111 INFO - Done: [get element attribute: 7 [[ChromeDriver: chrome on MAC (b84c3a502716d0e94be8fe3b118d17ce)] -> xpath: //a], href]
+10:07:27.129 INFO - Executing: [get element attribute: 8 [[ChromeDriver: chrome on MAC (b84c3a502716d0e94be8fe3b118d17ce)] -> xpath: //a], href])
+10:07:27.141 INFO - Done: [get element attribute: 8 [[ChromeDriver: chrome on MAC (b84c3a502716d0e94be8fe3b118d17ce)] -> xpath: //a], href]
+10:07:27.158 INFO - Executing: [get element attribute: 9 [[ChromeDriver: chrome on MAC (b84c3a502716d0e94be8fe3b118d17ce)] -> xpath: //a], href])
+10:07:27.176 INFO - Done: [get element attribute: 9 [[ChromeDriver: chrome on MAC (b84c3a502716d0e94be8fe3b118d17ce)] -> xpath: //a], href]
+10:07:27.189 INFO - Executing: [get element attribute: 10 [[ChromeDriver: chrome on MAC (b84c3a502716d0e94be8fe3b118d17ce)] -> xpath: //a], href])
+10:07:27.201 INFO - Done: [get element attribute: 10 [[ChromeDriver: chrome on MAC (b84c3a502716d0e94be8fe3b118d17ce)] -> xpath: //a], href]
+10:07:27.226 INFO - Executing: [get element attribute: 11 [[ChromeDriver: chrome on MAC (b84c3a502716d0e94be8fe3b118d17ce)] -> xpath: //a], href])
+10:07:27.240 INFO - Done: [get element attribute: 11 [[ChromeDriver: chrome on MAC (b84c3a502716d0e94be8fe3b118d17ce)] -> xpath: //a], href]
+10:07:27.251 INFO - Executing: [get element attribute: 12 [[ChromeDriver: chrome on MAC (b84c3a502716d0e94be8fe3b118d17ce)] -> xpath: //a], href])
+10:07:27.266 INFO - Done: [get element attribute: 12 [[ChromeDriver: chrome on MAC (b84c3a502716d0e94be8fe3b118d17ce)] -> xpath: //a], href]
+10:07:27.275 INFO - Executing: [get element attribute: 13 [[ChromeDriver: chrome on MAC (b84c3a502716d0e94be8fe3b118d17ce)] -> xpath: //a], href])
+10:07:27.288 INFO - Done: [get element attribute: 13 [[ChromeDriver: chrome on MAC (b84c3a502716d0e94be8fe3b118d17ce)] -> xpath: //a], href]
+10:07:27.301 INFO - Executing: [get element attribute: 14 [[ChromeDriver: chrome on MAC (b84c3a502716d0e94be8fe3b118d17ce)] -> xpath: //a], href])
+10:07:27.314 INFO - Done: [get element attribute: 14 [[ChromeDriver: chrome on MAC (b84c3a502716d0e94be8fe3b118d17ce)] -> xpath: //a], href]
+10:07:27.333 INFO - Executing: [get element attribute: 15 [[ChromeDriver: chrome on MAC (b84c3a502716d0e94be8fe3b118d17ce)] -> xpath: //a], href])
+10:07:27.346 INFO - Done: [get element attribute: 15 [[ChromeDriver: chrome on MAC (b84c3a502716d0e94be8fe3b118d17ce)] -> xpath: //a], href]
+10:07:27.359 INFO - Executing: [get element attribute: 16 [[ChromeDriver: chrome on MAC (b84c3a502716d0e94be8fe3b118d17ce)] -> xpath: //a], href])
+10:07:27.374 INFO - Done: [get element attribute: 16 [[ChromeDriver: chrome on MAC (b84c3a502716d0e94be8fe3b118d17ce)] -> xpath: //a], href]
+10:07:27.390 INFO - Executing: [get element attribute: 17 [[ChromeDriver: chrome on MAC (b84c3a502716d0e94be8fe3b118d17ce)] -> xpath: //a], href])
+10:07:27.402 INFO - Done: [get element attribute: 17 [[ChromeDriver: chrome on MAC (b84c3a502716d0e94be8fe3b118d17ce)] -> xpath: //a], href]
+10:07:27.414 INFO - Executing: [get element attribute: 18 [[ChromeDriver: chrome on MAC (b84c3a502716d0e94be8fe3b118d17ce)] -> xpath: //a], href])
+10:07:27.425 INFO - Done: [get element attribute: 18 [[ChromeDriver: chrome on MAC (b84c3a502716d0e94be8fe3b118d17ce)] -> xpath: //a], href]
+10:07:27.438 INFO - Executing: [get element attribute: 19 [[ChromeDriver: chrome on MAC (b84c3a502716d0e94be8fe3b118d17ce)] -> xpath: //a], href])
+10:07:27.450 INFO - Done: [get element attribute: 19 [[ChromeDriver: chrome on MAC (b84c3a502716d0e94be8fe3b118d17ce)] -> xpath: //a], href]
+10:08:06.613 INFO - Executing: [delete session: dbb12ae5-678b-4b7e-8daa-c45d1accea9e])
+10:08:06.692 INFO - Done: [delete session: dbb12ae5-678b-4b7e-8daa-c45d1accea9e]
+10:18:09.687 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, browserName=chrome, version=, platform=MAC}]])
+10:18:09.688 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, browserName=chrome, version=, platform=MAC}]
+Starting ChromeDriver 2.21.371459 (36d3d07f660ff2bc1bf28a75d1cdabed0983e7c4) on port 33923
+Only local connections are allowed.
+10:18:10.644 INFO - Done: [new session: Capabilities [{acceptSslCerts=true, browserName=chrome, version=, platform=MAC}]]
+10:18:11.155 INFO - Executing: [delete all cookies])
+10:18:11.169 INFO - Done: [delete all cookies]
+10:18:11.189 INFO - Executing: [maximise window])
+10:18:11.490 INFO - Done: [maximise window]
+10:18:11.519 INFO - Executing: [get current window handle])
+10:18:11.526 INFO - Done: [get current window handle]
+10:18:11.549 INFO - Executing: [implicit wait: 20000])
+10:18:11.553 INFO - Done: [implicit wait: 20000]
+10:18:11.576 INFO - Executing: [get current url])
+10:18:11.589 INFO - Done: [get current url]
+10:18:11.610 INFO - Executing: [page load wait: 20000])
+10:18:11.616 INFO - Done: [page load wait: 20000]
+10:18:11.633 INFO - Executing: [get: http://jaemzware.com])
+10:18:13.726 INFO - Done: [get: http://jaemzware.com]
+10:18:13.765 INFO - Executing: [get current url])
+10:18:13.772 INFO - Done: [get current url]
+10:18:13.797 INFO - Executing: [take screenshot])
+10:18:14.289 INFO - Done: [take screenshot]
+10:18:14.549 INFO - Executing: [switch to window: CDwindow-C44D6EDD-2401-40BC-8DDF-8FA16A3DB99A])
+10:18:14.553 INFO - Done: [switch to window: CDwindow-C44D6EDD-2401-40BC-8DDF-8FA16A3DB99A]
+10:18:14.584 INFO - Executing: [implicit wait: 10000])
+10:18:14.586 INFO - Done: [implicit wait: 10000]
+10:18:14.598 INFO - Executing: [find elements: By.xpath: //body])
+10:18:14.624 INFO - Done: [find elements: By.xpath: //body]
+10:18:14.654 INFO - Executing: [implicit wait: 20000])
+10:18:14.658 INFO - Done: [implicit wait: 20000]
+10:18:14.674 INFO - Executing: [implicit wait: 10000])
+10:18:14.675 INFO - Done: [implicit wait: 10000]
+10:18:14.691 INFO - Executing: [find elements: By.xpath: //a])
+10:18:14.710 INFO - Done: [find elements: By.xpath: //a]
+10:18:14.734 INFO - Executing: [implicit wait: 20000])
+10:18:14.737 INFO - Done: [implicit wait: 20000]
+10:18:14.752 INFO - Executing: [find elements: By.xpath: //a])
+10:18:14.773 INFO - Done: [find elements: By.xpath: //a]
+10:18:14.803 INFO - Executing: [get element attribute: 1 [[ChromeDriver: chrome on MAC (0e53c4f8b79e2f1c7fa488ce133c169b)] -> xpath: //a], href])
+10:18:14.813 INFO - Done: [get element attribute: 1 [[ChromeDriver: chrome on MAC (0e53c4f8b79e2f1c7fa488ce133c169b)] -> xpath: //a], href]
+10:18:14.820 INFO - Executing: [get element attribute: 2 [[ChromeDriver: chrome on MAC (0e53c4f8b79e2f1c7fa488ce133c169b)] -> xpath: //a], href])
+10:18:14.832 INFO - Done: [get element attribute: 2 [[ChromeDriver: chrome on MAC (0e53c4f8b79e2f1c7fa488ce133c169b)] -> xpath: //a], href]
+10:18:14.841 INFO - Executing: [get element attribute: 3 [[ChromeDriver: chrome on MAC (0e53c4f8b79e2f1c7fa488ce133c169b)] -> xpath: //a], href])
+10:18:14.852 INFO - Done: [get element attribute: 3 [[ChromeDriver: chrome on MAC (0e53c4f8b79e2f1c7fa488ce133c169b)] -> xpath: //a], href]
+10:18:14.860 INFO - Executing: [get element attribute: 4 [[ChromeDriver: chrome on MAC (0e53c4f8b79e2f1c7fa488ce133c169b)] -> xpath: //a], href])
+10:18:14.869 INFO - Done: [get element attribute: 4 [[ChromeDriver: chrome on MAC (0e53c4f8b79e2f1c7fa488ce133c169b)] -> xpath: //a], href]
+10:18:14.884 INFO - Executing: [get element attribute: 5 [[ChromeDriver: chrome on MAC (0e53c4f8b79e2f1c7fa488ce133c169b)] -> xpath: //a], href])
+10:18:14.893 INFO - Done: [get element attribute: 5 [[ChromeDriver: chrome on MAC (0e53c4f8b79e2f1c7fa488ce133c169b)] -> xpath: //a], href]
+10:18:14.916 INFO - Executing: [get element attribute: 6 [[ChromeDriver: chrome on MAC (0e53c4f8b79e2f1c7fa488ce133c169b)] -> xpath: //a], href])
+10:18:14.928 INFO - Done: [get element attribute: 6 [[ChromeDriver: chrome on MAC (0e53c4f8b79e2f1c7fa488ce133c169b)] -> xpath: //a], href]
+10:18:14.940 INFO - Executing: [get element attribute: 7 [[ChromeDriver: chrome on MAC (0e53c4f8b79e2f1c7fa488ce133c169b)] -> xpath: //a], href])
+10:18:14.953 INFO - Done: [get element attribute: 7 [[ChromeDriver: chrome on MAC (0e53c4f8b79e2f1c7fa488ce133c169b)] -> xpath: //a], href]
+10:18:14.968 INFO - Executing: [get element attribute: 8 [[ChromeDriver: chrome on MAC (0e53c4f8b79e2f1c7fa488ce133c169b)] -> xpath: //a], href])
+10:18:14.979 INFO - Done: [get element attribute: 8 [[ChromeDriver: chrome on MAC (0e53c4f8b79e2f1c7fa488ce133c169b)] -> xpath: //a], href]
+10:18:14.998 INFO - Executing: [get element attribute: 9 [[ChromeDriver: chrome on MAC (0e53c4f8b79e2f1c7fa488ce133c169b)] -> xpath: //a], href])
+10:18:15.017 INFO - Done: [get element attribute: 9 [[ChromeDriver: chrome on MAC (0e53c4f8b79e2f1c7fa488ce133c169b)] -> xpath: //a], href]
+10:18:15.072 INFO - Executing: [get element attribute: 10 [[ChromeDriver: chrome on MAC (0e53c4f8b79e2f1c7fa488ce133c169b)] -> xpath: //a], href])
+10:18:15.087 INFO - Done: [get element attribute: 10 [[ChromeDriver: chrome on MAC (0e53c4f8b79e2f1c7fa488ce133c169b)] -> xpath: //a], href]
+10:18:15.110 INFO - Executing: [get element attribute: 11 [[ChromeDriver: chrome on MAC (0e53c4f8b79e2f1c7fa488ce133c169b)] -> xpath: //a], href])
+10:18:15.130 INFO - Done: [get element attribute: 11 [[ChromeDriver: chrome on MAC (0e53c4f8b79e2f1c7fa488ce133c169b)] -> xpath: //a], href]
+10:18:15.191 INFO - Executing: [get element attribute: 12 [[ChromeDriver: chrome on MAC (0e53c4f8b79e2f1c7fa488ce133c169b)] -> xpath: //a], href])
+10:18:15.226 INFO - Done: [get element attribute: 12 [[ChromeDriver: chrome on MAC (0e53c4f8b79e2f1c7fa488ce133c169b)] -> xpath: //a], href]
+10:18:15.242 INFO - Executing: [get element attribute: 13 [[ChromeDriver: chrome on MAC (0e53c4f8b79e2f1c7fa488ce133c169b)] -> xpath: //a], href])
+10:18:15.264 INFO - Done: [get element attribute: 13 [[ChromeDriver: chrome on MAC (0e53c4f8b79e2f1c7fa488ce133c169b)] -> xpath: //a], href]
+10:18:15.276 INFO - Executing: [get element attribute: 14 [[ChromeDriver: chrome on MAC (0e53c4f8b79e2f1c7fa488ce133c169b)] -> xpath: //a], href])
+10:18:15.294 INFO - Done: [get element attribute: 14 [[ChromeDriver: chrome on MAC (0e53c4f8b79e2f1c7fa488ce133c169b)] -> xpath: //a], href]
+10:18:15.315 INFO - Executing: [get element attribute: 15 [[ChromeDriver: chrome on MAC (0e53c4f8b79e2f1c7fa488ce133c169b)] -> xpath: //a], href])
+10:18:15.335 INFO - Done: [get element attribute: 15 [[ChromeDriver: chrome on MAC (0e53c4f8b79e2f1c7fa488ce133c169b)] -> xpath: //a], href]
+10:18:15.357 INFO - Executing: [get element attribute: 16 [[ChromeDriver: chrome on MAC (0e53c4f8b79e2f1c7fa488ce133c169b)] -> xpath: //a], href])
+10:18:15.375 INFO - Done: [get element attribute: 16 [[ChromeDriver: chrome on MAC (0e53c4f8b79e2f1c7fa488ce133c169b)] -> xpath: //a], href]
+10:18:15.393 INFO - Executing: [get element attribute: 17 [[ChromeDriver: chrome on MAC (0e53c4f8b79e2f1c7fa488ce133c169b)] -> xpath: //a], href])
+10:18:15.418 INFO - Done: [get element attribute: 17 [[ChromeDriver: chrome on MAC (0e53c4f8b79e2f1c7fa488ce133c169b)] -> xpath: //a], href]
+10:18:15.432 INFO - Executing: [get element attribute: 18 [[ChromeDriver: chrome on MAC (0e53c4f8b79e2f1c7fa488ce133c169b)] -> xpath: //a], href])
+10:18:15.487 INFO - Done: [get element attribute: 18 [[ChromeDriver: chrome on MAC (0e53c4f8b79e2f1c7fa488ce133c169b)] -> xpath: //a], href]
+10:18:15.512 INFO - Executing: [get element attribute: 19 [[ChromeDriver: chrome on MAC (0e53c4f8b79e2f1c7fa488ce133c169b)] -> xpath: //a], href])
+10:18:15.527 INFO - Done: [get element attribute: 19 [[ChromeDriver: chrome on MAC (0e53c4f8b79e2f1c7fa488ce133c169b)] -> xpath: //a], href]
+10:18:54.141 INFO - Executing: [delete session: 1866a80b-f90e-4ad6-afae-833b8bace8db])
+10:18:54.228 INFO - Done: [delete session: 1866a80b-f90e-4ad6-afae-833b8bace8db]
+10:22:19.785 INFO - Executing: [new session: Capabilities [{acceptSslCerts=true, browserName=chrome, version=, platform=MAC}]])
+10:22:19.786 INFO - Creating a new session for Capabilities [{acceptSslCerts=true, browserName=chrome, version=, platform=MAC}]
+Starting ChromeDriver 2.21.371459 (36d3d07f660ff2bc1bf28a75d1cdabed0983e7c4) on port 17724
+Only local connections are allowed.
+10:22:20.560 INFO - Done: [new session: Capabilities [{acceptSslCerts=true, browserName=chrome, version=, platform=MAC}]]
+10:22:21.017 INFO - Executing: [delete all cookies])
+10:22:21.026 INFO - Done: [delete all cookies]
+10:22:21.048 INFO - Executing: [maximise window])
+10:22:21.329 INFO - Done: [maximise window]
+10:22:21.347 INFO - Executing: [get current window handle])
+10:22:21.351 INFO - Done: [get current window handle]
+10:22:21.366 INFO - Executing: [implicit wait: 20000])
+10:22:21.369 INFO - Done: [implicit wait: 20000]
+10:22:21.391 INFO - Executing: [get current url])
+10:22:21.399 INFO - Done: [get current url]
+10:22:21.429 INFO - Executing: [page load wait: 20000])
+10:22:21.433 INFO - Done: [page load wait: 20000]
+10:22:21.447 INFO - Executing: [get: https://seattlerules.com])
+10:22:25.368 INFO - Done: [get: https://seattlerules.com]
+10:22:25.405 INFO - Executing: [get current url])
+10:22:25.410 INFO - Done: [get current url]
+10:22:25.427 INFO - Executing: [take screenshot])
+10:22:25.797 INFO - Done: [take screenshot]
+10:22:26.011 INFO - Executing: [switch to window: CDwindow-4471CAB9-2D72-4780-B5C8-1CA003F9EB5B])
+10:22:26.015 INFO - Done: [switch to window: CDwindow-4471CAB9-2D72-4780-B5C8-1CA003F9EB5B]
+10:22:26.042 INFO - Executing: [implicit wait: 10000])
+10:22:26.044 INFO - Done: [implicit wait: 10000]
+10:22:26.061 INFO - Executing: [find elements: By.xpath: //body])
+10:22:26.085 INFO - Done: [find elements: By.xpath: //body]
+10:22:26.115 INFO - Executing: [implicit wait: 20000])
+10:22:26.117 INFO - Done: [implicit wait: 20000]
+10:22:26.134 INFO - Executing: [implicit wait: 10000])
+10:22:26.137 INFO - Done: [implicit wait: 10000]
+10:22:26.147 INFO - Executing: [find elements: By.xpath: //a])
+10:22:26.180 INFO - Done: [find elements: By.xpath: //a]
+10:22:26.262 INFO - Executing: [implicit wait: 20000])
+10:22:26.264 INFO - Done: [implicit wait: 20000]
+10:22:26.280 INFO - Executing: [find elements: By.xpath: //a])
+10:22:26.314 INFO - Done: [find elements: By.xpath: //a]
+10:22:26.368 INFO - Executing: [get element attribute: 1 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:26.385 INFO - Done: [get element attribute: 1 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:26.402 INFO - Executing: [get element attribute: 2 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:26.424 INFO - Done: [get element attribute: 2 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:26.461 INFO - Executing: [get element attribute: 3 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:26.473 INFO - Done: [get element attribute: 3 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:26.481 INFO - Executing: [get element attribute: 4 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:26.492 INFO - Done: [get element attribute: 4 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:26.504 INFO - Executing: [get element attribute: 5 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:26.514 INFO - Done: [get element attribute: 5 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:26.530 INFO - Executing: [get element attribute: 6 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:26.542 INFO - Done: [get element attribute: 6 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:26.550 INFO - Executing: [get element attribute: 7 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:26.563 INFO - Done: [get element attribute: 7 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:26.573 INFO - Executing: [get element attribute: 8 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:26.583 INFO - Done: [get element attribute: 8 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:26.594 INFO - Executing: [get element attribute: 9 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:26.605 INFO - Done: [get element attribute: 9 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:26.619 INFO - Executing: [get element attribute: 10 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:26.631 INFO - Done: [get element attribute: 10 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:26.646 INFO - Executing: [get element attribute: 11 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:26.659 INFO - Done: [get element attribute: 11 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:26.670 INFO - Executing: [get element attribute: 12 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:26.682 INFO - Done: [get element attribute: 12 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:26.692 INFO - Executing: [get element attribute: 13 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:26.705 INFO - Done: [get element attribute: 13 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:26.715 INFO - Executing: [get element attribute: 14 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:26.725 INFO - Done: [get element attribute: 14 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:26.737 INFO - Executing: [get element attribute: 15 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:26.750 INFO - Done: [get element attribute: 15 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:26.758 INFO - Executing: [get element attribute: 16 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:26.770 INFO - Done: [get element attribute: 16 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:26.779 INFO - Executing: [get element attribute: 17 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:26.791 INFO - Done: [get element attribute: 17 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:26.800 INFO - Executing: [get element attribute: 18 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:26.810 INFO - Done: [get element attribute: 18 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:26.823 INFO - Executing: [get element attribute: 19 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:26.833 INFO - Done: [get element attribute: 19 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:26.844 INFO - Executing: [get element attribute: 20 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:26.858 INFO - Done: [get element attribute: 20 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:26.868 INFO - Executing: [get element attribute: 21 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:26.879 INFO - Done: [get element attribute: 21 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:26.887 INFO - Executing: [get element attribute: 22 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:26.898 INFO - Done: [get element attribute: 22 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:26.911 INFO - Executing: [get element attribute: 23 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:26.923 INFO - Done: [get element attribute: 23 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:26.929 INFO - Executing: [get element attribute: 24 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:26.940 INFO - Done: [get element attribute: 24 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:26.949 INFO - Executing: [get element attribute: 25 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:26.959 INFO - Done: [get element attribute: 25 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:26.972 INFO - Executing: [get element attribute: 26 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:26.983 INFO - Done: [get element attribute: 26 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:26.996 INFO - Executing: [get element attribute: 27 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:27.008 INFO - Done: [get element attribute: 27 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:27.019 INFO - Executing: [get element attribute: 28 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:27.029 INFO - Done: [get element attribute: 28 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:27.039 INFO - Executing: [get element attribute: 29 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:27.052 INFO - Done: [get element attribute: 29 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:27.064 INFO - Executing: [get element attribute: 30 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:27.076 INFO - Done: [get element attribute: 30 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:27.094 INFO - Executing: [get element attribute: 31 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:27.108 INFO - Done: [get element attribute: 31 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:27.116 INFO - Executing: [get element attribute: 32 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:27.128 INFO - Done: [get element attribute: 32 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:27.139 INFO - Executing: [get element attribute: 33 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:27.151 INFO - Done: [get element attribute: 33 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:27.158 INFO - Executing: [get element attribute: 34 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:27.169 INFO - Done: [get element attribute: 34 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:27.178 INFO - Executing: [get element attribute: 35 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:27.192 INFO - Done: [get element attribute: 35 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:27.198 INFO - Executing: [get element attribute: 36 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:27.210 INFO - Done: [get element attribute: 36 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:27.218 INFO - Executing: [get element attribute: 37 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:27.228 INFO - Done: [get element attribute: 37 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:27.238 INFO - Executing: [get element attribute: 38 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:27.249 INFO - Done: [get element attribute: 38 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:27.258 INFO - Executing: [get element attribute: 39 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:27.268 INFO - Done: [get element attribute: 39 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:27.282 INFO - Executing: [get element attribute: 40 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:27.292 INFO - Done: [get element attribute: 40 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:27.301 INFO - Executing: [get element attribute: 41 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:27.311 INFO - Done: [get element attribute: 41 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:27.322 INFO - Executing: [get element attribute: 42 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:27.332 INFO - Done: [get element attribute: 42 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:27.348 INFO - Executing: [get element attribute: 43 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:27.359 INFO - Done: [get element attribute: 43 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:27.366 INFO - Executing: [get element attribute: 44 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:27.376 INFO - Done: [get element attribute: 44 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:27.386 INFO - Executing: [get element attribute: 45 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:27.396 INFO - Done: [get element attribute: 45 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:27.410 INFO - Executing: [get element attribute: 46 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:27.424 INFO - Done: [get element attribute: 46 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:27.432 INFO - Executing: [get element attribute: 47 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:27.457 INFO - Done: [get element attribute: 47 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:27.473 INFO - Executing: [get element attribute: 48 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:27.490 INFO - Done: [get element attribute: 48 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:27.502 INFO - Executing: [get element attribute: 49 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:27.523 INFO - Done: [get element attribute: 49 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:27.530 INFO - Executing: [get element attribute: 50 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:27.544 INFO - Done: [get element attribute: 50 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:27.554 INFO - Executing: [get element attribute: 51 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:27.566 INFO - Done: [get element attribute: 51 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:27.578 INFO - Executing: [get element attribute: 52 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:27.591 INFO - Done: [get element attribute: 52 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:27.598 INFO - Executing: [get element attribute: 53 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:27.612 INFO - Done: [get element attribute: 53 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:27.622 INFO - Executing: [get element attribute: 54 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:27.633 INFO - Done: [get element attribute: 54 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:27.648 INFO - Executing: [get element attribute: 55 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:27.659 INFO - Done: [get element attribute: 55 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:27.667 INFO - Executing: [get element attribute: 56 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:27.679 INFO - Done: [get element attribute: 56 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:27.687 INFO - Executing: [get element attribute: 57 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:27.701 INFO - Done: [get element attribute: 57 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:27.708 INFO - Executing: [get element attribute: 58 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:27.718 INFO - Done: [get element attribute: 58 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:27.728 INFO - Executing: [get element attribute: 59 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:27.742 INFO - Done: [get element attribute: 59 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:27.752 INFO - Executing: [get element attribute: 60 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:27.763 INFO - Done: [get element attribute: 60 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:27.773 INFO - Executing: [get element attribute: 61 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:27.783 INFO - Done: [get element attribute: 61 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:27.791 INFO - Executing: [get element attribute: 62 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:27.802 INFO - Done: [get element attribute: 62 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:27.811 INFO - Executing: [get element attribute: 63 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:27.823 INFO - Done: [get element attribute: 63 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:27.835 INFO - Executing: [get element attribute: 64 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:27.845 INFO - Done: [get element attribute: 64 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:27.858 INFO - Executing: [get element attribute: 65 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:27.868 INFO - Done: [get element attribute: 65 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:27.877 INFO - Executing: [get element attribute: 66 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:27.889 INFO - Done: [get element attribute: 66 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:27.900 INFO - Executing: [get element attribute: 67 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:27.910 INFO - Done: [get element attribute: 67 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:27.922 INFO - Executing: [get element attribute: 68 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:27.935 INFO - Done: [get element attribute: 68 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:27.946 INFO - Executing: [get element attribute: 69 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:27.959 INFO - Done: [get element attribute: 69 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:27.967 INFO - Executing: [get element attribute: 70 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:27.979 INFO - Done: [get element attribute: 70 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:27.988 INFO - Executing: [get element attribute: 71 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:28.000 INFO - Done: [get element attribute: 71 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:28.009 INFO - Executing: [get element attribute: 72 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:28.022 INFO - Done: [get element attribute: 72 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:28.029 INFO - Executing: [get element attribute: 73 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:28.042 INFO - Done: [get element attribute: 73 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:28.049 INFO - Executing: [get element attribute: 74 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:28.061 INFO - Done: [get element attribute: 74 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:28.068 INFO - Executing: [get element attribute: 75 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:28.079 INFO - Done: [get element attribute: 75 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:28.086 INFO - Executing: [get element attribute: 76 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:28.104 INFO - Done: [get element attribute: 76 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:28.115 INFO - Executing: [get element attribute: 77 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:28.126 INFO - Done: [get element attribute: 77 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:28.139 INFO - Executing: [get element attribute: 78 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:28.150 INFO - Done: [get element attribute: 78 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:28.161 INFO - Executing: [get element attribute: 79 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:28.176 INFO - Done: [get element attribute: 79 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:28.187 INFO - Executing: [get element attribute: 80 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:28.202 INFO - Done: [get element attribute: 80 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:28.209 INFO - Executing: [get element attribute: 81 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:28.221 INFO - Done: [get element attribute: 81 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:28.229 INFO - Executing: [get element attribute: 82 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:28.243 INFO - Done: [get element attribute: 82 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:28.251 INFO - Executing: [get element attribute: 83 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:28.262 INFO - Done: [get element attribute: 83 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:28.271 INFO - Executing: [get element attribute: 84 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:28.283 INFO - Done: [get element attribute: 84 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:28.293 INFO - Executing: [get element attribute: 85 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:28.306 INFO - Done: [get element attribute: 85 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:28.314 INFO - Executing: [get element attribute: 86 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:28.326 INFO - Done: [get element attribute: 86 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:28.333 INFO - Executing: [get element attribute: 87 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:28.342 INFO - Done: [get element attribute: 87 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:28.352 INFO - Executing: [get element attribute: 88 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:28.363 INFO - Done: [get element attribute: 88 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:28.371 INFO - Executing: [get element attribute: 89 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:28.383 INFO - Done: [get element attribute: 89 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:28.392 INFO - Executing: [get element attribute: 90 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:28.402 INFO - Done: [get element attribute: 90 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:28.410 INFO - Executing: [get element attribute: 91 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:28.420 INFO - Done: [get element attribute: 91 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:28.430 INFO - Executing: [get element attribute: 92 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:28.442 INFO - Done: [get element attribute: 92 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:28.451 INFO - Executing: [get element attribute: 93 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:28.462 INFO - Done: [get element attribute: 93 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:28.469 INFO - Executing: [get element attribute: 94 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:28.479 INFO - Done: [get element attribute: 94 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:28.492 INFO - Executing: [get element attribute: 95 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:28.502 INFO - Done: [get element attribute: 95 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:28.511 INFO - Executing: [get element attribute: 96 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:28.523 INFO - Done: [get element attribute: 96 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:28.531 INFO - Executing: [get element attribute: 97 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:28.542 INFO - Done: [get element attribute: 97 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:28.556 INFO - Executing: [get element attribute: 98 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:28.565 INFO - Done: [get element attribute: 98 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:28.575 INFO - Executing: [get element attribute: 99 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:28.585 INFO - Done: [get element attribute: 99 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:28.596 INFO - Executing: [get element attribute: 100 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:28.607 INFO - Done: [get element attribute: 100 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:28.624 INFO - Executing: [get element attribute: 101 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:28.634 INFO - Done: [get element attribute: 101 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:28.643 INFO - Executing: [get element attribute: 102 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:28.656 INFO - Done: [get element attribute: 102 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:28.664 INFO - Executing: [get element attribute: 103 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:28.675 INFO - Done: [get element attribute: 103 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:28.686 INFO - Executing: [get element attribute: 104 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:28.697 INFO - Done: [get element attribute: 104 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:28.707 INFO - Executing: [get element attribute: 105 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:28.716 INFO - Done: [get element attribute: 105 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:28.724 INFO - Executing: [get element attribute: 106 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:28.734 INFO - Done: [get element attribute: 106 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:28.742 INFO - Executing: [get element attribute: 107 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:28.751 INFO - Done: [get element attribute: 107 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:28.763 INFO - Executing: [get element attribute: 108 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:28.773 INFO - Done: [get element attribute: 108 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:28.783 INFO - Executing: [get element attribute: 109 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:28.793 INFO - Done: [get element attribute: 109 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:28.807 INFO - Executing: [get element attribute: 110 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:28.817 INFO - Done: [get element attribute: 110 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:28.824 INFO - Executing: [get element attribute: 111 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:28.835 INFO - Done: [get element attribute: 111 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:28.843 INFO - Executing: [get element attribute: 112 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:28.853 INFO - Done: [get element attribute: 112 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:28.863 INFO - Executing: [get element attribute: 113 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:28.876 INFO - Done: [get element attribute: 113 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:28.890 INFO - Executing: [get element attribute: 114 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:28.900 INFO - Done: [get element attribute: 114 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:28.911 INFO - Executing: [get element attribute: 115 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:28.922 INFO - Done: [get element attribute: 115 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:28.930 INFO - Executing: [get element attribute: 116 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:28.942 INFO - Done: [get element attribute: 116 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:28.950 INFO - Executing: [get element attribute: 117 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:28.959 INFO - Done: [get element attribute: 117 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:28.967 INFO - Executing: [get element attribute: 118 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:28.976 INFO - Done: [get element attribute: 118 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:28.982 INFO - Executing: [get element attribute: 119 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:28.992 INFO - Done: [get element attribute: 119 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:29.007 INFO - Executing: [get element attribute: 120 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:29.017 INFO - Done: [get element attribute: 120 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:29.025 INFO - Executing: [get element attribute: 121 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:29.035 INFO - Done: [get element attribute: 121 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:29.043 INFO - Executing: [get element attribute: 122 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:29.053 INFO - Done: [get element attribute: 122 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:29.064 INFO - Executing: [get element attribute: 123 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:29.075 INFO - Done: [get element attribute: 123 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:29.083 INFO - Executing: [get element attribute: 124 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:29.093 INFO - Done: [get element attribute: 124 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:29.101 INFO - Executing: [get element attribute: 125 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:29.111 INFO - Done: [get element attribute: 125 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:29.126 INFO - Executing: [get element attribute: 126 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:29.137 INFO - Done: [get element attribute: 126 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:29.144 INFO - Executing: [get element attribute: 127 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:29.156 INFO - Done: [get element attribute: 127 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:29.164 INFO - Executing: [get element attribute: 128 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:29.176 INFO - Done: [get element attribute: 128 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:29.188 INFO - Executing: [get element attribute: 129 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:29.199 INFO - Done: [get element attribute: 129 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:29.211 INFO - Executing: [get element attribute: 130 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:29.232 INFO - Done: [get element attribute: 130 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:29.247 INFO - Executing: [get element attribute: 131 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:29.260 INFO - Done: [get element attribute: 131 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:29.267 INFO - Executing: [get element attribute: 132 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:29.280 INFO - Done: [get element attribute: 132 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:29.293 INFO - Executing: [get element attribute: 133 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:29.305 INFO - Done: [get element attribute: 133 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:29.321 INFO - Executing: [get element attribute: 134 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:29.335 INFO - Done: [get element attribute: 134 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:29.342 INFO - Executing: [get element attribute: 135 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:29.352 INFO - Done: [get element attribute: 135 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:29.364 INFO - Executing: [get element attribute: 136 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:29.375 INFO - Done: [get element attribute: 136 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:29.381 INFO - Executing: [get element attribute: 137 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:29.392 INFO - Done: [get element attribute: 137 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:29.398 INFO - Executing: [get element attribute: 138 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:29.409 INFO - Done: [get element attribute: 138 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:29.416 INFO - Executing: [get element attribute: 139 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:29.427 INFO - Done: [get element attribute: 139 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:29.435 INFO - Executing: [get element attribute: 140 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:29.444 INFO - Done: [get element attribute: 140 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:29.452 INFO - Executing: [get element attribute: 141 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:29.464 INFO - Done: [get element attribute: 141 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:29.471 INFO - Executing: [get element attribute: 142 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:29.481 INFO - Done: [get element attribute: 142 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:29.494 INFO - Executing: [get element attribute: 143 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:29.506 INFO - Done: [get element attribute: 143 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:29.517 INFO - Executing: [get element attribute: 144 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:29.527 INFO - Done: [get element attribute: 144 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:29.535 INFO - Executing: [get element attribute: 145 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:29.545 INFO - Done: [get element attribute: 145 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:29.555 INFO - Executing: [get element attribute: 146 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:29.566 INFO - Done: [get element attribute: 146 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:29.575 INFO - Executing: [get element attribute: 147 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:29.585 INFO - Done: [get element attribute: 147 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:29.592 INFO - Executing: [get element attribute: 148 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:29.602 INFO - Done: [get element attribute: 148 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:29.611 INFO - Executing: [get element attribute: 149 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:29.622 INFO - Done: [get element attribute: 149 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:29.628 INFO - Executing: [get element attribute: 150 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:29.641 INFO - Done: [get element attribute: 150 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:29.648 INFO - Executing: [get element attribute: 151 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:29.658 INFO - Done: [get element attribute: 151 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:29.666 INFO - Executing: [get element attribute: 152 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:29.675 INFO - Done: [get element attribute: 152 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:29.685 INFO - Executing: [get element attribute: 153 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:29.694 INFO - Done: [get element attribute: 153 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:29.706 INFO - Executing: [get element attribute: 154 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:29.717 INFO - Done: [get element attribute: 154 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:29.725 INFO - Executing: [get element attribute: 155 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:29.735 INFO - Done: [get element attribute: 155 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:29.746 INFO - Executing: [get element attribute: 156 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:29.756 INFO - Done: [get element attribute: 156 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:29.763 INFO - Executing: [get element attribute: 157 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:29.773 INFO - Done: [get element attribute: 157 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:29.780 INFO - Executing: [get element attribute: 158 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:29.791 INFO - Done: [get element attribute: 158 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:29.799 INFO - Executing: [get element attribute: 159 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:29.813 INFO - Done: [get element attribute: 159 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:29.823 INFO - Executing: [get element attribute: 160 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:29.832 INFO - Done: [get element attribute: 160 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:29.841 INFO - Executing: [get element attribute: 161 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href])
+10:22:29.853 INFO - Done: [get element attribute: 161 [[ChromeDriver: chrome on MAC (907aa80a322234c890e9f72d4280e84c)] -> xpath: //a], href]
+10:22:53.362 INFO - Executing: [delete session: 28bcd094-cf01-44f8-8443-91ae1d5ad201])
+10:22:53.440 INFO - Done: [delete session: 28bcd094-cf01-44f8-8443-91ae1d5ad201]
+10:42:20.138 INFO - I/O exception (java.net.SocketException) caught when processing request to {}->http://192.168.99.100:4444: Operation timed out
+10:42:20.138 INFO - Retrying request to {}->http://192.168.99.100:4444

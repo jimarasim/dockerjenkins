@@ -1,0 +1,12 @@
+commit 9e9ba533fb212a883db7ec06314600afc1f07a94
+tree c0f1781fc70c345884f5dbe767ec0c5ff2a55a4f
+parent 84cf9468a9316c5f9af14c8d630285727d81ddbd
+author JAMES ARASIM <jaemzware@hotmail.com> 2016-03-19 08:17:56 -0600
+committer JAMES ARASIM <jaemzware@hotmail.com> 2016-03-19 08:17:56 -0600
+
+    implemented lambda expression but not sure why this is timing out. could
+    be slow connection
+
+
+
+:100644 100644 3af2a89a76f1f723ce1e993069e096271b87df1f 27e345fef3346707a84da616b851181b8193d466 M	src/main/java/com/jaemzware/seleniumcodebase/CodeBase.java
