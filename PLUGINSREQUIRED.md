@@ -1,3 +1,6 @@
+INSTALL THIN BACKUP FIRST THEN RESTORE A BACKUP FROM dockerjenkins GITHUB REPOSITORY
+NEXT TIME: Check restore plugins when restoring from thinbackup
+
 USERS
 sk8creteordie
 Sk8Omlb
@@ -13,15 +16,14 @@ publish over ssh
 rebuilder
 
 CONFIGURATION SETUP
-JDK - auto, add credentials
-maven - auto
-nodejs - auto
-git plugin - username and email
-jobs - supply github credentials
-thin backup
-extended email notification https://support.google.com/mail/troubleshooter/1668960?hl=en&rd=1
-
-E-mail Notification
++turn on slave to master security
++JDK - auto, add credentials, carried over from thin backup
++maven - auto, carried over from thin backup
++nodejs - install plugin, settings carried over from thin backup after installation auto
++github plugin - install plugin, settings carried over form thin backup after installation username and email
++thin backup
++extended email notification plugin: install, then settings were there from thin backup https://support.google.com/mail/troubleshooter/1668960?hl=en&rd=1
+    E-mail Notification
     smtp server: mail.stuffedanimalwar.com
     default user email suffix: @stuffedanimalwar.com
     use smtp authentication
@@ -31,9 +33,9 @@ E-mail Notification
     port: 587
     reply to: suespamnow@stuffedanimalwar.com
     charset: utf-8
-
-excecutors 10
-publish over ssh
++excecutors 10, carried over from thin backup
++global properties JENKINSREPORTSURL: http://jaemzware.com/jenkinsreports
++publish over ssh, install then settings carried over from thin backup
     passphrase: SkatePark@3
     ...
     ssh server:
@@ -41,3 +43,8 @@ publish over ssh
     hostname: seattlerules.com
     username: jimara0
     remote directory: jaemzware.com/jenkinsreports
++upgrade plugins
++jobs - supply github credentials
+NOTE: Views did not carry over. try another thin backup, 
+
+
