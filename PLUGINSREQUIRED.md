@@ -22,12 +22,11 @@ CONFIGURATION SETUP
 +nodejs - install plugin, settings carried over from thin backup after installation auto
 +github plugin - install plugin, settings carried over form thin backup after installation username and email
 +thin backup
-+extended email notification plugin: install, then settings were there from thin backup https://support.google.com/mail/troubleshooter/1668960?hl=en&rd=1
++extended email notification plugin: install, then settings were there from thin backup; however kept getting errors sending email. the test email button would work in configuration, but the jobs sending email would say jaemzware@hotmail.com was an invalid email address. now saying the address is valid, but send failed. trying to leave default suffix blank
+    
     E-mail Notification
-
     smtp server: mail.stuffedanimalwar.com, smtp.gmail.com
-
-    default user email suffix: @stuffedanimalwar.com, @gmail.com
+    default user email suffix: {BLANK} //@stuffedanimalwar.com, @gmail.com
     use smtp authentication
     user name: suespamnow@stuffedanimalwar.com, jaemzware@gmail.com
     password: 8bigfish, G00G73g00g73
@@ -35,6 +34,16 @@ CONFIGURATION SETUP
     port: 587, 465
     reply to: suespamnow@stuffedanimalwar.com, jaemzware@gmail.com
     charset: UTF-8, UTF-8
+
+    Extended Email Notification
+smtp server: smtp.gmail.com
+default user email suffix: @gmail.com
+default content type: html
+default recipients: jaemzware@hotmail.com
+reply to list: jaemzware@gmail.com
+default triggers: always
+    
+
 +excecutors 10, carried over from thin backup
 +global properties JENKINSREPORTSURL: http://jaemzware.com/jenkinsreports
 +publish over ssh, install then settings carried over from thin backup, have to re-enter password
