@@ -45,6 +45,7 @@ CONFIGURATION SETUP
     hostname: seattlerules.com
     username: jimara0
     remote directory: jaemzware.com/jenkinsreports
++rebuilder plugin
 +upgrade plugins
 +jobs - github credentials were stored, but password had to be re-entered for the global credential
 NOTE: Views did not carry over. try another thin backup, 
