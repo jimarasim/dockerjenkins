@@ -44,7 +44,7 @@ CONFIGURATION SETUP
     username: jimara0
     remote directory: jaemzware.com/jenkinsreports
 +upgrade plugins
-+jobs - supply github credentials
++jobs - github credentials were stored, but password had to be re-entered for the global credential
 NOTE: Views did not carry over. try another thin backup, 
 
 
