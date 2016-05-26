@@ -37,7 +37,7 @@ CONFIGURATION SETUP
     charset: UTF-8, UTF-8
 +excecutors 10, carried over from thin backup
 +global properties JENKINSREPORTSURL: http://jaemzware.com/jenkinsreports
-+publish over ssh, install then settings carried over from thin backup
++publish over ssh, install then settings carried over from thin backup, have to re-enter password
     passphrase: SkatePark@3
     ...
     ssh server:
