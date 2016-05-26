@@ -24,15 +24,17 @@ CONFIGURATION SETUP
 +thin backup
 +extended email notification plugin: install, then settings were there from thin backup https://support.google.com/mail/troubleshooter/1668960?hl=en&rd=1
     E-mail Notification
-    smtp server: mail.stuffedanimalwar.com
-    default user email suffix: @stuffedanimalwar.com
+
+    smtp server: mail.stuffedanimalwar.com, smtp.gmail.com
+
+    default user email suffix: @stuffedanimalwar.com, @gmail.com
     use smtp authentication
-    user name: suespamnow@stuffedanimalwar.com
-    password: 8bigfish
-    use ssl: uncheck
-    port: 587
-    reply to: suespamnow@stuffedanimalwar.com
-    charset: utf-8
+    user name: suespamnow@stuffedanimalwar.com, jaemzware@gmail.com
+    password: 8bigfish, G00G73g00g73
+    use ssl: uncheck, check
+    port: 587, 465
+    reply to: suespamnow@stuffedanimalwar.com, jaemzware@gmail.com
+    charset: UTF-8, UTF-8
 +excecutors 10, carried over from thin backup
 +global properties JENKINSREPORTSURL: http://jaemzware.com/jenkinsreports
 +publish over ssh, install then settings carried over from thin backup
