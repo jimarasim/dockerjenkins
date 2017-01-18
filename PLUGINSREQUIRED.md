@@ -1,21 +1,48 @@
-INSTALL THIN BACKUP FIRST THEN RESTORE A BACKUP FROM dockerjenkins GITHUB REPOSITORY
-NEXT TIME: Check restore plugins when restoring from thinbackup
+DO INITIAL JENKINS SETUP THROUGH KITEMATIC (DOCKER TOOLBOX)
+    DOWNLOAD AND INSTALL KITEMATIC (DOCKER TOOLBOX DOWNLOAD)
+    CREATE LOCAL FOLDER to map KITEMATIC JENKINS to
+        e.g. ~/Downloads/Installed/repositories/dockerjenkins_volatile
+    IF IT ALREADY EXISTS AND IT'S OLD, THEN CLEAN IT OUT (DELTE ALL)'
+    MAP IT
+        KITEMATIC=>jenkins:latest=>Settings=>Volumes
+        DOCKER FOLDER:/var/jenkins_home LOCAL FOLDER: ~/Downloads/Installed/repositories/dockerjenkins_volatile
+    START JENKINS
+    CREATE FIRST ADMIN USER
+        user: sk8creteordie
+        password: Sk8Omlb
+    PLUGINS
+        Email Ext
+        github
+        nodejs
+        publish over ssh
+        rebuilder
+    JENKINS INSTALL MANAGE PLUGINS 
+        thinBackup plugin
+    RESTART
+    MANAGE JENKINS=>THINBACKUP=>SETTINGS=>BACKUPDIRECTORY=>/var/jenkins_home
+    RESTART
+    COPY A BACKUP FROM dockerjenkins (git CLONE https://github.com/jimarasim/dockerjenkins) TO LOCAL FOLDER FOR DOCKER FOLDER
+    RESTORE THE BACKUP (IT WON'T TAKE EFFECT TILL YOU RESTART KITEMATIC)
+        CHECK RESTORE BUILD NUMBERS
+        CHECK RESTORE PLUGINS
+    RESTART jenkins:latest IN KITEMATIC
 
-USERS
-sk8creteordie
-Sk8Omlb
+RESTORE A BACKUP FROM dockerjenkins GITHUB REPOSITORY
+    NEXT TIME: Check restore plugins when restoring from thinbackup
+    THINBACKUP => SETTINGS => BACKUP DIRECTORY => MAP dockerjenkins TO A KITEMATIC CONTAINER FOLDER
+        git CLONE https://github.com/jimarasim/dockerjenkins
+        CREATE LOCAL FOLDER to map KITEMATIC JENKINS to
+            e.g. ~/Downloads/Installed/repositories/dockerjenkins_volatile
+        if it already exists, and it's old (e.g. old .war file)'
+            stop JENKINS in KITEMATIC
+            clean it out (delete all if jenkins.war files are different)
+                        restart jenkins
+        
+    restore thin backup if need be
+    KITEMATIC=>CONTAINER=>JENKINS=>SETTINGS=>VOLUMES=>/var/jenkins_home
 
-jim
-jim
 
-PLUGINS
-Email Ext
-github
-nodejs
-publish over ssh
-rebuilder
 
-CONFIGURATION SETUP
 +turn on slave to master security
 +JDK - auto, add credentials, carried over from thin backup
 +maven - auto, carried over from thin backup
