@@ -1,0 +1,216 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<maven2-moduleset plugin="maven-plugin@2.13">
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <jenkins.model.BuildDiscarderProperty>
+      <strategy class="hudson.tasks.LogRotator">
+        <daysToKeep>-1</daysToKeep>
+        <numToKeep>20</numToKeep>
+        <artifactDaysToKeep>-1</artifactDaysToKeep>
+        <artifactNumToKeep>-1</artifactNumToKeep>
+      </strategy>
+    </jenkins.model.BuildDiscarderProperty>
+    <com.sonyericsson.rebuild.RebuildSettings plugin="rebuild@1.25">
+      <autoRebuild>false</autoRebuild>
+      <rebuildDisabled>false</rebuildDisabled>
+    </com.sonyericsson.rebuild.RebuildSettings>
+    <hudson.model.ParametersDefinitionProperty>
+      <parameterDefinitions>
+        <hudson.model.ChoiceParameterDefinition>
+          <name>STARTURL</name>
+          <description>projects</description>
+          <choices class="java.util.Arrays$ArrayList">
+            <a class="string-array">
+              <string>http://www.newlineskateparks.com/Projects/</string>
+            </a>
+          </choices>
+        </hudson.model.ChoiceParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>LINKSLOADEDINDICATORXPATH</name>
+          <description></description>
+          <defaultValue>//a[contains(@href,&apos;/Projects/&apos;)]</defaultValue>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>LINKXPATH</name>
+          <description>xpath of links to follow. this is for oregon park links</description>
+          <defaultValue>//a[contains(@href,&apos;/Projects/&apos;)]</defaultValue>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>BODYTEXTXPATH</name>
+          <description></description>
+          <defaultValue>//p</defaultValue>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>TITLETEXTXPATH</name>
+          <description></description>
+          <defaultValue>//h1</defaultValue>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>IMAGEXPATH</name>
+          <description></description>
+          <defaultValue>//img</defaultValue>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>NEXTLINKXPATH</name>
+          <description>this is if there are multiple pages of where to find //LINKXPATH on. like if you&apos;re doing a google search and you want to go through pages and pages of results. this job needs to konw the xpath of the &quot;next page&quot; link on the page, and it will keep clicking that until it does not exist. just set this to an xpath that you know will not be on the page, like //stupidmoo</description>
+          <defaultValue>//stupidmoo</defaultValue>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>MAXHITS</name>
+          <description>you can use this to limit the number of links followed. like if you want the first 10 results only, when there are like 399999 results possible, then set this to 10</description>
+          <defaultValue>0</defaultValue>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>REPORT</name>
+          <description>this is the name of the report generated. it will be prepended with index and appended with .htm. 
+e.g. index$REPORT.htm</description>
+          <defaultValue>newline</defaultValue>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>DEFAULTIMPLICITWAITSECONDS</name>
+          <description>this is how long you want to wait, until you run out of patence waiting for the page to load. it would be good to use when there&apos;s a maximum number of seconds you&apos;d expect your customer to wait while visiting your site. you will get an error telling you to increase this value if the wait is not long enough. in that case, you know you have an unexpected performance issue.</description>
+          <defaultValue>200</defaultValue>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>BRANCH</name>
+          <description>branch of git development</description>
+          <defaultValue>develop</defaultValue>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>NOIMAGES</name>
+          <description>Set this value to -DnoImages to omit images from board scrub</description>
+          <defaultValue></defaultValue>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>WAITAFTERPAGELOADMILLISECONDS</name>
+          <description>after the page loads, wait this many seconds to go to the next. this is good if there are people observing the automation as it runs.</description>
+          <defaultValue>0</defaultValue>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>HUBSERVER</name>
+          <description>selenium grid ip address (usually same machine)</description>
+          <defaultValue>192.168.99.100</defaultValue>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.ChoiceParameterDefinition>
+          <name>HUBPORT</name>
+          <description>port of grid or appium server</description>
+          <choices class="java.util.Arrays$ArrayList">
+            <a class="string-array">
+              <string>4444</string>
+              <string>4723</string>
+            </a>
+          </choices>
+        </hudson.model.ChoiceParameterDefinition>
+        <hudson.model.ChoiceParameterDefinition>
+          <name>BROWSER</name>
+          <description>browser to run automation in </description>
+          <choices class="java.util.Arrays$ArrayList">
+            <a class="string-array">
+              <string>CHROMEMAC</string>
+              <string>FIREFOXMAC</string>
+              <string>SAFARI</string>
+            </a>
+          </choices>
+        </hudson.model.ChoiceParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>NOSCREENSHOTS</name>
+          <description>SET THIS value to -DnoScreenShots for no screenshots in scrub</description>
+          <defaultValue>-DnoScreenShots</defaultValue>
+        </hudson.model.StringParameterDefinition>
+      </parameterDefinitions>
+    </hudson.model.ParametersDefinitionProperty>
+  </properties>
+  <scm class="hudson.plugins.git.GitSCM" plugin="git@2.4.4">
+    <configVersion>2</configVersion>
+    <userRemoteConfigs>
+      <hudson.plugins.git.UserRemoteConfig>
+        <url>https://github.com/jimarasim/Board</url>
+        <credentialsId>cbed8dac-88d8-4836-bb8b-49e3c86904e6</credentialsId>
+      </hudson.plugins.git.UserRemoteConfig>
+    </userRemoteConfigs>
+    <branches>
+      <hudson.plugins.git.BranchSpec>
+        <name>*/$BRANCH</name>
+      </hudson.plugins.git.BranchSpec>
+    </branches>
+    <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+    <submoduleCfg class="list"/>
+    <extensions/>
+  </scm>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <rootModule>
+    <groupId>com.jaemzware</groupId>
+    <artifactId>AppTest</artifactId>
+  </rootModule>
+  <goals>$NOSCREENSHOTS $NOIMAGES -Dinput=&quot;$STARTURL&quot; -DdefaultImplicitWaitSeconds=$DEFAULTIMPLICITWAITSECONDS -DnoScroll -Dreport=&quot;$REPORT&quot; -DbodyTextXpath=&quot;$BODYTEXTXPATH&quot; -DnextLinkXpath=&quot;$NEXTLINKXPATH&quot; -DlinksLoadedIndicatorXpath=&quot;$LINKSLOADEDINDICATORXPATH&quot; -DlinkXpath=&quot;$LINKXPATH&quot; -DimageXpath=&quot;$IMAGEXPATH&quot; -DtitleTextXpath=&quot;$TITLETEXTXPATH&quot; -Dbrowser=&quot;$BROWSER&quot; -DaHubPort=&quot;$HUBPORT&quot; -DaHubServer=&quot;$HUBSERVER&quot; -DaNumber=&quot;$MAXHITS&quot; -DwaitAfterPageLoadMilliSeconds=&quot;$WAITAFTERPAGELOADMILLISECONDS&quot; -Dtest=&quot;BoardScrub#BuildPageOfFoundLinks&quot; test</goals>
+  <aggregatorStyleBuild>true</aggregatorStyleBuild>
+  <incrementalBuild>false</incrementalBuild>
+  <ignoreUpstremChanges>true</ignoreUpstremChanges>
+  <ignoreUnsuccessfulUpstreams>false</ignoreUnsuccessfulUpstreams>
+  <archivingDisabled>false</archivingDisabled>
+  <siteArchivingDisabled>false</siteArchivingDisabled>
+  <fingerprintingDisabled>false</fingerprintingDisabled>
+  <resolveDependencies>false</resolveDependencies>
+  <processPlugins>false</processPlugins>
+  <mavenValidationLevel>-1</mavenValidationLevel>
+  <runHeadless>false</runHeadless>
+  <disableTriggerDownstreamProjects>false</disableTriggerDownstreamProjects>
+  <blockTriggerWhenBuilding>true</blockTriggerWhenBuilding>
+  <settings class="jenkins.mvn.DefaultSettingsProvider"/>
+  <globalSettings class="jenkins.mvn.DefaultGlobalSettingsProvider"/>
+  <reporters/>
+  <publishers/>
+  <buildWrappers/>
+  <prebuilders/>
+  <postbuilders>
+    <jenkins.plugins.publish__over__ssh.BapSshBuilderPlugin plugin="publish-over-ssh@1.14">
+      <delegate>
+        <consolePrefix>SSH: </consolePrefix>
+        <delegate>
+          <publishers>
+            <jenkins.plugins.publish__over__ssh.BapSshPublisher>
+              <configName>seattlerules</configName>
+              <verbose>false</verbose>
+              <transfers>
+                <jenkins.plugins.publish__over__ssh.BapSshTransfer>
+                  <remoteDirectory></remoteDirectory>
+                  <sourceFiles>*.htm, *.jpg, *.JPG, *.jpeg, *.JPEG, *.png, *.PNG</sourceFiles>
+                  <excludes></excludes>
+                  <removePrefix></removePrefix>
+                  <remoteDirectorySDF>false</remoteDirectorySDF>
+                  <flatten>false</flatten>
+                  <cleanRemote>false</cleanRemote>
+                  <noDefaultExcludes>false</noDefaultExcludes>
+                  <makeEmptyDirs>false</makeEmptyDirs>
+                  <patternSeparator>[, ]+</patternSeparator>
+                  <execCommand></execCommand>
+                  <execTimeout>120000</execTimeout>
+                  <usePty>false</usePty>
+                </jenkins.plugins.publish__over__ssh.BapSshTransfer>
+              </transfers>
+              <useWorkspaceInPromotion>false</useWorkspaceInPromotion>
+              <usePromotionTimestamp>false</usePromotionTimestamp>
+            </jenkins.plugins.publish__over__ssh.BapSshPublisher>
+          </publishers>
+          <continueOnError>false</continueOnError>
+          <failOnError>false</failOnError>
+          <alwaysPublishFromMaster>false</alwaysPublishFromMaster>
+          <hostConfigurationAccess class="jenkins.plugins.publish_over_ssh.BapSshPublisherPlugin" reference="../.."/>
+        </delegate>
+      </delegate>
+    </jenkins.plugins.publish__over__ssh.BapSshBuilderPlugin>
+  </postbuilders>
+  <runPostStepsIfResult>
+    <name>FAILURE</name>
+    <ordinal>2</ordinal>
+    <color>RED</color>
+    <completeBuild>true</completeBuild>
+  </runPostStepsIfResult>
+</maven2-moduleset>

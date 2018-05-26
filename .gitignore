@@ -1,7 +1,1 @@
-*
-!.gitignore
-!README.md
-!config.xml
-!jobs
-!jobs/*
-!jobs/*/
+.DS_Store
